@@ -1,0 +1,24 @@
+add
+addi*
+addu*
+sub
+subu*
+and
+or
+sll
+lw
+sw
+slt
+sltu
+beq
+bne
+
+
+signExt
+
+Control -- Brian
+PC -- Danny
+Registers -- Matt
+Big Picture
+
+
