@@ -1,0 +1,138 @@
+# //  ModelSim SE-64 6.3c Sep 11 2007 Linux 2.6.32-431.20.3.el6.x86_64
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project demo
+# reading /vol/mentor/modelsim6.3c/modeltech/linux_x86_64/../modelsim.ini
+# Loading project Project 1
+# Compile of and_gate.vhd was successful.
+# Compile of and_gate_32.vhd was successful.
+# Compile of and_gate_n.vhd was successful.
+# Compile of cache_test.vhd failed with 1 errors.
+# Compile of cmp_n.vhd was successful.
+# Compile of csram.vhd was successful.
+# Compile of dec_n.vhd was successful.
+# Compile of dff.vhd was successful.
+# Compile of dffr.vhd was successful.
+# Compile of dffr_a.vhd was successful.
+# Compile of eecs361.vhd failed with 1 errors.
+# Compile of eecs361_gates.vhd was successful.
+# Compile of fulladder_32.vhd was successful.
+# Compile of fulladder_n.vhd was successful.
+# Compile of mux.vhd failed with 1 errors.
+# Compile of mux_32.vhd failed with 1 errors.
+# Compile of mux_n.vhd was successful.
+# Compile of nand_gate.vhd was successful.
+# Compile of nand_gate_32.vhd was successful.
+# Compile of nand_gate_n.vhd was successful.
+# Compile of nor_gate.vhd was successful.
+# Compile of nor_gate_32.vhd was successful.
+# Compile of nor_gate_n.vhd was successful.
+# Compile of not_gate.vhd was successful.
+# Compile of not_gate_32.vhd was successful.
+# Compile of not_gate_n.vhd was successful.
+# Compile of or_gate.vhd was successful.
+# Compile of or_gate_32.vhd was successful.
+# Compile of or_gate_n.vhd was successful.
+# Compile of sram.vhd was successful.
+# Compile of syncram.vhd was successful.
+# Compile of xnor_gate.vhd was successful.
+# Compile of xnor_gate_32.vhd was successful.
+# Compile of xnor_gate_n.vhd was successful.
+# Compile of xor_gate.vhd was successful.
+# Compile of xor_gate_32.vhd was successful.
+# Compile of xor_gate_n.vhd was successful.
+# Compile of register_32bit.vhd failed with 1 errors.
+# 38 compiles, 5 failed with 5 errors. 
+# Compile of and_gate.vhd was successful.
+# Compile of and_gate_32.vhd was successful.
+# Compile of and_gate_n.vhd was successful.
+# Compile of cache_test.vhd failed with 1 errors.
+# Compile of cmp_n.vhd was successful.
+# Compile of csram.vhd was successful.
+# Compile of dec_n.vhd was successful.
+# Compile of dff.vhd was successful.
+# Compile of dffr.vhd was successful.
+# Compile of dffr_a.vhd was successful.
+# Compile of eecs361.vhd was successful.
+# Compile of eecs361_gates.vhd was successful.
+# Compile of fulladder_32.vhd was successful.
+# Compile of fulladder_n.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of mux_32.vhd was successful.
+# Compile of mux_n.vhd was successful.
+# Compile of nand_gate.vhd was successful.
+# Compile of nand_gate_32.vhd was successful.
+# Compile of nand_gate_n.vhd was successful.
+# Compile of nor_gate.vhd was successful.
+# Compile of nor_gate_32.vhd was successful.
+# Compile of nor_gate_n.vhd was successful.
+# Compile of not_gate.vhd was successful.
+# Compile of not_gate_32.vhd was successful.
+# Compile of not_gate_n.vhd was successful.
+# Compile of or_gate.vhd was successful.
+# Compile of or_gate_32.vhd was successful.
+# Compile of or_gate_n.vhd was successful.
+# Compile of sram.vhd was successful.
+# Compile of syncram.vhd was successful.
+# Compile of xnor_gate.vhd was successful.
+# Compile of xnor_gate_32.vhd was successful.
+# Compile of xnor_gate_n.vhd was successful.
+# Compile of xor_gate.vhd was successful.
+# Compile of xor_gate_32.vhd was successful.
+# Compile of xor_gate_n.vhd was successful.
+# Compile of register_32bit.vhd failed with 1 errors.
+# 38 compiles, 2 failed with 2 errors. 
+# Compile of and_gate.vhd was successful.
+# Compile of and_gate_32.vhd was successful.
+# Compile of and_gate_n.vhd was successful.
+# Compile of cache_test.vhd was successful.
+# Compile of cmp_n.vhd was successful.
+# Compile of csram.vhd was successful.
+# Compile of dec_n.vhd was successful.
+# Compile of dff.vhd was successful.
+# Compile of dffr.vhd was successful.
+# Compile of dffr_a.vhd was successful.
+# Compile of eecs361.vhd was successful.
+# Compile of eecs361_gates.vhd was successful.
+# Compile of fulladder_32.vhd was successful.
+# Compile of fulladder_n.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of mux_32.vhd was successful.
+# Compile of mux_n.vhd was successful.
+# Compile of nand_gate.vhd was successful.
+# Compile of nand_gate_32.vhd was successful.
+# Compile of nand_gate_n.vhd was successful.
+# Compile of nor_gate.vhd was successful.
+# Compile of nor_gate_32.vhd was successful.
+# Compile of nor_gate_n.vhd was successful.
+# Compile of not_gate.vhd was successful.
+# Compile of not_gate_32.vhd was successful.
+# Compile of not_gate_n.vhd was successful.
+# Compile of or_gate.vhd was successful.
+# Compile of or_gate_32.vhd was successful.
+# Compile of or_gate_n.vhd was successful.
+# Compile of sram.vhd was successful.
+# Compile of syncram.vhd was successful.
+# Compile of xnor_gate.vhd was successful.
+# Compile of xnor_gate_32.vhd was successful.
+# Compile of xnor_gate_n.vhd was successful.
+# Compile of xor_gate.vhd was successful.
+# Compile of xor_gate_32.vhd was successful.
+# Compile of xor_gate_n.vhd was successful.
+# Compile of register_32bit.vhd failed with 1 errors.
+# 38 compiles, 1 failed with 1 error. 
+# Compile of register_32bit.vhd failed with 1 errors.
+# Compile of register_32bit.vhd failed with 1 errors.
+# Compile of register_32bit.vhd failed with 1 errors.
+# Compile of register_32bit.vhd failed with 1 errors.
+# Compile of register_32bit.vhd failed with 1 errors.
+# Compile of register_32bit.vhd failed with 1 errors.
+# Compile of register_32bit.vhd failed with 1 errors.
+# Compile of register_32bit.vhd was successful.
