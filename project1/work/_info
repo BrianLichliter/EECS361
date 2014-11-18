@@ -727,7 +727,7 @@ R8
 R6
 R7
 Eregister_32bit
-Z79 w1416283674
+Z79 w1416335854
 R15
 R14
 R1
@@ -745,15 +745,15 @@ Astructural
 R15
 R14
 R1
-DE work register_32bit [gMoWjBnR588VY?>OlYoQ1
+Z82 DE work register_32bit [gMoWjBnR588VY?>OlYoQ1
 l17
 L15
-VE2ACLPEI6_NzACS1Z[zh@1
+VCENTVd^SZoV:1T]EMUP:]0
 R5
 32
 R50
-M2 work eecs361_gates
-M1 work eecs361
+Z83 M2 work eecs361_gates
+Z84 M1 work eecs361
 R6
 R7
 Esram
@@ -765,8 +765,8 @@ R27
 R28
 R1
 R2
-Z82 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/sram.vhd
-Z83 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/sram.vhd
+Z85 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/sram.vhd
+Z86 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/sram.vhd
 l0
 L12
 VD[K6nRz3ncm10jT>?DOML3
@@ -804,8 +804,8 @@ R27
 R28
 R1
 R2
-Z84 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/syncram.vhd
-Z85 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/syncram.vhd
+Z87 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/syncram.vhd
+Z88 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/syncram.vhd
 l0
 L12
 V]e:Y?obJ[4M8b[19LA@K03
@@ -838,8 +838,8 @@ Exnor_gate
 R9
 R1
 R2
-Z86 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate.vhd
-Z87 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate.vhd
+Z89 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate.vhd
+Z90 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate.vhd
 l0
 L5
 V0jC_AEbQ?fX[VC;d9f=SZ0
@@ -862,8 +862,8 @@ Exnor_gate_32
 R9
 R1
 R2
-Z88 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd
-Z89 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd
+Z91 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd
+Z92 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd
 l0
 L5
 VRBRJkD;GmzZ;KGbV>TfCE0
@@ -886,8 +886,8 @@ Exnor_gate_n
 R9
 R1
 R2
-Z90 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd
-Z91 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd
+Z93 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd
+Z94 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd
 l0
 L5
 VQ5SkE=YScX<bAnLWRJeLY2
@@ -910,8 +910,8 @@ Exor_gate
 R9
 R1
 R2
-Z92 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate.vhd
-Z93 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate.vhd
+Z95 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate.vhd
+Z96 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate.vhd
 l0
 L5
 VbjSHRh8@2g]F@@2[VWf6l1
@@ -934,8 +934,8 @@ Exor_gate_32
 R9
 R1
 R2
-Z94 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd
-Z95 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd
+Z97 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd
+Z98 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd
 l0
 L5
 Vi1l=7]fR<l]0hCK8E^IZW3
@@ -958,8 +958,8 @@ Exor_gate_n
 R9
 R1
 R2
-Z96 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd
-Z97 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd
+Z99 8/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd
+Z100 F/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd
 l0
 L5
 VY>2j8ke4[;]oUS6I4Nak60

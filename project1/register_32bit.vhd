@@ -13,11 +13,11 @@ entity register_32bit is
 end register_32bit;
 
 architecture structural of register_32bit is
-    signal ored_clock : std_logic;
+    signal anded_clock : std_logic;
 begin
-    or_clk : or_gate port map(x=>clock,y=>write_en,z=>ored_clock);
+    and_clk : and_gate port map(x=>clock,y=>write_en,z=>anded_clock);
     gen_ffs:
     for I in 0 to 31 generate
-       dffx: dff port map (clk=>ored_clock,d=>D(I),q=>Z(I));
+       dffx: dff port map (clk=>anded_clock,d=>D(I),q=>Z(I));
    end generate gen_ffs;
 end architecture structural;
