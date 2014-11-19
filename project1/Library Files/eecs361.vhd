@@ -50,6 +50,31 @@ package eecs361 is
     );
   end component mux_32;
 
+  component mux_1_4
+    port (
+      sel	: in  std_logic_vector(1 downto 0);
+      src0	: in  std_logic;
+      src1	: in  std_logic;
+      src2	: in  std_logic;
+      src3	: in  std_logic;
+      z		: out std_logic
+    );
+  end component mux_1_4;
+
+  component mux_n_4 is
+    generic (
+      n	: integer
+    );
+    port (
+      sel  : in  std_logic_vector(1 downto 0);
+      src0 : in  std_logic_vector(n-1 downto 0);
+      src1 : in  std_logic_vector(n-1 downto 0);
+      src2 : in  std_logic_vector(n-1 downto 0);
+      src3 : in  std_logic_vector(n-1 downto 0);
+      z    : out std_logic_vector(n-1 downto 0)
+    );
+  end component mux_n_4;
+
   -- Flip-flops
 
   -- D Flip-flops from Figure C.8.4 with a falling edge trigger.
@@ -153,6 +178,29 @@ package eecs361 is
     );
   end component fulladder_32;
 
+  -- 1-bit full adder.
+  component fulladder_1
+    port (
+      x    : in std_logic;
+      y    : in std_logic;
+      cin  : in std_logic;
+      z    : out std_logic;
+      cout : out std_logic
+    );
+  end component fulladder_1;
+
+  -- n-bit full adder.
+  component fulladder_s_n
+    generic (
+      n : integer
+    );
+    port (
+      A    : in std_logic_vector(n-1 downto 0);
+      B    : in std_logic_vector(n-1 downto 0);
+      R    : in std_logic_vector(n-1 downto 0)
+    );
+  end component fulladder_s_n;
+
   -- Cache tester.
   component cache_test
     generic (
@@ -203,4 +251,64 @@ package eecs361 is
       signed_a_lt_b : out std_logic
     );
   end component cmp_n;
+
+  component comparator_1 is
+    port (
+      x   : in std_logic;
+      y   : in std_logic;
+      cin : in std_logic;
+      z   : out std_logic
+    );
+  end component comparator_1;
+
+  component comparator_32 is
+    port (
+      A   : in std_logic_vector(31 downto 0);
+      B   : in std_logic_vector(31 downto 0);
+      sgn : in std_logic; --1: signed compare, 0: unsigned compare
+      R   : out std_logic_vector(31 downto 0) -- result
+    );
+  end component comparator_32;
+
+  component ALU_1 is
+    port (
+      A    : in std_logic;
+      B    : in std_logic;
+      sel  : in std_logic_vector(1 downto 0);
+      cin  : in std_logic;
+      cout : out std_logic;
+      R    : out std_logic
+    );
+  end component ALU_1;
+
+  component ALU_32 is
+    port (
+      sel  : in std_logic_vector(1 downto 0);
+      A    : in std_logic_vector(31 downto 0);
+      B    : in std_logic_vector(31 downto 0);
+      cin  : in std_logic;
+      cout : out std_logic;  -- ?1? -> carry out
+      ovf  : out std_logic;  -- ?1? -> overflow
+      R    : out std_logic_vector(31 downto 0) -- result
+    );
+  end component ALU_32;
+
+  component shifter_32 is
+    port (
+      A : in std_logic_vector(31 downto 0);
+      B : in std_logic_vector(31 downto 0);
+      R : out std_logic_vector(31 downto 0)
+    );
+  end component shifter_32;
+
+  component signextender_n_m
+    generic (
+      n : integer;
+      m : integer
+    );
+    port (
+      A    : in std_logic_vector(n-1 downto 0);
+      R    : in std_logic_vector(m-1 downto 0)
+    );
+  end component signextender_n_m;
 end;

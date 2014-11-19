@@ -81,6 +81,16 @@ package eecs361_gates is
     );
   end component or_gate_32;
 
+  component or_gate_unary_n is
+    generic (
+      n  : integer
+    );
+    port (
+      x  : in  std_logic_vector(n-1 downto 0);
+      z  : out std_logic
+    );
+  end component or_gate_unary_n;
+
   component nand_gate
     port (
       x : in std_logic;

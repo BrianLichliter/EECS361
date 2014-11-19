@@ -6,24 +6,24 @@ cModel Technology
 d/home/maa935/demo
 Ealu
 Z0 w1414559706
-Z1 DPx4 work 7 eecs361 0 22 BfaSemIQ0<^8L3md3if3n2
+Z1 DPx4 work 7 eecs361 0 22 E]agU:7_SQ2HY]6o<[OVi0
 Z2 DPx4 work 13 eecs361_gates 0 22 M1CcROhYlUJSWnY_f[iU?2
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z5 dC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1
-Z6 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd
-Z7 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd
+Z6 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd
+Z7 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd
 l0
 L6
 VRD?RcB9ngTcRz8PobZ=Xg3
 !s100 RmkfbeO7WU7biaQ2J1lc70
 Z8 OP;C;10.3d;59
 32
-Z9 !s110 1416378569
+Z9 !s110 1416441127
 !i10b 1
-Z10 !s108 1416378568.932000
-Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd|
-Z12 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd|
+Z10 !s108 1416441127.833000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd|
+Z12 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd|
 !i113 1
 Z13 o-work work -2002 -explicit -O0
 Z14 tExplicit 1
@@ -54,19 +54,19 @@ R1
 R3
 R4
 R5
-Z16 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd
-Z17 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd
+Z16 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_1.vhd
+Z17 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_1.vhd
 l0
 L6
 V[a9eZNjXTkE@i>z^h<XT63
 !s100 V`2XS;6^adW1Th33RofX13
 R8
 32
-Z18 !s110 1416378570
+Z18 !s110 1416441129
 !i10b 1
-Z19 !s108 1416378570.425000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd|
-Z21 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd|
+Z19 !s108 1416441129.262000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_1.vhd|
+Z21 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_1.vhd|
 !i113 1
 R13
 R14
@@ -97,19 +97,19 @@ R2
 R3
 R4
 R5
-Z23 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd
-Z24 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd
+Z23 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_32.vhd
+Z24 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_32.vhd
 l0
 L6
 VhDIeCZ4:c91LO5YOJlAN:2
 !s100 ICkkE_DOTWS:lPP17EO;U1
 R8
 32
-Z25 !s110 1416378571
+Z25 !s110 1416441130
 !i10b 1
-Z26 !s108 1416378571.843000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd|
-Z28 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd|
+Z26 !s108 1416441130.606000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_32.vhd|
+Z28 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/ALU_32.vhd|
 !i113 1
 R13
 R14
@@ -138,19 +138,19 @@ Z29 w1415742849
 R3
 R4
 R5
-Z30 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd
-Z31 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd
+Z30 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate.vhd
+Z31 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate.vhd
 l0
 L5
 VU_Y]TlgZX3N<gl1:ZjH622
 !s100 9zM?`;meNomBE;big9UG12
 R8
 32
-Z32 !s110 1416378515
+Z32 !s110 1416441134
 !i10b 1
-Z33 !s108 1416378515.844000
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd|
-Z35 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd|
+Z33 !s108 1416441134.675000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate.vhd|
+Z35 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate.vhd|
 !i113 1
 R13
 R14
@@ -177,19 +177,19 @@ R29
 R3
 R4
 R5
-Z36 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd
-Z37 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd
+Z36 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_32.vhd
+Z37 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_32.vhd
 l0
 L5
 Ve3_4FiC7KKo76^^ZW`RA;2
 !s100 KSRcRaLU>DVF[looI[MAB1
 R8
 32
-Z38 !s110 1416378517
+Z38 !s110 1416441136
 !i10b 1
-Z39 !s108 1416378517.268000
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd|
-Z41 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd|
+Z39 !s108 1416441136.072000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_32.vhd|
+Z41 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -216,19 +216,19 @@ R29
 R3
 R4
 R5
-Z42 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd
-Z43 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd
+Z42 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_n.vhd
+Z43 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_n.vhd
 l0
 L5
 VZDz=h^?4N8=QG_lZb8Y^N3
 !s100 BgW1<b848=U4b0Fm5IB4V0
 R8
 32
-Z44 !s110 1416378518
+Z44 !s110 1416441137
 !i10b 1
-Z45 !s108 1416378518.690000
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd|
-Z47 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd|
+Z45 !s108 1416441137.412000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_n.vhd|
+Z47 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/and_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -258,19 +258,19 @@ Z48 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R3
 R4
 R5
-Z49 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd
-Z50 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd
+Z49 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cache_test.vhd
+Z50 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cache_test.vhd
 l0
 L7
 VCHDjezf5mPenFA@4OTMDc0
 !s100 g5=l_MS3VNVDM1kz6kNY=0
 R8
 32
-Z51 !s110 1416378520
+!s110 1416441138
 !i10b 1
-Z52 !s108 1416378520.175000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd|
-Z54 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd|
+Z51 !s108 1416441138.785000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cache_test.vhd|
+Z53 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cache_test.vhd|
 !i113 1
 R13
 R14
@@ -287,11 +287,11 @@ VIaYz<[=d4VDRdVM6Bil>j1
 !s100 RE30zc;jERnWUgcQW=Rbe0
 R8
 32
-R51
+!s110 1416441139
 !i10b 1
+R51
 R52
 R53
-R54
 !i113 1
 R13
 R14
@@ -301,19 +301,19 @@ R48
 R3
 R4
 R5
-Z55 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd
-Z56 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd
+Z54 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cmp_n.vhd
+Z55 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cmp_n.vhd
 l0
 L5
 V[>7ZP_42a4D:Fmd]7;Mei2
 !s100 Q@FG57Y^f`a49FFnA^8XA3
 R8
 32
-Z57 !s110 1416378521
+Z56 !s110 1416441140
 !i10b 1
-Z58 !s108 1416378521.612000
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd|
-Z60 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd|
+Z57 !s108 1416441140.437000
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cmp_n.vhd|
+Z59 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/cmp_n.vhd|
 !i113 1
 R13
 R14
@@ -328,34 +328,34 @@ Vm4akQmO[iagF^;X2^[E];1
 !s100 k3J96n;G0?;fYl<Wkbnk=1
 R8
 32
-R57
+R56
 !i10b 1
+R57
 R58
 R59
-R60
 !i113 1
 R13
 R14
 Ecomparator_1
-Z61 w1414545118
+Z60 w1414545118
 R1
 R2
 R3
 R4
 R5
-Z62 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd
-Z63 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd
+Z61 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_1.vhd
+Z62 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_1.vhd
 l0
 L6
 V=B<;3[<NFmYnMa0`Ilnj_0
 !s100 FMGzzD[gk7ab:3lZH6zeB3
 R8
 32
-Z64 !s110 1416378573
+Z63 !s110 1416441132
 !i10b 1
-Z65 !s108 1416378573.213000
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd|
-Z67 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd|
+Z64 !s108 1416441131.946000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_1.vhd|
+Z66 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_1.vhd|
 !i113 1
 R13
 R14
@@ -371,34 +371,34 @@ VVAWZzN5PHezeWIlTGa;XM2
 !s100 >AAnK<N6bZRFHcYN11<n>0
 R8
 32
-R64
+R63
 !i10b 1
+R64
 R65
 R66
-R67
 !i113 1
 R13
 R14
 Ecomparator_32
-Z68 w1414551606
+Z67 w1414551606
 R2
 R1
 R3
 R4
 R5
-Z69 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd
-Z70 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd
+Z68 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_32.vhd
+Z69 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_32.vhd
 l0
 L5
 V;R<bhdOYLk[LWCT=U6`Q53
 !s100 cNVfGRJ`d7LH1`G]Dg5Yl2
 R8
 32
-Z71 !s110 1416378574
+Z70 !s110 1416441133
 !i10b 1
-Z72 !s108 1416378574.646000
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd|
-Z74 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd|
+Z71 !s108 1416441133.315000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_32.vhd|
+Z73 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/comparator_32.vhd|
 !i113 1
 R13
 R14
@@ -414,44 +414,44 @@ VlhkoT^nS8[KbY1TWa6aD61
 !s100 dVfK:GH>XP4<CkCJWVZ^[0
 R8
 32
-R71
+R70
 !i10b 1
+R71
 R72
 R73
-R74
 !i113 1
 R13
 R14
 Ecsram
 R29
 R48
-Z75 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-Z76 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z77 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z74 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z75 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z76 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R3
 R4
 R5
-Z78 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd
-Z79 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd
+Z77 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/csram.vhd
+Z78 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/csram.vhd
 l0
 L12
 VccB:eUz6G[KU;5]K^_WMh0
 !s100 G3Pibi36FAWWliCKjYRFl3
 R8
 32
-Z80 !s110 1416378523
+Z79 !s110 1416441142
 !i10b 1
-Z81 !s108 1416378523.168000
-Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd|
-Z83 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd|
+Z80 !s108 1416441141.786000
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/csram.vhd|
+Z82 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/csram.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R48
+R74
 R75
 R76
-R77
 R3
 R4
 DEx4 work 5 csram 0 22 ccB:eUz6G[KU;5]K^_WMh0
@@ -461,11 +461,11 @@ VDhVd`XJ]KB3I=i>:E`f2h3
 !s100 D^5mU=C?a[K@12<8cz96E0
 R8
 32
-R80
+R79
 !i10b 1
+R80
 R81
 R82
-R83
 !i113 1
 R13
 R14
@@ -475,19 +475,19 @@ R48
 R3
 R4
 R5
-Z84 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd
-Z85 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd
+Z83 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dec_n.vhd
+Z84 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dec_n.vhd
 l0
 L5
 V7iJ?jPYN_emZ4:^;hN;]G2
 !s100 TFYiE@E?[zcS;UYZJZ]e]0
 R8
 32
-Z86 !s110 1416378524
+Z85 !s110 1416441143
 !i10b 1
-Z87 !s108 1416378524.662000
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd|
-Z89 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd|
+Z86 !s108 1416441143.307000
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dec_n.vhd|
+Z88 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dec_n.vhd|
 !i113 1
 R13
 R14
@@ -502,11 +502,11 @@ V@Fb=@53n>MNEImDCn?Ze>0
 !s100 55g?PRCWKJcmYh6jzUGZ80
 R8
 32
-R86
+R85
 !i10b 1
+R86
 R87
 R88
-R89
 !i113 1
 R13
 R14
@@ -515,19 +515,19 @@ R29
 R3
 R4
 R5
-Z90 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd
-Z91 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd
+Z89 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dff.vhd
+Z90 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dff.vhd
 l0
 L4
 VmKZ>[LGJ@mPeC8i@F[]]G1
 !s100 6RF6aKO;bLUdc^Uo1TlJA1
 R8
 32
-Z92 !s110 1416378526
+Z91 !s110 1416441144
 !i10b 1
-Z93 !s108 1416378526.092000
-Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd|
-Z95 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd|
+Z92 !s108 1416441144.792000
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dff.vhd|
+Z94 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dff.vhd|
 !i113 1
 R13
 R14
@@ -541,11 +541,11 @@ V?G=X8dlZ@2I_O[J]5HOIT1
 !s100 YQ?Mf61<mPk;FAfQWmbPe2
 R8
 32
-R92
+R91
 !i10b 1
+R92
 R93
 R94
-R95
 !i113 1
 R13
 R14
@@ -554,19 +554,19 @@ R29
 R3
 R4
 R5
-Z96 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd
-Z97 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd
+Z95 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr.vhd
+Z96 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr.vhd
 l0
 L4
 VJ64Bn0^0_^0mUSU<ZOo591
 !s100 8^h72ccPiicFMoll6;?B^1
 R8
 32
-Z98 !s110 1416378527
+Z97 !s110 1416441146
 !i10b 1
-Z99 !s108 1416378527.500000
-Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd|
-Z101 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd|
+Z98 !s108 1416441146.168000
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr.vhd|
+Z100 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr.vhd|
 !i113 1
 R13
 R14
@@ -580,11 +580,11 @@ V_Uhmck]XK8N?fUm1<]knZ2
 !s100 [jSDjV[;ooEXI1fbj<kQH2
 R8
 32
-R98
+R97
 !i10b 1
+R98
 R99
 R100
-R101
 !i113 1
 R13
 R14
@@ -593,19 +593,19 @@ R29
 R3
 R4
 R5
-Z102 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd
-Z103 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd
+Z101 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr_a.vhd
+Z102 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr_a.vhd
 l0
 L4
 VdP=DD7z<d9h=O[o6XL5N11
 !s100 Ae06@YlEN>^ZBC[J]R^j?2
 R8
 32
-Z104 !s110 1416378529
+Z103 !s110 1416441147
 !i10b 1
-Z105 !s108 1416378528.950000
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd|
-Z107 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd|
+Z104 !s108 1416441147.492000
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr_a.vhd|
+Z106 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/dffr_a.vhd|
 !i113 1
 R13
 R14
@@ -619,11 +619,11 @@ VI62cMXNa9hMQ88?5;TBh:2
 !s100 18jIoW:5CWgj6bjeXK^2W3
 R8
 32
-R104
+R103
 !i10b 1
+R104
 R105
 R106
-R107
 !i113 1
 R13
 R14
@@ -631,21 +631,21 @@ Peecs361
 R2
 R3
 R4
-w1416380674
+w1416440833
 R5
-8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd
-FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd
+8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361.vhd
+FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361.vhd
 l0
 L8
 VE]agU:7_SQ2HY]6o<[OVi0
 !s100 NY@^3mEQh5hOKf3[jYRdm1
 R8
 32
-!s110 1416438889
+!s110 1416441123
 !i10b 1
-!s108 1416438888.553000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd|
-!s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd|
+!s108 1416441123.528000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361.vhd|
+!s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361.vhd|
 !i113 1
 R13
 R14
@@ -654,41 +654,41 @@ R3
 R4
 w1414537486
 R5
-8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd
-FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd
+8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361_gates.vhd
+FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361_gates.vhd
 l0
 L4
 VM1CcROhYlUJSWnY_f[iU?2
 !s100 F?g<zR]^;z15P_eT=MAaZ0
 R8
 32
-Z108 !s110 1416378576
+!s110 1416441191
 !i10b 1
-!s108 1416378576.481000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd|
-!s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd|
+!s108 1416441191.150000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361_gates.vhd|
+!s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361_gates.vhd|
 !i113 1
 R13
 R14
 Efulladder_1
-Z109 w1414526355
+Z107 w1414526355
 R2
 R3
 R4
 R5
-Z110 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd
-Z111 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd
+Z108 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_1.vhd
+Z109 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_1.vhd
 l0
 L5
 Vnnd6B`^F;DC]:KHCZIdb_0
 !s100 =:cYHX`lP54SWQ8EBSGFf3
 R8
 32
-R108
+Z110 !s110 1416441188
 !i10b 1
-Z112 !s108 1416378576.825000
-Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd|
-Z114 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd|
+Z111 !s108 1416441188.281000
+Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_1.vhd|
+Z113 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_1.vhd|
 !i113 1
 R13
 R14
@@ -703,11 +703,11 @@ VQhb5UACJ=P=@I7iDYYA262
 !s100 [JCIiHT5bYzH[TS0n>3Zf2
 R8
 32
-R108
+R110
 !i10b 1
+R111
 R112
 R113
-R114
 !i113 1
 R13
 R14
@@ -716,19 +716,19 @@ R29
 R3
 R4
 R5
-Z115 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd
-Z116 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd
+Z114 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_32.vhd
+Z115 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_32.vhd
 l0
 L4
 V>ReaF7L@IkV:Lf5;c1iGi1
 !s100 VUBWe9FBJWK;X=mWOQneA3
 R8
 32
-Z117 !s110 1416378530
+Z116 !s110 1416441148
 !i10b 1
-Z118 !s108 1416378530.352000
-Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd|
-Z120 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd|
+Z117 !s108 1416441148.841000
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_32.vhd|
+Z119 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_32.vhd|
 !i113 1
 R13
 R14
@@ -742,11 +742,11 @@ VmD2XY;Jb84I[Z0Aj_bS?H2
 !s100 2_@4>b7=<lh>L?l_cAQk80
 R8
 32
-R117
+R116
 !i10b 1
+R117
 R118
 R119
-R120
 !i113 1
 R13
 R14
@@ -756,19 +756,19 @@ R48
 R3
 R4
 R5
-Z121 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd
-Z122 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd
+Z120 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_n.vhd
+Z121 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_n.vhd
 l0
 L5
 V=VzBTYNjL?;I=L[:Z@Am83
 !s100 V6IE>^`E7L]cZ]31OjmKO0
 R8
 32
-Z123 !s110 1416378531
+Z122 !s110 1416441150
 !i10b 1
-Z124 !s108 1416378531.714000
-Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd|
-Z126 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd|
+Z123 !s108 1416441150.189000
+Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_n.vhd|
+Z125 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/fulladder_n.vhd|
 !i113 1
 R13
 R14
@@ -783,40 +783,40 @@ VQN:0h>GkjIIGbWkATMNnP2
 !s100 dO2Y]L5HUgBaSB^@IH`Tz1
 R8
 32
-R123
+R122
 !i10b 1
+R123
 R124
 R125
-R126
 !i113 1
 R13
 R14
 Efulladder_s_n
-Z127 w1416380098
+Z126 w1416380098
 R2
-Z128 DPx4 work 7 eecs361 0 22 6]kdZg2jV__e=V2adcWD]3
+R1
 R3
 R4
 R5
-Z129 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/fulladder_s_n.vhd
-Z130 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/fulladder_s_n.vhd
+Z127 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_s_n.vhd
+Z128 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_s_n.vhd
 l0
 L6
 V`>UO6h:>N`L8B27GJOUF`3
 !s100 7SXoKXH[I2GO7YB<K6eJ62
 R8
 32
-Z131 !s110 1416380457
+Z129 !s110 1416441187
 !i10b 1
-Z132 !s108 1416380457.788000
-Z133 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/fulladder_s_n.vhd|
-Z134 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/fulladder_s_n.vhd|
+Z130 !s108 1416441186.948000
+Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_s_n.vhd|
+Z132 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/fulladder_s_n.vhd|
 !i113 1
 R13
 R14
 Astructural
 R2
-R128
+R1
 R3
 R4
 DEx4 work 13 fulladder_s_n 0 22 `>UO6h:>N`L8B27GJOUF`3
@@ -826,11 +826,11 @@ VASzV`>`bm3Fl`I_afTY_=1
 !s100 7nXgn8LKSZT[O0z8H6g=Q1
 R8
 32
-R131
+R129
 !i10b 1
+R130
+R131
 R132
-R133
-R134
 !i113 1
 R13
 R14
@@ -841,19 +841,19 @@ R1
 R3
 R4
 R5
-Z135 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd
-Z136 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd
+Z133 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux.vhd
+Z134 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux.vhd
 l0
 L5
 VzB3mFn]^WO1Q5f;oa5<:i1
 !s100 R7SGh1UNzgRXkDgUzi0Dn0
 R8
 32
-Z137 !s110 1416378533
+Z135 !s110 1416441151
 !i10b 1
-Z138 !s108 1416378533.210000
-Z139 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd|
-Z140 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd|
+Z136 !s108 1416441151.526000
+Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux.vhd|
+Z138 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux.vhd|
 !i113 1
 R13
 R14
@@ -869,34 +869,34 @@ V>1PeESFaHClS=zBGFdF772
 !s100 TMbaX=C3aUF9Pl?TK_bl20
 R8
 32
-R137
+R135
 !i10b 1
+R136
+R137
 R138
-R139
-R140
 !i113 1
 R13
 R14
 Emux_1_4
-Z141 w1414526433
+Z139 w1414526433
 R2
 R1
 R3
 R4
 R5
-Z142 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd
-Z143 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd
+Z140 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_1_4.vhd
+Z141 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_1_4.vhd
 l0
 L5
 V:jhX<8eOb9:2?[LY_jjKc0
 !s100 R3[A3PZ=F`neQKa8n6b>91
 R8
 32
-Z144 !s110 1416378578
+Z142 !s110 1416441185
 !i10b 1
-Z145 !s108 1416378578.187000
-Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd|
-Z147 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd|
+Z143 !s108 1416441185.556000
+Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_1_4.vhd|
+Z145 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_1_4.vhd|
 !i113 1
 R13
 R14
@@ -912,11 +912,11 @@ ViJXH8G911Ch0Z`HVWX^L93
 !s100 B6gQ>EdM]h=g3fXPX4c673
 R8
 32
-R144
+R142
 !i10b 1
+R143
+R144
 R145
-R146
-R147
 !i113 1
 R13
 R14
@@ -927,19 +927,19 @@ R1
 R3
 R4
 R5
-Z148 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd
-Z149 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd
+Z146 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_32.vhd
+Z147 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_32.vhd
 l0
 L5
 VOlZhk[`?`GZQTV3Y4L@ZX0
 !s100 ciE_BzZP_7gaALUfNcf3V2
 R8
 32
-Z150 !s110 1416378534
+Z148 !s110 1416441152
 !i10b 1
-Z151 !s108 1416378534.707000
-Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd|
-Z153 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd|
+Z149 !s108 1416441152.886000
+Z150 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_32.vhd|
+Z151 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_32.vhd|
 !i113 1
 R13
 R14
@@ -955,11 +955,11 @@ V7UHP=BdYn]NVWnMkCOB[F3
 !s100 iiT]gRaJ0BGA@1c7lKGZ;1
 R8
 32
-R150
+R148
 !i10b 1
+R149
+R150
 R151
-R152
-R153
 !i113 1
 R13
 R14
@@ -968,19 +968,19 @@ R29
 R3
 R4
 R5
-Z154 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd
-Z155 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd
+Z152 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_n.vhd
+Z153 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_n.vhd
 l0
 L4
 V?KK90]`1?K3cYmaZ@2ZiU2
 !s100 DhH_dWUkhZScmPX0PShL>1
 R8
 32
-Z156 !s110 1416378536
+Z154 !s110 1416441154
 !i10b 1
-Z157 !s108 1416378536.119000
-Z158 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd|
-Z159 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd|
+Z155 !s108 1416441154.251000
+Z156 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_n.vhd|
+Z157 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux_n.vhd|
 !i113 1
 R13
 R14
@@ -994,34 +994,34 @@ Vc:nT1[O:OUd7C:kd0;RQm2
 !s100 VOPJAGmKhfQ>L9L:P_FXf0
 R8
 32
-R156
+R154
 !i10b 1
+R155
+R156
 R157
-R158
-R159
 !i113 1
 R13
 R14
 Emux_n_4
-Z160 w1414556494
+Z158 w1414556494
 R2
 R1
 R3
 R4
 R5
-Z161 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd
-Z162 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd
+Z159 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_n_4.vhd
+Z160 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_n_4.vhd
 l0
 L5
 VV4hFF:dn3SP6nnkX_RaYH3
 !s100 kk8hdBXG5Go;M]^n=f?WL3
 R8
 32
-Z163 !s110 1416378579
+Z161 !s110 1416441184
 !i10b 1
-Z164 !s108 1416378579.622000
-Z165 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd|
-Z166 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd|
+Z162 !s108 1416441184.175000
+Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_n_4.vhd|
+Z164 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/mux_n_4.vhd|
 !i113 1
 R13
 R14
@@ -1037,11 +1037,11 @@ Vagn9?]?>oYcRk9d:cQFT>3
 !s100 ?CQ;zbOVcoB=C:CYdjFT43
 R8
 32
-R163
+R161
 !i10b 1
+R162
+R163
 R164
-R165
-R166
 !i113 1
 R13
 R14
@@ -1050,19 +1050,19 @@ R29
 R3
 R4
 R5
-Z167 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd
-Z168 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd
+Z165 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate.vhd
+Z166 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate.vhd
 l0
 L5
 VUJRIU4Oo2bb833MR;8eeK0
 !s100 `;YoNjg98=RO3KEUJb?JH2
 R8
 32
-Z169 !s110 1416378537
+Z167 !s110 1416441155
 !i10b 1
-Z170 !s108 1416378537.534000
-Z171 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd|
-Z172 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd|
+Z168 !s108 1416441155.599000
+Z169 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate.vhd|
+Z170 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate.vhd|
 !i113 1
 R13
 R14
@@ -1076,11 +1076,11 @@ Vmc;dGB9PFB8Va]cJiKPnA3
 !s100 DdgXSJTenGYMFNYGk^j2^2
 R8
 32
-R169
+R167
 !i10b 1
+R168
+R169
 R170
-R171
-R172
 !i113 1
 R13
 R14
@@ -1089,19 +1089,19 @@ R29
 R3
 R4
 R5
-Z173 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd
-Z174 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd
+Z171 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_32.vhd
+Z172 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_32.vhd
 l0
 L5
 VQ7HWC=HJVfdNKlmLIkMma2
 !s100 d7`oU3cRhD_iz]OR?aJbM0
 R8
 32
-Z175 !s110 1416378539
+Z173 !s110 1416441157
 !i10b 1
-Z176 !s108 1416378538.949000
-Z177 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd|
-Z178 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd|
+Z174 !s108 1416441156.947000
+Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_32.vhd|
+Z176 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1115,11 +1115,11 @@ VK]`eXcoP?:P;fL`IZDg_33
 !s100 5L7`cY6bRPYMYkmEYAg871
 R8
 32
-R175
+R173
 !i10b 1
+R174
+R175
 R176
-R177
-R178
 !i113 1
 R13
 R14
@@ -1128,19 +1128,19 @@ R29
 R3
 R4
 R5
-Z179 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd
-Z180 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd
+Z177 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_n.vhd
+Z178 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_n.vhd
 l0
 L5
 Vd^AhAU01S^7Y4JlPiBl:g3
 !s100 LMidV?0i^0NCQXjDDfE0j1
 R8
 32
-Z181 !s110 1416378540
+Z179 !s110 1416441158
 !i10b 1
-Z182 !s108 1416378540.370000
-Z183 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd|
-Z184 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd|
+Z180 !s108 1416441158.320000
+Z181 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_n.vhd|
+Z182 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nand_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1154,11 +1154,11 @@ VhPSaT<<CzCS1C=bQ>Y:zY1
 !s100 5mzmEVJ8`Ol]kLAA1ADTS0
 R8
 32
-R181
+R179
 !i10b 1
+R180
+R181
 R182
-R183
-R184
 !i113 1
 R13
 R14
@@ -1167,19 +1167,19 @@ R29
 R3
 R4
 R5
-Z185 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd
-Z186 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd
+Z183 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate.vhd
+Z184 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate.vhd
 l0
 L5
 Vl4NcfXKNiThldYNcnP5;o2
 !s100 Uz[KW04m>JL2N=<Ae_26A3
 R8
 32
-Z187 !s110 1416378541
+Z185 !s110 1416441159
 !i10b 1
-Z188 !s108 1416378541.733000
-Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd|
-Z190 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd|
+Z186 !s108 1416441159.672000
+Z187 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate.vhd|
+Z188 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate.vhd|
 !i113 1
 R13
 R14
@@ -1193,11 +1193,11 @@ VKa[[7jgRMIb1_iK<QKz2R3
 !s100 kE2E`N:jBl`5f7h@CAkLc3
 R8
 32
-R187
+R185
 !i10b 1
+R186
+R187
 R188
-R189
-R190
 !i113 1
 R13
 R14
@@ -1206,19 +1206,19 @@ R29
 R3
 R4
 R5
-Z191 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd
-Z192 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd
+Z189 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_32.vhd
+Z190 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_32.vhd
 l0
 L5
 V]Ta:lVnBf>1l]Wn18fddR1
 !s100 3mdJRKLJ_1Z1ih<o1WC>A3
 R8
 32
-Z193 !s110 1416378543
+Z191 !s110 1416441161
 !i10b 1
-Z194 !s108 1416378543.132000
-Z195 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd|
-Z196 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd|
+Z192 !s108 1416441161.017000
+Z193 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_32.vhd|
+Z194 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1232,11 +1232,11 @@ VO2Pz=mOESO?_VkSnX;2[h1
 !s100 4C[N[o;dbNU?^;JAFz8P@0
 R8
 32
-R193
+R191
 !i10b 1
+R192
+R193
 R194
-R195
-R196
 !i113 1
 R13
 R14
@@ -1245,19 +1245,19 @@ R29
 R3
 R4
 R5
-Z197 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd
-Z198 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd
+Z195 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_n.vhd
+Z196 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_n.vhd
 l0
 L5
 V<g@BZYRAl27b0zBj]hAQA3
 !s100 WOgXHNaOaa3V@ZQR9[dBF2
 R8
 32
-Z199 !s110 1416378544
+Z197 !s110 1416441162
 !i10b 1
-Z200 !s108 1416378544.531000
-Z201 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd|
-Z202 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd|
+Z198 !s108 1416441162.333000
+Z199 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_n.vhd|
+Z200 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/nor_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1271,11 +1271,11 @@ VhDFW?hDGVTc>S8Vj5`kMU0
 !s100 LLY;[lESSHQFLXI0BM0Lk2
 R8
 32
-R199
+R197
 !i10b 1
+R198
+R199
 R200
-R201
-R202
 !i113 1
 R13
 R14
@@ -1284,19 +1284,19 @@ R29
 R3
 R4
 R5
-Z203 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd
-Z204 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd
+Z201 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate.vhd
+Z202 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate.vhd
 l0
 L5
 Va2jU0gU?ahMAOCzX>hcie3
 !s100 ZFL^eh?^CT8f=9?@;fY^P1
 R8
 32
-Z205 !s110 1416378546
+Z203 !s110 1416441163
 !i10b 1
-Z206 !s108 1416378545.933000
-Z207 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd|
-Z208 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd|
+Z204 !s108 1416441163.689000
+Z205 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate.vhd|
+Z206 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate.vhd|
 !i113 1
 R13
 R14
@@ -1310,11 +1310,11 @@ VSd>_hU>oSoTbK=><35n<J1
 !s100 0K4o_`::YhV<`CcAlY38V3
 R8
 32
-R205
+R203
 !i10b 1
+R204
+R205
 R206
-R207
-R208
 !i113 1
 R13
 R14
@@ -1323,19 +1323,19 @@ R29
 R3
 R4
 R5
-Z209 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd
-Z210 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd
+Z207 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_32.vhd
+Z208 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_32.vhd
 l0
 L5
 Vbc@1G6Pn;1QIPj9N?dX;R3
 !s100 MlQa>L3D?j3YTME?WDA^I3
 R8
 32
-Z211 !s110 1416378547
+Z209 !s110 1416441165
 !i10b 1
-Z212 !s108 1416378547.471000
-Z213 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd|
-Z214 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd|
+Z210 !s108 1416441165.050000
+Z211 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_32.vhd|
+Z212 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1349,11 +1349,11 @@ Vi3iP4D6`igl`ehm^d4^co2
 !s100 SZ]KSd]7=<``cT7UO3c^32
 R8
 32
-R211
+R209
 !i10b 1
+R210
+R211
 R212
-R213
-R214
 !i113 1
 R13
 R14
@@ -1362,19 +1362,19 @@ R29
 R3
 R4
 R5
-Z215 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd
-Z216 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd
+Z213 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_n.vhd
+Z214 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_n.vhd
 l0
 L5
 VkY>E^h@zmf?^JH:]<>5jN0
 !s100 IMo29cac8Wo2jk<h1@>Y41
 R8
 32
-Z217 !s110 1416378550
+Z215 !s110 1416441166
 !i10b 1
-Z218 !s108 1416378550.695000
-Z219 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd|
-Z220 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd|
+Z216 !s108 1416441166.422000
+Z217 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_n.vhd|
+Z218 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/not_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1388,11 +1388,11 @@ V[?@bjFlkW]?Eigeec4`<]1
 !s100 f1R?C4QOI1W16^[L00fF`1
 R8
 32
-R217
+R215
 !i10b 1
+R216
+R217
 R218
-R219
-R220
 !i113 1
 R13
 R14
@@ -1401,19 +1401,19 @@ R29
 R3
 R4
 R5
-Z221 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd
-Z222 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd
+Z219 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate.vhd
+Z220 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate.vhd
 l0
 L5
 VI0bn=1KP2N19:Qz72M5BR3
 !s100 P4NBKo^c]hz<z`LINQA5?3
 R8
 32
-Z223 !s110 1416378552
+Z221 !s110 1416441167
 !i10b 1
-Z224 !s108 1416378552.369000
-Z225 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd|
-Z226 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd|
+Z222 !s108 1416441167.779000
+Z223 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate.vhd|
+Z224 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate.vhd|
 !i113 1
 R13
 R14
@@ -1427,11 +1427,11 @@ VMWOz`KXoz4S7hV@cG3bY]1
 !s100 imjaYVkITBGK@1]KZ;:O?1
 R8
 32
-R223
+R221
 !i10b 1
+R222
+R223
 R224
-R225
-R226
 !i113 1
 R13
 R14
@@ -1440,19 +1440,19 @@ R29
 R3
 R4
 R5
-Z227 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd
-Z228 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd
+Z225 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_32.vhd
+Z226 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_32.vhd
 l0
 L5
 V62h?8Mlfl`WN<[W?cCkTI0
 !s100 XkkR6QF?Vl4ZJYEZjo;0l2
 R8
 32
-Z229 !s110 1416378553
+Z227 !s110 1416441169
 !i10b 1
-Z230 !s108 1416378553.780000
-Z231 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd|
-Z232 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd|
+Z228 !s108 1416441169.143000
+Z229 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_32.vhd|
+Z230 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1466,11 +1466,11 @@ Vl1M<aAZJ1D^S3_3^W_^IR3
 !s100 K:BE?onG;^0[1Z5dkfcRR0
 R8
 32
-R229
+R227
 !i10b 1
+R228
+R229
 R230
-R231
-R232
 !i113 1
 R13
 R14
@@ -1479,19 +1479,19 @@ R29
 R3
 R4
 R5
-Z233 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd
-Z234 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd
+Z231 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_n.vhd
+Z232 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_n.vhd
 l0
 L5
 Vzn[6N]nRC@T4X2TN[5l?_0
 !s100 Y[01iFT>714d^L[KJ4VM82
 R8
 32
-Z235 !s110 1416378555
+Z233 !s110 1416441170
 !i10b 1
-Z236 !s108 1416378555.177000
-Z237 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd|
-Z238 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd|
+Z234 !s108 1416441170.484000
+Z235 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_n.vhd|
+Z236 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/or_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1505,33 +1505,33 @@ V92IH<JT]B^;>eHZBo@=fg0
 !s100 X0T0eOJ7Mi7@HZjHoZO6:3
 R8
 32
-R235
+R233
 !i10b 1
+R234
+R235
 R236
-R237
-R238
 !i113 1
 R13
 R14
 Eor_gate_unary_n
-Z239 w1414537445
+Z237 w1414537445
 R2
 R3
 R4
 R5
-Z240 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd
-Z241 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd
+Z238 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/or_gate_unary_n.vhd
+Z239 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/or_gate_unary_n.vhd
 l0
 L5
 VS]kn1binoG>nG?@fCU]fk3
 !s100 lAifUTMjG4]59=<MWQMSZ0
 R8
 32
-Z242 !s110 1416378581
+Z240 !s110 1416441182
 !i10b 1
-Z243 !s108 1416378581.047000
-Z244 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd|
-Z245 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd|
+Z241 !s108 1416441182.791000
+Z242 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/or_gate_unary_n.vhd|
+Z243 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/or_gate_unary_n.vhd|
 !i113 1
 R13
 R14
@@ -1546,39 +1546,39 @@ V?K6zX8]W21JY3:69g;:dE2
 !s100 2QRzMPSXWFT2jiUMCW2nK0
 R8
 32
-R242
+R240
 !i10b 1
+R241
+R242
 R243
-R244
-R245
 !i113 1
 R13
 R14
 Eregister_32bit
-Z246 w1416439080
-Z247 DPx4 work 7 eecs361 0 22 E]agU:7_SQ2HY]6o<[OVi0
+Z244 w1416439080
+R1
 R2
 R3
 R4
 R5
-Z248 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd
-Z249 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd
+Z245 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/IFU.vhd
+Z246 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/IFU.vhd
 l0
 L6
 VfHiVS^Yaeg6Q6f3V1X6IG3
 !s100 7<2hHcMSDNM`E:DA6KAXV2
 R8
 32
-Z250 !s110 1416439093
+Z247 !s110 1416441125
 !i10b 1
-Z251 !s108 1416439093.436000
-Z252 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd|
-Z253 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd|
+Z248 !s108 1416441125.144000
+Z249 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/IFU.vhd|
+Z250 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/IFU.vhd|
 !i113 1
 R13
 R14
 Astructural
-R247
+R1
 R2
 R3
 R4
@@ -1589,34 +1589,34 @@ VWoM<>6`0DS@]jFS_VmJfz0
 !s100 @F>@8IWk<N=aQj9<APnRN0
 R8
 32
-R250
+R247
 !i10b 1
-R251
-R252
-R253
+R248
+R249
+R250
 !i113 1
 R13
 R14
 Eshifter_32
-Z254 w1414557725
+Z251 w1414557725
 R2
 R1
 R3
 R4
 R5
-Z255 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd
-Z256 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd
+Z252 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd
+Z253 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd
 l0
 L6
 V4dAWERSiRd6fWSL1P0A6U2
 !s100 UQhZUK^MD@dnUGK79k@=_0
 R8
 32
-Z257 !s110 1416378567
+Z254 !s110 1416441126
 !i10b 1
-Z258 !s108 1416378567.545000
-Z259 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd|
-Z260 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd|
+Z255 !s108 1416441126.489000
+Z256 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd|
+Z257 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd|
 !i113 1
 R13
 R14
@@ -1632,40 +1632,40 @@ VZQHYG2N5h:ZLAbVIoZ6`l1
 !s100 3XgR37c@6Xlm>G0Pi0j9j0
 R8
 32
-R257
+R254
 !i10b 1
-R258
-R259
-R260
+R255
+R256
+R257
 !i113 1
 R13
 R14
 Esignextender_n_m
-Z261 w1416380608
+Z258 w1416380608
 R2
-R128
+R1
 R3
 R4
 R5
-Z262 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/signextender_n_m.vhd
-Z263 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/signextender_n_m.vhd
+Z259 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd
+Z260 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd
 l0
 L6
 V:RJRKkCN;j88HP[:5WNX[1
 !s100 DE[<n1JDn5SGojLNl`C4L2
 R8
 32
-Z264 !s110 1416380613
+Z261 !s110 1416441189
 !i10b 1
-Z265 !s108 1416380612.946000
-Z266 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/signextender_n_m.vhd|
-Z267 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/signextender_n_m.vhd|
+Z262 !s108 1416441189.777000
+Z263 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd|
+Z264 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd|
 !i113 1
 R13
 R14
 Astructural
 R2
-R128
+R1
 R3
 R4
 DEx4 work 16 signextender_n_m 0 22 :RJRKkCN;j88HP[:5WNX[1
@@ -1675,44 +1675,44 @@ V60UaGaV30<N<T]U3RM4h=2
 !s100 RiS3?Lg=XL>NL_NRTz4>^3
 R8
 32
-R264
+R261
 !i10b 1
-R265
-R266
-R267
+R262
+R263
+R264
 !i113 1
 R13
 R14
 Esram
 R29
 R48
+R74
 R75
 R76
-R77
 R3
 R4
 R5
-Z268 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd
-Z269 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd
+Z265 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/sram.vhd
+Z266 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/sram.vhd
 l0
 L12
 VjMAm^bfJIg7Ekk9RIXHeS0
 !s100 4U[]`8DWS[aYZMb6m^0<A1
 R8
 32
-Z270 !s110 1416378556
+Z267 !s110 1416441171
 !i10b 1
-Z271 !s108 1416378556.635000
-Z272 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd|
-Z273 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd|
+Z268 !s108 1416441171.800000
+Z269 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/sram.vhd|
+Z270 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/sram.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R48
+R74
 R75
 R76
-R77
 R3
 R4
 DEx4 work 4 sram 0 22 jMAm^bfJIg7Ekk9RIXHeS0
@@ -1722,44 +1722,44 @@ V=TzGLV@Gzj]bf_83=R^l^3
 !s100 1UZ=:h7PhO2;@=]V1B[GV1
 R8
 32
-R270
+R267
 !i10b 1
-R271
-R272
-R273
+R268
+R269
+R270
 !i113 1
 R13
 R14
 Esyncram
 R29
 R48
+R74
 R75
 R76
-R77
 R3
 R4
 R5
-Z274 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd
-Z275 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd
+Z271 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/syncram.vhd
+Z272 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/syncram.vhd
 l0
 L12
 V9SF6a]cFn[EkodD;4OT_h0
 !s100 aFnLlL1@m415d6em?MG^21
 R8
 32
-Z276 !s110 1416378558
+Z273 !s110 1416441173
 !i10b 1
-Z277 !s108 1416378558.113000
-Z278 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd|
-Z279 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd|
+Z274 !s108 1416441173.292000
+Z275 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/syncram.vhd|
+Z276 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/syncram.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R48
+R74
 R75
 R76
-R77
 R3
 R4
 DEx4 work 7 syncram 0 22 9SF6a]cFn[EkodD;4OT_h0
@@ -1769,11 +1769,11 @@ V`V1W?_S89^YMz7nNZIMVB1
 !s100 W:<cVUTVPgIfz60fOOgQ20
 R8
 32
-R276
+R273
 !i10b 1
-R277
-R278
-R279
+R274
+R275
+R276
 !i113 1
 R13
 R14
@@ -1782,19 +1782,19 @@ R29
 R3
 R4
 R5
-Z280 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd
-Z281 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd
+Z277 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate.vhd
+Z278 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate.vhd
 l0
 L5
 V64cWg<O7h^DkP_G;TSfFb3
 !s100 VMF9C>DP[5;VOiN5[aESd3
 R8
 32
-Z282 !s110 1416378559
+Z279 !s110 1416441174
 !i10b 1
-Z283 !s108 1416378559.620000
-Z284 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd|
-Z285 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd|
+Z280 !s108 1416441174.713000
+Z281 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate.vhd|
+Z282 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate.vhd|
 !i113 1
 R13
 R14
@@ -1808,11 +1808,11 @@ VQi:Iak;D@9C9]:NzK;74n0
 !s100 ]_>oDFZN:PJ[HJie3IcK81
 R8
 32
-R282
+R279
 !i10b 1
-R283
-R284
-R285
+R280
+R281
+R282
 !i113 1
 R13
 R14
@@ -1821,19 +1821,19 @@ R29
 R3
 R4
 R5
-Z286 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd
-Z287 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd
+Z283 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_32.vhd
+Z284 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_32.vhd
 l0
 L5
 Vb;[YHU0[33T3iW>0faTEM1
 !s100 7TK64^z14nVXPK]cWgS3=0
 R8
 32
-Z288 !s110 1416378561
+Z285 !s110 1416441176
 !i10b 1
-Z289 !s108 1416378561.114000
-Z290 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd|
-Z291 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd|
+Z286 !s108 1416441176.073000
+Z287 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_32.vhd|
+Z288 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1847,11 +1847,11 @@ Vj6oobg=Md_S?TNUXnEgQS1
 !s100 l]IKGhY:hL2aDUPV;>SB?0
 R8
 32
-R288
+R285
 !i10b 1
-R289
-R290
-R291
+R286
+R287
+R288
 !i113 1
 R13
 R14
@@ -1860,19 +1860,19 @@ R29
 R3
 R4
 R5
-Z292 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd
-Z293 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd
+Z289 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_n.vhd
+Z290 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_n.vhd
 l0
 L5
 V4EA6^j0IRIDB16NETgY=Y2
 !s100 UCY45ZALOU6@I^4jz3eW33
 R8
 32
-Z294 !s110 1416378563
+Z291 !s110 1416441177
 !i10b 1
-Z295 !s108 1416378563.353000
-Z296 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd|
-Z297 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd|
+Z292 !s108 1416441177.382000
+Z293 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_n.vhd|
+Z294 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xnor_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1886,11 +1886,11 @@ VN80JhF1hQ^[dBKNd[M=fT3
 !s100 dDail5hL?0zna@N:=D@8b2
 R8
 32
-R294
+R291
 !i10b 1
-R295
-R296
-R297
+R292
+R293
+R294
 !i113 1
 R13
 R14
@@ -1899,19 +1899,19 @@ R29
 R3
 R4
 R5
-Z298 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd
-Z299 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd
+Z295 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate.vhd
+Z296 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate.vhd
 l0
 L5
 V>:0of;3?<Db:J2P]bLRRE1
 !s100 K_6H3f?zAK@4`dnkC2j[K2
 R8
 32
-Z300 !s110 1416378564
+Z297 !s110 1416441178
 !i10b 1
-Z301 !s108 1416378564.767000
-Z302 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd|
-Z303 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd|
+Z298 !s108 1416441178.742000
+Z299 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate.vhd|
+Z300 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate.vhd|
 !i113 1
 R13
 R14
@@ -1925,11 +1925,11 @@ V?CjQI0YRXW2fDDWch@MCZ2
 !s100 e;mL^F4ENl;O2f_Ae@3MU2
 R8
 32
-R300
+R297
 !i10b 1
-R301
-R302
-R303
+R298
+R299
+R300
 !i113 1
 R13
 R14
@@ -1938,19 +1938,19 @@ R29
 R3
 R4
 R5
-Z304 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd
-Z305 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd
+Z301 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_32.vhd
+Z302 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_32.vhd
 l0
 L5
 VGbk[]dcIS]^URh4W`1n2k2
 !s100 IY:zIdH0EdL@PUV4ISe5M0
 R8
 32
-Z306 !s110 1416378566
+Z303 !s110 1416441180
 !i10b 1
-Z307 !s108 1416378566.156000
-Z308 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd|
-Z309 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd|
+Z304 !s108 1416441180.111000
+Z305 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_32.vhd|
+Z306 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1964,11 +1964,11 @@ VzI^J^MZ^38iCSSjiao;;]1
 !s100 [@^nmEj?djZ;8jS41JD]@3
 R8
 32
-R306
+R303
 !i10b 1
-R307
-R308
-R309
+R304
+R305
+R306
 !i113 1
 R13
 R14
@@ -1977,19 +1977,19 @@ R29
 R3
 R4
 R5
-Z310 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd
-Z311 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd
+Z307 8C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_n.vhd
+Z308 FC:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_n.vhd
 l0
 L5
 VM9]8CicZMP;K]3l`m2zdS3
 !s100 LPoPXbzH8=CBB]^6S5Unf1
 R8
 32
-Z312 !s110 1416378514
+Z309 !s110 1416441181
 !i10b 1
-Z313 !s108 1416378514.482000
-Z314 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd|
-Z315 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd|
+Z310 !s108 1416441181.463000
+Z311 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_n.vhd|
+Z312 !s107 C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/xor_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -2003,11 +2003,11 @@ V_NK2YA8924hnGVNBI=DYK3
 !s100 29oXRe`]fm02Bce^Do[3m2
 R8
 32
-R312
+R309
 !i10b 1
-R313
-R314
-R315
+R310
+R311
+R312
 !i113 1
 R13
 R14
