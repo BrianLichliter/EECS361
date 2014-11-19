@@ -1,284 +1,1167 @@
-/home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+{{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:25 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity xor_gate
--- Compiling architecture dataflow of xor_gate
+-- Compiling entity xnor_gate
+-- Compiling architecture dataflow of xnor_gate
+End time: 00:27:26 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/or_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/or_gate.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:02 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fulladder_n
+-- Compiling architecture behavioral of fulladder_n
+End time: 00:27:03 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:35 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux_1_4
+-- Compiling architecture structural of mux_1_4
+End time: 00:27:36 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_32.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:43 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_32.vhd(5): near "GATE": expecting IDENTIFIER
+End time: 23:07:43 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {8.0 9.0} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity or_gate
 -- Compiling architecture dataflow of or_gate
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dec_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dec_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity dec_n
--- Compiling architecture behavioral of dec_n
+-- Compiling entity xor_gate
+-- Compiling architecture dataflow of xor_gate
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dffr.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dffr.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/signextender_n_m.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/signextender_n_m.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity dffr
--- Compiling architecture behavioral of dffr
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity signextender_n_m
+-- Compiling architecture structural of signextender_n_m
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/eecs361.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/eecs361.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/eecs361.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/eecs361.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:34 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/eecs361.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package eecs361_gates
 -- Compiling package eecs361
+End time: 23:07:34 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:45 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity xnor_gate_32
--- Compiling architecture dataflow of xnor_gate_32
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/sram.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/sram.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Loading package textio
--- Loading package std_logic_textio
--- Loading package numeric_std
--- Compiling entity sram
--- Compiling architecture behavioral of sram
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity nor_gate_32
--- Compiling architecture dataflow of nor_gate_32
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/and_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/and_gate.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity and_gate
--- Compiling architecture dataflow of and_gate
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/cache_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/cache_test.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Loading package numeric_std
 -- Loading package eecs361_gates
 -- Loading package eecs361
--- Compiling entity cache_test
--- Compiling architecture mix of cache_test
+-- Compiling entity shifter_32
+-- Compiling architecture structural of shifter_32
+End time: 00:27:47 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/cmp_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/cmp_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/eecs361_gates.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/eecs361_gates.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:00 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/eecs361_gates.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity cmp_n
--- Compiling architecture behavioral of cmp_n
+-- Compiling package eecs361_gates
+End time: 23:07:00 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/not_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/not_gate_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity not_gate_32
--- Compiling architecture dataflow of not_gate_32
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity nand_gate_32
--- Compiling architecture dataflow of nand_gate_32
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/or_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/or_gate_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity or_gate_n
--- Compiling architecture dataflow of or_gate_n
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity xor_gate_n
 -- Compiling architecture dataflow of xor_gate_n
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/fulladder_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/fulladder_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity fulladder_32
--- Compiling architecture behavioral of fulladder_32
+-- Compiling entity or_gate_n
+-- Compiling architecture dataflow of or_gate_n
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nor_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nor_gate.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:38 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity nor_gate
--- Compiling architecture dataflow of nor_gate
+-- Loading package eecs361_gates
+-- Compiling entity or_gate_unary_n
+-- Compiling architecture structural of or_gate_unary_n
+End time: 00:27:39 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/or_gate_unary_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling entity or_gate_unary_n
+-- Compiling architecture structural of or_gate_unary_n
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity xnor_gate
 -- Compiling architecture dataflow of xnor_gate
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dff.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dff.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity dff
--- Compiling architecture behavioral of dff
+-- Compiling entity nor_gate
+-- Compiling architecture dataflow of nor_gate
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/and_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/and_gate_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:49 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity and_gate_n
--- Compiling architecture dataflow of and_gate_n
+-- Compiling entity and_gate_32
+-- Compiling architecture dataflow of and_gate_32
+End time: 00:26:50 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nand_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nand_gate.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:04 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity nand_gate
--- Compiling architecture dataflow of nand_gate
+-- Compiling entity mux_n
+-- Compiling architecture behavioral of mux_n
+End time: 00:27:05 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/not_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/not_gate.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:14 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity not_gate
 -- Compiling architecture dataflow of not_gate
+End time: 00:27:15 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dffr_a.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/dffr_a.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity dffr_a
 -- Compiling architecture behavioral of dffr_a
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/mux.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/mux.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:46 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity xor_gate_n
+-- Compiling architecture dataflow of xor_gate_n
+End time: 00:26:47 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:53 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Compiling entity csram
+-- Compiling architecture behavioral of csram
+End time: 00:26:54 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:08 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate_n
+-- Compiling architecture dataflow of nand_gate_n
+End time: 00:27:09 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fulladder_n
+-- Compiling architecture behavioral of fulladder_n
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity dec_n
+-- Compiling architecture behavioral of dec_n
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:59 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr_a.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dffr_a
+-- Compiling architecture behavioral of dffr_a
+End time: 00:27:00 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:51 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity comparator_1
+-- Compiling architecture structural of comparator_1
+End time: 00:27:52 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity xnor_gate_32
+-- Compiling architecture dataflow of xnor_gate_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Compiling entity sram
+-- Compiling architecture behavioral of sram
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nor_gate_32
+-- Compiling architecture dataflow of nor_gate_32
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:41 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity cache_test
+-- Compiling architecture mix of cache_test
+End time: 00:27:42 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity register_32bit
+-- Compiling architecture structural of register_32bit
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd(38): (vcom-1141) Identifier "sign_extender_n_m" does not identify a component declaration.
+
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd(53): (vcom-1272) Length of expected is 32; length of actual is 3.
+
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/IFU.vhd(59): VHDL Compiler exiting
+
+} {10.0 11.0 12.0 13.0 14.0 15.0} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/shifter_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity shifter_32
+-- Compiling architecture structural of shifter_32
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:37 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux_n_4
+-- Compiling architecture structural of mux_n_4
+End time: 00:27:38 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity not_gate_32
+-- Compiling architecture dataflow of not_gate_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cmp_n
+-- Compiling architecture behavioral of cmp_n
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:07 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate_32
+-- Compiling architecture dataflow of nand_gate_32
+End time: 00:27:08 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:31 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity xor_gate_32
+-- Compiling architecture dataflow of xor_gate_32
+End time: 00:27:32 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:44 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux_32
+-- Compiling architecture structural of mux_32
+End time: 00:27:45 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fulladder_32
+-- Compiling architecture behavioral of fulladder_32
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:00 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/fulladder_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fulladder_32
+-- Compiling architecture behavioral of fulladder_32
+End time: 00:27:02 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package eecs361_gates
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity and_gate_n
+-- Compiling architecture dataflow of and_gate_n
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:56 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dff
+-- Compiling architecture behavioral of dff
+End time: 00:26:57 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/register_32bit.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/register_32bit.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:39 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/register_32bit.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity register_32bit
+-- Compiling architecture structural of register_32bit
+End time: 00:27:41 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:50 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity ALU_32
+-- Compiling architecture structural of ALU_32
+End time: 00:27:51 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity not_gate
+-- Compiling architecture dataflow of not_gate
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:18 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity or_gate
+-- Compiling architecture dataflow of or_gate
+End time: 00:27:19 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_n.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:43 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template_n.vhd(5): near "GATE": expecting IDENTIFIER
+End time: 23:07:43 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {8.0 9.0} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:42 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux
+-- Compiling architecture structural of mux
+End time: 00:27:44 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package eecs361_gates
 -- Loading package eecs361
 -- Compiling entity mux
 -- Compiling architecture structural of mux
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_32.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:43 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_32.vhd(5): near "GATE": expecting IDENTIFIER
+End time: 23:07:43 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {8.0 9.0} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:11 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nor_gate_32
+-- Compiling architecture dataflow of nor_gate_32
+End time: 00:27:12 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:52 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cmp_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cmp_n
+-- Compiling architecture behavioral of cmp_n
+End time: 00:26:53 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:33 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling package eecs361
+End time: 00:27:33 on Nov 19,2014, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity not_gate_n
+-- Compiling architecture dataflow of not_gate_n
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling entity fulladder_1
+-- Compiling architecture structural of fulladder_1
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity and_gate_32
+-- Compiling architecture dataflow of and_gate_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity comparator_32
+-- Compiling architecture structural of comparator_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity ALU_32
+-- Compiling architecture structural of ALU_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dffr
+-- Compiling architecture behavioral of dffr
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/fulladder_s_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/fulladder_s_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity fulladder_s_n
+-- Compiling architecture structural of fulladder_s_n
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/cache_test.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity cache_test
+-- Compiling architecture mix of cache_test
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_n.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:42 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template_n.vhd(5): near "GATE": expecting IDENTIFIER
+End time: 23:07:42 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {8.0 9.0} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:12 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nor_gate_n
+-- Compiling architecture dataflow of nor_gate_n
+End time: 00:27:14 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:24 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Compiling entity syncram
+-- Compiling architecture behavioral of syncram
+End time: 00:27:25 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate_32
+-- Compiling architecture dataflow of nand_gate_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity alu
+-- Compiling architecture structural of alu
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_n_4.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux_n_4
+-- Compiling architecture structural of mux_n_4
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:17 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity not_gate_n
+-- Compiling architecture dataflow of not_gate_n
+End time: 00:27:18 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:43 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/unary_operator_gate_template.vhd(5): near "GATE": expecting IDENTIFIER
+End time: 23:07:43 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {8.0 9.0} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:09 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nor_gate
+-- Compiling architecture dataflow of nor_gate
+End time: 00:27:11 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dff.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dff
+-- Compiling architecture behavioral of dff
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate
+-- Compiling architecture dataflow of nand_gate
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nor_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity nor_gate_n
 -- Compiling architecture dataflow of nor_gate_n
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity xnor_gate_n
 -- Compiling architecture dataflow of xnor_gate_n
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/eecs361_gates.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/eecs361_gates.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:15 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/not_gate_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling package eecs361_gates
+-- Compiling entity not_gate_32
+-- Compiling architecture dataflow of not_gate_32
+End time: 00:27:16 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/or_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/or_gate_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity or_gate_32
--- Compiling architecture dataflow of or_gate_32
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/syncram.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/syncram.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/syncram.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Loading package textio
+-- Loading package STD_LOGIC_UNSIGNED
 -- Loading package std_logic_textio
--- Loading package numeric_std
+-- Loading package NUMERIC_STD
 -- Compiling entity syncram
 -- Compiling architecture behavioral of syncram
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity xor_gate_32
--- Compiling architecture dataflow of xor_gate_32
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity ALU_1
+-- Compiling architecture structural of ALU_1
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/csram.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/csram.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:48 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/ALU_1.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package std_logic_unsigned
--- Loading package textio
--- Loading package std_logic_textio
--- Loading package numeric_std
--- Compiling entity csram
--- Compiling architecture behavioral of csram
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity ALU_1
+-- Compiling architecture structural of ALU_1
+End time: 00:27:49 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/mux_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/mux_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\deiden26\Dropbox\School\EECS 361 (Architecture)\Projects\Group Project\Resources_Project1\ALU\eecs361.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling package eecs361
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package eecs361_gates
 -- Loading package eecs361
 -- Compiling entity mux_32
 -- Compiling architecture structural of mux_32
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity nand_gate_n
 -- Compiling architecture dataflow of nand_gate_n
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/not_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/not_gate_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity not_gate_n
--- Compiling architecture dataflow of not_gate_n
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/and_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/and_gate_32.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity and_gate_32
--- Compiling architecture dataflow of and_gate_32
-
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/mux_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/mux_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/mux_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity mux_n
 -- Compiling architecture behavioral of mux_n
 
-} {} {}} /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/fulladder_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/maa935/361/EECS361/Resources_Project1/eecs361lib/lib/fulladder_n.vhd
-Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
--- Loading package standard
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:53 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity fulladder_n
--- Compiling architecture behavioral of fulladder_n
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity comparator_32
+-- Compiling architecture structural of comparator_32
+End time: 00:27:54 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:50 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity and_gate_n
+-- Compiling architecture dataflow of and_gate_n
+End time: 00:26:51 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:33 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/eecs361_gates.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package eecs361_gates
+End time: 00:27:34 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:29 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity xor_gate
+-- Compiling architecture dataflow of xor_gate
+End time: 00:27:30 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:05 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/nand_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate
+-- Compiling architecture dataflow of nand_gate
+End time: 00:27:06 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:26 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity xnor_gate_32
+-- Compiling architecture dataflow of xnor_gate_32
+End time: 00:27:28 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:22 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/sram.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Compiling entity sram
+-- Compiling architecture behavioral of sram
+End time: 00:27:23 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:47 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity and_gate
+-- Compiling architecture dataflow of and_gate
+End time: 00:26:48 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/and_gate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity and_gate
+-- Compiling architecture dataflow of and_gate
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:47 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/alu.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity alu
+-- Compiling architecture structural of alu
+End time: 00:27:48 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:21 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity or_gate_n
+-- Compiling architecture dataflow of or_gate_n
+End time: 00:27:22 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:34 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/fulladder_1.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling entity fulladder_1
+-- Compiling architecture structural of fulladder_1
+End time: 00:27:35 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/register_32bit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/register_32bit.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity register_32bit
+-- Compiling architecture structural of register_32bit
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux_1_4
+-- Compiling architecture structural of mux_1_4
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:55 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dec_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity dec_n
+-- Compiling architecture behavioral of dec_n
+End time: 00:26:56 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:26:58 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/dffr.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dffr
+-- Compiling architecture behavioral of dffr
+End time: 00:26:59 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/comparator_1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity comparator_1
+-- Compiling architecture structural of comparator_1
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:28 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xnor_gate_n.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity xnor_gate_n
+-- Compiling architecture dataflow of xnor_gate_n
+End time: 00:27:29 on Nov 19,2014, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 23:07:42 on Nov 18,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/binary_operator_gate_template.vhd(5): near "GATE": expecting IDENTIFIER
+End time: 23:07:42 on Nov 18,2014, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {8.0 9.0} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+Start time: 00:27:19 on Nov 19,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity or_gate_32
+-- Compiling architecture dataflow of or_gate_32
+End time: 00:27:21 on Nov 19,2014, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/or_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity or_gate_32
+-- Compiling architecture dataflow of or_gate_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/xor_gate_32.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity xor_gate_32
+-- Compiling architecture dataflow of xor_gate_32
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/eecs361lib/lib/csram.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Compiling entity csram
+-- Compiling architecture behavioral of csram
 
 } {} {}}

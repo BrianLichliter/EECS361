@@ -189,6 +189,18 @@ package eecs361 is
     );
   end component fulladder_1;
 
+  -- n-bit full adder.
+  component fulladder_s_n
+    generic (
+      n : integer
+    );
+    port (
+      A    : in std_logic_vector(n-1 downto 0);
+      B    : in std_logic_vector(n-1 downto 0);
+      R    : in std_logic_vector(n-1 downto 0)
+    );
+  end component fulladder_s_n;
+
   -- Cache tester.
   component cache_test
     generic (
@@ -288,4 +300,15 @@ package eecs361 is
       R : out std_logic_vector(31 downto 0)
     );
   end component shifter_32;
+
+  component signextender_n_m
+    generic (
+      n : integer;
+      m : integer
+    );
+    port (
+      A    : in std_logic_vector(n-1 downto 0);
+      R    : in std_logic_vector(m-1 downto 0)
+    );
+  end component signextender_n_m;
 end;
