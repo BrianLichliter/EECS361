@@ -20,7 +20,7 @@ architecture structural of cpu is
 	signal regWr		: std_logic;
 	signal regDst		: std_logic;
 	signal ALUsrc		: std_logic;
-	signal ALUctl		: std_logic;
+	signal ALUctl		: std_logic_vector(3 downto 0);
 	signal memWr		: std_logic;
 	signal memRd		: std_logic;
 	signal memToReg		: std_logic;
@@ -40,7 +40,7 @@ begin
 	IFU : IFU generic map (mem=>instMem) port map (clock=>clock, branch=>branch, zero=>zero, inst=>inst);
 
 	-- Control
-	ctrl_m : control_m port map (op=>inst(31 downto 26), regWr=>regWr, regDst=>regDst, ALUsrc=>ALUsrc, ALUctl=>ALUctl, memWr=>memWr, memRd=>memRd, memToReg=>memToReg, branch=>branch);
+	ctrl : control port map (opcode=>inst(31 downto 26), func=>inst(5 downto 0), ALUCtr=>ALUctl, regDst=>regDst, ALUSrc=>ALUsrc, memtoReg=>memToReg, regWrite=>regWr, memWrite=>memWr, memRead=>memRd, branch=>branch);
 
 	-- Chose write register (0:Rt, 1:Rd)
 	mux_rw : mux_n generic map (n=>5) port map (sel=>regDst, src0=>inst(25 downto 21), src1=>inst(15 downto 11), z=>Rw);
