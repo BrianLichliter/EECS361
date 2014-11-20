@@ -5,11 +5,11 @@ use work.eecs361.all;
 
 entity cpu is
 	generic (
-		instMem		: string;
-		dataMem		: string
+		mem		: string
 	);
 	port (
-		clock		: in std_logic
+		clock		: in std_logic;
+		reset		: in std_logic
 	);
 end cpu;
 
@@ -37,7 +37,7 @@ architecture structural of cpu is
 begin
 
 	-- IFU
-	IFU : IFU generic map (mem=>instMem) port map (clock=>clock, branch=>branch, zero=>zero, inst=>inst);
+	IFU : IFU generic map (mem=>instMem) port map (clock=>clock, reset=>reset, branch=>branch, zero=>zero, inst=>inst);
 
 	-- Control
 	ctrl : control port map (opcode=>inst(31 downto 26), func=>inst(5 downto 0), ALUCtr=>ALUctl, regDst=>regDst, ALUSrc=>ALUsrc, memtoReg=>memToReg, regWrite=>regWr, memWrite=>memWr, memRead=>memRd, branch=>branch);
@@ -57,8 +57,8 @@ begin
 	-- ALU
 	alu : alu port map (ctrl=>ALUctl, A=>busA, B=>imm_or_B, cout=>open, ovf=>open, ze=>zero, R=>ALU_out);
 
-	-- Data Memory (probably needs to be wrapped in a clock)
-	dataMem: sram generic map (mem_file => dataMem) port map (cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
+	-- Data Memory
+	dataMem: syncram generic map (mem_file=>mem) port map (clk=>clock, cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
 
 	-- Mux ALU and memory output (0:ALU_out, 1:mem_out)
 	mux_ALU_mem : mux_n generic map (n=>32) port map (sel=>memToReg, src0=>ALU_out, src1=>mem_out, z=>busW);

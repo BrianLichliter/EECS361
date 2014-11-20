@@ -3,21 +3,23 @@ use ieee.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
 
-entity register_32bit is
+entity IFU is
 	generic (
 		mem	: string
 	);
 	port (
 		clock	: in std_logic;
+		reset	: in std_logic;
 		branch	: in std_logic;
 		zero	: in std_logic;
 		inst	: inout std_logic_vector(31 downto 0)
 	);
-end register_32bit;
+end IFU;
 
-architecture structural of register_32bit is
+architecture structural of IFU is
 	signal PC_ff_in		: std_logic_vector(29 downto 0);
 	signal PC_ff_out	: std_logic_vector(29 downto 0);
+	signal PC_30		: std_logic_vector(29 downto 0);
 	signal PC_plus_4	: std_logic_vector(29 downto 0);
 	signal imm_16_ext	: std_logic_vector(29 downto 0);
 	signal PC_plus_imm	: std_logic_vector(29 downto 0);
@@ -32,8 +34,11 @@ begin
 		dff_PC : dff port map (clk=>clock, d=>PC_ff_in(i),q=>PC_ff_out(i));
 	end generate gen_ff;
 
+	-- Chose the output of the PC_ff or the start adress (if reset is 1)
+	mux_res : mux_n generic map (n=>30) port map (sel=>reset, src0=>PC_ff_out, src1=>"100000000000000001000", z=>PC_30);
+
 	-- Add 4 to PC
-	add_4_PC : fulladder_s_n generic map (n=> 30) port map (A=>PC_ff_out, B=>"000000000000000000000000000001", R=>PC_plus_4);
+	add_4_PC : fulladder_s_n generic map (n=> 30) port map (A=>PC_30, B=>"000000000000000000000000000001", R=>PC_plus_4);
 
 	-- Sign extend Imm16
 	ext_imm : signextender_n_m generic map (n=>16, m=>30) port map (A=>imm16, R=>imm_16_ext);
