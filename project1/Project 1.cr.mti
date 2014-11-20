@@ -18,18 +18,17 @@ Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 
 -- Compiling entity not_gate_n
 -- Compiling architecture dataflow of not_gate_n
 
-} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd}
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package eecs361_gates
 -- Loading package eecs361
-** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd(4): (vcom-1195) Cannot find expanded name "eecs361_gates.or_gate_unary_n".
+-- Compiling entity shifter_32
+-- Compiling architecture structural of shifter_32
 
-** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/shifter_32.vhd(6): VHDL Compiler exiting
-
-} {8.0 9.0 10.0 11.0} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd}
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
 Start time: 00:27:35 on Nov 19,2014
 vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/Resources_Project1/ALU/mux_1_4.vhd 
@@ -353,6 +352,13 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/Sc
 -- Compiling architecture dataflow of xor_gate
 End time: 17:43:19 on Nov 19,2014, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361_gates.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Library Files/eecs361_gates.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package eecs361_gates
 
 } {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Provided Components/mux.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
@@ -1483,7 +1489,7 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/Sc
 End time: 00:26:51 on Nov 19,2014, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0
 
-} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd}
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -1492,11 +1498,8 @@ Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 
 -- Loading package eecs361
 -- Compiling entity alu
 -- Compiling architecture structural of alu
-** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd(33): (vcom-1141) Identifier "or_gate_unary_n" does not identify a component declaration.
 
-** Error: C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Major Components/ALU/alu.vhd(36): VHDL Compiler exiting
-
-} {10.0 11.0 12.0 13.0} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd}
+} {} {}} {{C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
 Start time: 17:43:27 on Nov 19,2014
 vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group Project/project1/Reusable Components/signextender_n_m.vhd 
