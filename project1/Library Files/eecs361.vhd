@@ -311,4 +311,28 @@ package eecs361 is
       R    : in std_logic_vector(m-1 downto 0)
     );
   end component signextender_n_m;
+
+  component IFU
+    generic (
+      mem : string
+    );
+    port (
+      clock   : in std_logic;
+      reset   : in std_logic;
+      branch  : in std_logic;
+      zero    : in std_logic;
+      inst    : inout std_logic_vector(31 downto 0)
+    );
+  end component IFU;
+
+  component cpu
+    generic (
+      mem : string
+    );
+    port (
+      clock   : in std_logic;
+      reset   : in std_logic
+    );
+  end component cpu;
+
 end;
