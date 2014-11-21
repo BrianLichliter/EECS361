@@ -4,14 +4,14 @@ use work.eecs361_gates.all;
 
 entity mainControl is 
     port ( 
-        opcode        : in  std_logic_vector(5 downto 0);
+        opcode    : in  std_logic_vector(5 downto 0);
         ALUOp     : out std_logic_vector(1 downto 0);
         regDst    : out std_logic;
         ALUSrc    : out std_logic;
         memtoReg  : out std_logic;
         regWrite  : out std_logic;
         memWrite  : out std_logic;
-		  memRead	: out std_logic;
+		memRead	  : out std_logic;
         branch    : out std_logic
     );
 end mainControl;
@@ -20,32 +20,32 @@ architecture structural of mainControl is
 
 	component whichOp is
 		port ( 
-			opcode   : in  std_logic_vector(5 downto 0);
+			opcode  : in  std_logic_vector(5 downto 0);
 			RtypeOp	: out std_logic; 
 			AddiOp 	: out std_logic; 
 			BeqOp 	: out std_logic;
-			BneOp	   : out std_logic;
-			LwOp 		: out std_logic;  
+			BneOp	: out std_logic;
+			LwOp    : out std_logic;  
 			SwOp  	: out std_logic
 		);
 	end component whichOp;
-
-   signal RtypeOp 	: std_logic; 
+ 
+    signal RtypeOp 		: std_logic; 
 	signal AddiOp 		: std_logic; 
 	signal BeqOp 		: std_logic; 
 	signal BneOp 		: std_logic; 
 	signal LwOp 		: std_logic; 
 	signal SwOp 		: std_logic;
 	
-   signal regWrTemp 	: std_logic; 
-	signal ALUsrcTemp : std_logic;
+    signal regWrTemp 	: std_logic; 
+	signal ALUsrcTemp 	: std_logic;
     
 	begin
 		-- Classify the op-code
       isOperations : whichOp 
 			port map ( 
 				opcode  => opcode,
-            RtypeOp => RtypeOp,
+            	RtypeOp => RtypeOp,
 				AddiOp  => AddiOp,
 				BeqOp   => BeqOp,
 				BneOp   => BneOp,
