@@ -311,4 +311,16 @@ package eecs361 is
       R    : in std_logic_vector(m-1 downto 0)
     );
   end component signextender_n_m;
+  component and_5to1
+      port (
+          andIn : in std_logic_vector (4 downto 0);
+          andOut : out std_logic
+      );
+   end component and_5to1;
+   component decoder_5_32
+       port (
+           x : in std_logic_vector (4 downto 0);
+           z : in std_logic_vector (31 downto 0)
+       );
+   end component decoder_5_32;
 end;
