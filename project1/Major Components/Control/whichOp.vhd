@@ -4,11 +4,11 @@ use work.eecs361_gates.all;
 
 entity whichOp is
     port ( 
-        opcode    : in  std_logic_vector(5 downto 0);
-        RtypeOp   : out std_logic; 
+    opcode    : in  std_logic_vector(5 downto 0);
+    RtypeOp   : out std_logic; 
 		AddiOp    : out std_logic; 
 		BeqOp     : out std_logic;
-        BneOp     : out std_logic;  
+    BneOp     : out std_logic;  
 		LwOp      : out std_logic;   
 		SwOp  	  : out std_logic
 	);
@@ -23,10 +23,10 @@ architecture structural of whichOp is
 	end component and_5to1;
 
 	-- signals for which instruction type (R-Type, addi, lw, sw, beq, bne) 
-    signal tRtype : std_logic_vector(5 downto 0); 
+  signal tRtype : std_logic_vector(5 downto 0); 
 	signal tAddi  : std_logic_vector(5 downto 0); 
 	signal tBeq   : std_logic_vector(5 downto 0);
-    signal tBne	  : std_logic_vector(5 downto 0); 
+  signal tBne	  : std_logic_vector(5 downto 0); 
 	signal tLw	  : std_logic_vector(5 downto 0); 
 	signal tSw    : std_logic_vector(5 downto 0);
 

@@ -5,20 +5,19 @@ use work.eecs361_gates.all;
 entity whichALUOp is
     port ( 
         ALUctl  : in  std_logic_vector(1 downto 0);
-        Funct   : in  std_logic_vector(5 downto 0);
+        Funct    : in  std_logic_vector(5 downto 0);
         LwSwOp  : out std_logic; 
-		BOp     : out std_logic; 
-		AddOp   : out std_logic; 
-		SubOp  	: out std_logic; 
+		  BOp     : out std_logic; 
+		  AddOp   : out std_logic; 
+		  SubOp   : out std_logic; 
         AndOp   : out std_logic; 
         OrOp    : out std_logic; 
         SltOp   : out std_logic; 
         SllOp   : out std_logic
-
 	);
 end whichALUOp;
 
-architecture structural of whichOp is
+architecture structural of whichALUOp is
 	component and_8to1 is
 		port ( 
 			andIn  : in std_logic_vector(7 downto 0);
@@ -31,19 +30,25 @@ architecture structural of whichOp is
 
     signal tLwSw  : std_logic_vector(7 downto 0);
     signal tB     : std_logic_vector(7 downto 0);
-    signal tAdd   : std_logic_vector(7 downto 0);   
+    signal tAdd   : std_logic_vector(7 downto 0);
+    signal tAddU   : std_logic_vector(7 downto 0);
     signal tSub   : std_logic_vector(7 downto 0);
     signal tAnd   : std_logic_vector(7 downto 0);
     signal tOr    : std_logic_vector(7 downto 0);
     signal tSlt   : std_logic_vector(7 downto 0);
     signal tSll   : std_logic_vector(7 downto 0);
+	
+	signal AddUOp_temp : std_logic;
+	signal AddOp_temp : std_logic;
+	
 
     -- ALUCtl(1,0)Funct(5,4,3,2,1,0)
     signal ALUFunct : std_logic_vector(7 downto 0);
 
     begin
-
-        ALUFunct <= Funct & ALUctl;
+		  ALUFunct(7 downto 6) <= ALUctl(1 downto 0);
+        ALUFunct(5 downto 0) <= Funct(5 downto 0);
+		  
 
 		-- logic to check for lw or sw
         -- ALUctl = 00 Funct = xxxxxx
@@ -74,7 +79,24 @@ architecture structural of whichOp is
         t_Add6 : not_gate port map (x => ALUFunct(6), z => tAdd(6));
         tAdd(7) <= ALUFunct(7);
         
-        and_Add : and_8to1 port map (andIn => tAdd, andOut => AddOp);
+        and_Add : and_8to1 port map (andIn => tAdd, andOut => AddOp_temp);
+		
+----------------------------------------
+		  
+		-- logic to check for addU 
+        -- ALUctl = 10 Funct = 100001
+        tAddU(0) <= ALUFunct(0);
+        t_AddU1 : not_gate port map (x => ALUFunct(1), z => tAddU(1));
+        t_AddU2 : not_gate port map (x => ALUFunct(2), z => tAddU(2));
+        t_AddU3 : not_gate port map (x => ALUFunct(3), z => tAddU(3));
+        t_AddU4 : not_gate port map (x => ALUFunct(4), z => tAddU(4));
+        tAddU(5) <= ALUFunct(5);
+        t_AddU6 : not_gate port map (x => ALUFunct(6), z => tAddU(6));
+        tAddU(7) <= ALUFunct(7);
+        
+        and_AddU : and_8to1 port map (andIn => tAddU, andOut => AddUOp_temp);
+		
+		or_Add : or_gate port map (x => AddUOp_temp, y => AddOp_temp,z => AddOp);
          
 ----------------------------------------
 			
