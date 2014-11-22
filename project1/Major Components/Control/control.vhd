@@ -11,7 +11,7 @@ entity control is
 		-- 3 bit ALU control
         ALUCtr    : out std_logic_vector(2 downto 0);
 	
-		-- 8 control signals
+		-- 7 control signals
         regDst    : out std_logic;
         ALUSrc    : out std_logic;
         memtoReg  : out std_logic;
@@ -47,6 +47,7 @@ architecture structural of control is
 	end component ALUControl;
 
 	-- comes out of mainControl
+	-- goes into ALUControl
 	signal ALUOp : std_logic_vector(1 downto 0);
 
    	begin
@@ -65,7 +66,7 @@ architecture structural of control is
 
 		ALUCtr_map : ALUControl
 			port map (
-				AlUOp  => ALUOp,
+				ALUOp  => ALUOp,
 				func   => func,
 				ALUCtr => ALUCtr
 			);

@@ -27,7 +27,7 @@ architecture structural of ALUControl is
 		);
 	end component whichALUOp;
  
-   signal LwSwOp 		: std_logic; 
+   	signal LwSwOp 		: std_logic; 
 	signal BOp 			: std_logic; 
 	signal AddOp 		: std_logic; 
 	signal SubOp 		: std_logic; 
@@ -38,7 +38,7 @@ architecture structural of ALUControl is
 	signal ALUctl0_temp0 : std_logic;
 	signal ALUctl0_temp1 : std_logic;
 	signal ALUctl1_temp0 : std_logic;
-   signal ALUctl1_temp1 : std_logic;
+   	signal ALUctl1_temp1 : std_logic;
 
 	
 	begin

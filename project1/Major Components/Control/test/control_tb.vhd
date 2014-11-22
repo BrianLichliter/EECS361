@@ -12,7 +12,7 @@ entity control_tb is
         memtoReg_tb  : out std_logic;
         regWrite_tb  : out std_logic;
         memWrite_tb  : out std_logic;
-		    memRead_tb	  : out std_logic;
+		memRead_tb	 : out std_logic;
         branch_tb    : out std_logic
     );
 end control_tb;
@@ -37,7 +37,7 @@ architecture structural of control_tb is
     end component control;
 
     signal opcode_tb : std_logic_vector(5 downto 0);
-	 signal func_tb   : std_logic_vector(5 downto 0);
+	signal func_tb   : std_logic_vector(5 downto 0);
 
     begin
         Control_map : control port map (
@@ -57,32 +57,32 @@ architecture structural of control_tb is
         begin
             -- Test add
             opcode_tb <= "000000";
-				func_tb <= "100000";
+			func_tb <= "100000";
             wait for 5 ns;
 
             -- Test sub
             opcode_tb <= "000000";
-				func_tb <= "100010";
+			func_tb <= "100010";
             wait for 5 ns;
 
-				            -- Test and
+			-- Test and
             opcode_tb <= "000000";
-				func_tb <= "100100";
+			func_tb <= "100100";
             wait for 5 ns;
 				
-				            -- Test or
+			-- Test or
             opcode_tb <= "000000";
-				func_tb <= "100101";
+			func_tb <= "100101";
             wait for 5 ns;
 				
-				            -- Test slt
+			-- Test slt
             opcode_tb <= "000000";
-				func_tb <= "101010";
+			func_tb <= "101010";
             wait for 5 ns;
 			
-				            -- Test sll
+			-- Test sll
             opcode_tb <= "000000";
-				func_tb <= "000000";
+			func_tb <= "000000";
             wait for 5 ns;
 
             wait;
