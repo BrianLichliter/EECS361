@@ -1,1 +1,6 @@
 project1_brian/
+project1/work/
+*.bak
+project1/modelsim.ini
+Project\ 1.mpf
+Project\ 1.cr.mti
