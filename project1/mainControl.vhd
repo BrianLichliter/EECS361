@@ -12,7 +12,8 @@ entity mainControl is
         regWrite  : out std_logic;
         memWrite  : out std_logic;
 		memRead	  : out std_logic;
-        branch    : out std_logic
+        branch_eq : out std_logic;
+		branch_ne : out std_logic
     );
 end mainControl;
 
@@ -99,13 +100,9 @@ architecture structural of mainControl is
 		memRead <= LwOp;
 
 		-- Branch signal
-		-- 1 when beq or bne is 1
-		sigBranch : or_gate 
-			port map (
-				x => BeqOp, 
-				y => BneOp,
-				z => branch
-			);
+
+		branch_eq <= BeqOp;
+		branch_ne <= BneOp;
 	  
 		-- ALU operations
 		-- 1 when rtype is 1
