@@ -17,14 +17,14 @@ architecture structural of test_mainControl is
 
     component mainControl is 
         port (         
-			  opcode        : in  std_logic_vector(5 downto 0);
+			  opcode    : in  std_logic_vector(5 downto 0);
 			  ALUOp     : out std_logic_vector(1 downto 0);
 			  regDst    : out std_logic;
 			  ALUSrc    : out std_logic;
 			  memtoReg  : out std_logic;
 			  regWrite  : out std_logic;
 			  memWrite  : out std_logic;
-			  memRead	: out std_logic;
+			  memRead	  : out std_logic;
 			  branch    : out std_logic
 		);
     end component mainControl;

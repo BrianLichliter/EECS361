@@ -8,8 +8,8 @@ entity control is
         opcode    : in  std_logic_vector(5 downto 0);
         func      : in  std_logic_vector(5 downto 0);
 		  
-		-- 3 bit ALU control
-        ALUCtr    : out std_logic_vector(2 downto 0);
+		-- 4 bit ALU control
+        ALUCtr    : out std_logic_vector(3 downto 0);
 	
 		-- 7 control signals
         regDst    : out std_logic;
@@ -17,7 +17,7 @@ entity control is
         memtoReg  : out std_logic;
         regWrite  : out std_logic;
         memWrite  : out std_logic;
-		memRead	  : out std_logic;
+		    memRead	  : out std_logic;
         branch    : out std_logic
     );
 end entity control;
@@ -42,7 +42,7 @@ architecture structural of control is
 		port ( 
 			ALUOp   : in  std_logic_vector(1 downto 0);
          	func    : in  std_logic_vector(5 downto 0);
-         	ALUCtr  : out std_logic_vector(2 downto 0)
+         	ALUCtr  : out std_logic_vector(3 downto 0)
         );
 	end component ALUControl;
 

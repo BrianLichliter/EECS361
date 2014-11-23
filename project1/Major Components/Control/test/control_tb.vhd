@@ -55,35 +55,61 @@ architecture structural of control_tb is
 
      test_proc : process
         begin
-            -- Test add
-            opcode_tb <= "000000";
+      -- Test add
+      opcode_tb <= "000000";
 			func_tb <= "100000";
             wait for 5 ns;
 
-            -- Test sub
-            opcode_tb <= "000000";
+      -- Test sub
+      opcode_tb <= "000000";
 			func_tb <= "100010";
             wait for 5 ns;
 
 			-- Test and
-            opcode_tb <= "000000";
+      opcode_tb <= "000000";
 			func_tb <= "100100";
             wait for 5 ns;
 				
 			-- Test or
-            opcode_tb <= "000000";
+      opcode_tb <= "000000";
 			func_tb <= "100101";
             wait for 5 ns;
 				
 			-- Test slt
-            opcode_tb <= "000000";
+      opcode_tb <= "000000";
 			func_tb <= "101010";
             wait for 5 ns;
 			
 			-- Test sll
-            opcode_tb <= "000000";
+      opcode_tb <= "000000";
 			func_tb <= "000000";
             wait for 5 ns;
+
+			-- Test addi
+      opcode_tb <= "001000";
+			func_tb <= "000000";
+            wait for 5 ns;
+            
+            			-- Test beq
+      opcode_tb <= "000100";
+			func_tb <= "000000";
+            wait for 5 ns;
+            
+            			-- Test bne
+      opcode_tb <= "000101";
+			func_tb <= "000000";
+            wait for 5 ns;
+            
+            			-- Test lw
+      opcode_tb <= "100011";
+			func_tb <= "000000";
+            wait for 5 ns;
+
+            			-- Test sw
+      opcode_tb <= "101011";
+			func_tb <= "000000";
+            wait for 5 ns;
+
 
             wait;
         end process;
