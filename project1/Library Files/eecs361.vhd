@@ -332,4 +332,61 @@ package eecs361 is
            Z   : out std_logic_vector(31 downto 0)
        );
    end component register_32bit;
+   component register_file
+      port (
+	      clk : in std_logic;
+	      reset_active_low : in std_logic;
+	      write_en : in std_logic;
+	      write_data : in std_logic_vector(31 downto 0);
+	      read_index_A : in std_logic_vector(4 downto 0);
+	      read_index_B : in std_logic_vector(4 downto 0);
+	      write_index : in std_logic_vector(4 downto 0);
+	      read_op_A : out std_logic_vector(31 downto 0);
+	      read_op_B: out std_logic_vector(31 downto 0)
+      );
+   end component register_file;
+   component control is 
+       port ( 
+    	   -- inputs from instruction
+           opcode    : in  std_logic_vector(5 downto 0);
+           func      : in  std_logic_vector(5 downto 0);
+		     
+		   -- 4 bit ALU control
+           ALUCtr    : out std_logic_vector(3 downto 0);
+	   
+		   -- 7 control signals
+           regDst    : out std_logic;
+           ALUSrc    : out std_logic;
+           memtoReg  : out std_logic;
+           regWrite  : out std_logic;
+           memWrite  : out std_logic;
+		       memRead	  : out std_logic;
+           branch    : out std_logic
+       );
+   end component control;
+   
+   component IFU is
+	   generic (
+		   mem	: string
+	   );
+	   port (
+		   clock	: in std_logic;
+		   reset	: in std_logic;
+		   branch	: in std_logic;
+		   zero	: in std_logic;
+		   inst	: inout std_logic_vector(31 downto 0)
+	   );
+   end component IFU;
+   
+   component alu is
+	   port (
+		   ctrl   : in std_logic_vector(3 downto 0);
+		   A      : in std_logic_vector(31 downto 0);
+		   B      : in std_logic_vector(31 downto 0);
+		   cout   : out std_logic;  -- ?1? -> carry out
+		   ovf    : out std_logic;  -- ?1? -> overflow
+		   ze     : out std_logic;  -- ?1? -> is zero
+		   R      : out std_logic_vector(31 downto 0) -- result
+	   );
+   end component alu;
 end;

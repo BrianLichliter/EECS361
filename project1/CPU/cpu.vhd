@@ -32,21 +32,21 @@ architecture structural of cpu is
 	signal imm_or_B		: std_logic_vector(31 downto 0);
 	signal ALU_out		: std_logic_vector(31 downto 0);
 	signal mem_out		: std_logic_vector(31 downto 0);
-
+   signal write_data : std_logic_vector(31 downto 0);
 
 begin
 
 	-- IFU
-	IFU : IFU generic map (mem=>instMem) port map (clock=>clock, reset=>reset, branch=>branch, zero=>zero, inst=>inst);
+	IFU_map : IFU generic map (mem=>mem) port map (clock=>clock, reset=>reset, branch=>branch, zero=>zero, inst=>inst);
 
 	-- Control
 	ctrl : control port map (opcode=>inst(31 downto 26), func=>inst(5 downto 0), ALUCtr=>ALUctl, regDst=>regDst, ALUSrc=>ALUsrc, memtoReg=>memToReg, regWrite=>regWr, memWrite=>memWr, memRead=>memRd, branch=>branch);
 
 	-- Chose write register (0:Rt, 1:Rd)
-	mux_rw : mux_n generic map (n=>5) port map (sel=>regDst, src0=>inst(25 downto 21), src1=>inst(15 downto 11), z=>Rw);
+	mux_rw : mux_n generic map (n=>5) port map (sel=>regDst, src0=>inst(20 downto 16), src1=>inst(15 downto 11), z=>Rw);
 
 	-- Registers (Rw:Rw, Ra:Rs, Rb:Rt)
-	reg : registers port map(Rw=>Rw, Ra=>inst(20 downto 16), Rb=>inst(25 downto 21), a=>busA, b=>busB, clock=>clock, din=>busW, writeEn=>regWr);
+	reg : register_file port map(clk=>clock, reset_active_low=>reset, write_data=>busW,write_index=>Rw, read_index_A=>inst(20 downto 16), read_index_B=>inst(25 downto 21), read_op_A=>busA, read_op_B=>busB, write_en=>regWr);
 
 	-- Sign extend the immediate
 	ext : signextender_n_m generic map (n=>16, m=>32) port map (A=>inst(15 downto 0), R=>imm32);
@@ -55,7 +55,7 @@ begin
 	mux_imm_B : mux_n generic map (n=>32) port map (sel=>ALUsrc, src0=>busB, src1=>imm32, z=>imm_or_B);
 
 	-- ALU
-	alu : alu port map (ctrl=>ALUctl, A=>busA, B=>imm_or_B, cout=>open, ovf=>open, ze=>zero, R=>ALU_out);
+	alu_map : alu port map (ctrl=>ALUctl, A=>busA, B=>imm_or_B, cout=>open, ovf=>open, ze=>zero, R=>ALU_out);
 
 	-- Data Memory
 	dataMem: syncram generic map (mem_file=>mem) port map (clk=>clock, cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
