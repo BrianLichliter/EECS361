@@ -5,18 +5,18 @@ use work.eecs361.all;
 
 entity cpu is
 	generic (
-		mem		: string
+		mem			: string
 	);
 	port (
 		clock		: in std_logic;
-		reset		: in std_logic
+		reset		: in std_logic;
+		inst		: inout std_logic_vector(31 downto 0)
 	);
 end cpu;
 
 architecture structural of cpu is
-	signal inst			: std_logic_vector(31 downto 0);
-	signal branch_eq		: std_logic;
-	signal branch_ne : std_logic;
+	signal branch_eq	: std_logic;
+	signal branch_ne	: std_logic;
 	signal zero			: std_logic;
 	signal regWr		: std_logic;
 	signal regDst		: std_logic;
@@ -33,8 +33,8 @@ architecture structural of cpu is
 	signal imm_or_B		: std_logic_vector(31 downto 0);
 	signal ALU_out		: std_logic_vector(31 downto 0);
 	signal mem_out		: std_logic_vector(31 downto 0);
-   signal write_data : std_logic_vector(31 downto 0);
-   signal reset_low : std_logic;
+	signal write_data	: std_logic_vector(31 downto 0);
+	signal reset_low	: std_logic;
 
 begin
 

@@ -55,6 +55,6 @@ begin
 
 	gen_ands:
 	for I in 0 to 31 generate
-		and5: and_5to1 port map(andIn=>concat_array(I),andOut=>z(I));
+		and5: and_gate_unary_n generic map (n=>5) port map(x=>concat_array(I),z=>z(I));
 	end generate gen_ands;
 end structural;

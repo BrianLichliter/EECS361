@@ -14,7 +14,7 @@ architecture structural of IFU_test is
     signal reset  : std_logic;
     
  begin 
-     IFU_map : IFU generic map (mem => "./Test Code/bills_branch.dat") port map (clock=>clk, reset=>reset, branch=>'0', zero=>'0', inst=>instOut);
+     IFU_map : IFU generic map (mem => "./Test Code/bills_branch.dat") port map (clock=>clk, reset=>reset, branch_eq=>'0', branch_neq=>'0', zero=>'0', inst=>instOut);
                    
      test_IFU : process
      begin

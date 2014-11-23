@@ -5,15 +5,15 @@ use work.eecs361.all;
 
 entity IFU is
 	generic (
-		mem	: string
+		mem		: string
 	);
 	port (
-		clock	: in std_logic;
-		reset	: in std_logic;
+		clock		: in std_logic;
+		reset		: in std_logic;
 		branch_eq	: in std_logic;
-		branch_neq : in std_logic;
-		zero	: in std_logic;
-		inst	: inout std_logic_vector(31 downto 0)
+		branch_neq	: in std_logic;
+		zero		: in std_logic;
+		inst		: inout std_logic_vector(31 downto 0)
 	);
 end IFU;
 
