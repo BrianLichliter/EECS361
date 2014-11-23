@@ -373,7 +373,8 @@ package eecs361 is
          regWrite  : out std_logic;
          memWrite  : out std_logic;
 	       memRead	  : out std_logic;
-         branch    : out std_logic
+         branch_eq    : out std_logic;
+         branch_ne : out std_logic
      );
  end component control;
  
@@ -384,7 +385,8 @@ package eecs361 is
    port (
 	   clock	: in std_logic;
 	   reset	: in std_logic;
-	   branch	: in std_logic;
+	   branch_eq	: in std_logic;
+	   branch_neq : in std_logic;
 	   zero	: in std_logic;
 	   inst	: inout std_logic_vector(31 downto 0)
    );

@@ -15,7 +15,8 @@ end cpu;
 
 architecture structural of cpu is
 	signal inst			: std_logic_vector(31 downto 0);
-	signal branch		: std_logic;
+	signal branch_eq		: std_logic;
+	signal branch_ne : std_logic;
 	signal zero			: std_logic;
 	signal regWr		: std_logic;
 	signal regDst		: std_logic;
@@ -38,10 +39,10 @@ architecture structural of cpu is
 begin
 
 	-- IFU
-	IFU_map : IFU generic map (mem=>mem) port map (clock=>clock, reset=>reset, branch=>branch, zero=>zero, inst=>inst);
+	IFU_map : IFU generic map (mem=>mem) port map (clock=>clock, reset=>reset, branch_eq=>branch_eq, branch_neq=>branch_ne, zero=>zero, inst=>inst);
 
 	-- Control
-	ctrl : control port map (opcode=>inst(31 downto 26), func=>inst(5 downto 0), ALUCtr=>ALUctl, regDst=>regDst, ALUSrc=>ALUsrc, memtoReg=>memToReg, regWrite=>regWr, memWrite=>memWr, memRead=>memRd, branch=>branch);
+	ctrl : control port map (opcode=>inst(31 downto 26), func=>inst(5 downto 0), ALUCtr=>ALUctl, regDst=>regDst, ALUSrc=>ALUsrc, memtoReg=>memToReg, regWrite=>regWr, memWrite=>memWr, memRead=>memRd, branch_eq=>branch_eq, branch_ne=>branch_ne);
 
 	-- Chose write register (0:Rt, 1:Rd)
 	mux_rw : mux_n generic map (n=>5) port map (sel=>regDst, src0=>inst(20 downto 16), src1=>inst(15 downto 11), z=>Rw);

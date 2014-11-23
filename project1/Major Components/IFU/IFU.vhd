@@ -10,7 +10,8 @@ entity IFU is
 	port (
 		clock	: in std_logic;
 		reset	: in std_logic;
-		branch	: in std_logic;
+		branch_eq	: in std_logic;
+		branch_neq : in std_logic;
 		zero	: in std_logic;
 		inst	: inout std_logic_vector(31 downto 0)
 	);
@@ -27,6 +28,9 @@ architecture structural of IFU is
 	signal PC_full		: std_logic_vector(31 downto 0);
 	signal imm16		: std_logic_vector(15 downto 0);
 	signal dont_care	: std_logic_vector(31 downto 0);
+	signal not_zero : std_logic;
+	signal branch : std_logic;
+	signal branch_notzero : std_logic;
 begin
 
 	-- PC Storage in FFs
@@ -44,10 +48,14 @@ begin
 	add_imm_PC : fulladder_s_n generic map (n=> 30) port map (A=>PC_plus_4, B=>imm_16_ext, R=>PC_plus_imm);
 
 	-- And Branch and Zero
-	and_b_z : and_gate port map (x=>branch, y=>zero, z=>branch_zero);
+	and_b_z : and_gate port map (x=>branch_eq, y=>zero, z=>branch_zero);
+	
+	not_z : not_gate port map(zero, not_zero);
+	and_b_nz : and_gate port map(x=>branch_neq, y=>not_zero, z=>branch_notzero);
 
 	-- Mux PC+4 and PC+4+Imm16
-	PC_Mux : mux_n generic map (n=>30) port map (sel=> branch_zero,src0=>PC_plus_4, src1=>PC_plus_imm, z=>PC_30);
+	or_branches : or_gate port map(branch_zero, branch_notzero, branch);
+	PC_Mux : mux_n generic map (n=>30) port map (sel=> branch,src0=>PC_plus_4, src1=>PC_plus_imm, z=>PC_30);
 
 	-- Choose PC_30 or the start adress (if reset is 1)
 	mux_res : mux_n generic map (n=>30) port map (sel=>reset, src0=>PC_30, src1=>"000000000100000000000000001000", z=>PC_ff_in);
@@ -64,3 +72,4 @@ begin
 	
 
 end architecture structural;
+	
