@@ -33,6 +33,7 @@ architecture structural of cpu is
 	signal ALU_out		: std_logic_vector(31 downto 0);
 	signal mem_out		: std_logic_vector(31 downto 0);
    signal write_data : std_logic_vector(31 downto 0);
+   signal reset_low : std_logic;
 
 begin
 
@@ -46,7 +47,8 @@ begin
 	mux_rw : mux_n generic map (n=>5) port map (sel=>regDst, src0=>inst(20 downto 16), src1=>inst(15 downto 11), z=>Rw);
 
 	-- Registers (Rw:Rw, Ra:Rs, Rb:Rt)
-	reg : register_file port map(clk=>clock, reset_active_low=>reset, write_data=>busW,write_index=>Rw, read_index_A=>inst(20 downto 16), read_index_B=>inst(25 downto 21), read_op_A=>busA, read_op_B=>busB, write_en=>regWr);
+	not_reset: not_gate port map(reset,reset_low);
+	reg : register_file port map(clk=>clock, reset_active_low=>reset_low, write_data=>busW,write_index=>Rw, read_index_A=>inst(20 downto 16), read_index_B=>inst(25 downto 21), read_op_A=>busA, read_op_B=>busB, write_en=>regWr);
 
 	-- Sign extend the immediate
 	ext : signextender_n_m generic map (n=>16, m=>32) port map (A=>inst(15 downto 0), R=>imm32);
