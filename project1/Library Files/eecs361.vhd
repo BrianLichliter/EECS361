@@ -197,7 +197,7 @@ package eecs361 is
     port (
       A    : in std_logic_vector(n-1 downto 0);
       B    : in std_logic_vector(n-1 downto 0);
-      R    : in std_logic_vector(n-1 downto 0)
+      R    : out std_logic_vector(n-1 downto 0)
     );
   end component fulladder_s_n;
 
@@ -308,7 +308,7 @@ package eecs361 is
     );
     port (
       A    : in std_logic_vector(n-1 downto 0);
-      R    : in std_logic_vector(m-1 downto 0)
+      R    : out std_logic_vector(m-1 downto 0)
     );
   end component signextender_n_m;
   component and_5to1
@@ -332,4 +332,27 @@ package eecs361 is
            Z   : out std_logic_vector(31 downto 0)
        );
    end component register_32bit;
+
+  component IFU
+    generic (
+      mem : string
+    );
+    port (
+      clock   : in std_logic;
+      reset   : in std_logic;
+      branch  : in std_logic;
+      zero    : in std_logic;
+      inst    : inout std_logic_vector(31 downto 0)
+    );
+  end component IFU;
+
+  component cpu
+    generic (
+      mem : string
+    );
+    port (
+      clock   : in std_logic;
+      reset   : in std_logic
+    );
+  end component cpu;
 end;
