@@ -52,6 +52,8 @@ architecture structural of control is
 	-- comes out of mainControl
 	-- goes into ALUControl
 	signal ALUOp : std_logic_vector(1 downto 0);
+	signal ALUCtr_temp : std_logic_vector(3 downto 0);
+	signal ALUSrc_temp :  std_logic;
 
    	begin
 		mainCtr_map : mainControl 
@@ -59,7 +61,7 @@ architecture structural of control is
 				opcode    => opcode, 
 				ALUOp     => ALUOp,
 				regDst    => regDst,
-				ALUSrc    => ALUSrc,
+				ALUSrc    => ALUSrc_temp,
 				memtoReg  => memtoReg,
 				regWrite  => regWrite,
 				memWrite  => memWrite,
@@ -72,7 +74,16 @@ architecture structural of control is
 			port map (
 				ALUOp  => ALUOp,
 				func   => func,
-				ALUCtr => ALUCtr
+				ALUCtr => ALUCtr_temp
 			);
+			  
+		sigALUsrc : or_gate 
+		port map (
+			x => ALUSrc_temp, 
+			y => ALUCtr_temp(3), 
+			z => ALUSrc
+		);
+		
+		ALUCtr <= ALUCtr_temp;
 
 end architecture structural;

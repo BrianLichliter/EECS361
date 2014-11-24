@@ -10,7 +10,8 @@ entity whichOp is
 		BeqOp     : out std_logic;
     BneOp     : out std_logic;  
 		LwOp      : out std_logic;   
-		SwOp  	  : out std_logic
+		SwOp  	  : out std_logic;
+		SllOp   : out std_logic
 	);
 end whichOp;
 
