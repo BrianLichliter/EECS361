@@ -61,7 +61,7 @@ begin
 	mux_res : mux_n generic map (n=>30) port map (sel=>reset, src0=>PC_30, src1=>"000000000100000000000000001000", z=>PC_ff_in);
 
 	-- Create full instruction address
-	PC_full <= PC_ff_in & "00";
+	PC_full <= PC_ff_out & "00";
 
 	-- Get next instruction from s-ram
 	dont_care <= "00000000000000000000000000000000";
