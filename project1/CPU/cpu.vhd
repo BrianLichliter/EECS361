@@ -39,6 +39,7 @@ architecture structural of cpu is
 	signal write_data	: std_logic_vector(31 downto 0);
 	signal reset_low	: std_logic;
 	signal imm_sll_16 : std_logic_vector(15 downto 0);
+	signal not_clock	: std_logic;
 
 begin
 
@@ -69,7 +70,8 @@ begin
 	alu_map : alu port map (ctrl=>ALUctl, A=>busA, B=>imm_or_b_or_sll, cout=>open, ovf=>open, ze=>zero, R=>ALU_out);
 
 	-- Data Memory
-	dataMem: syncram generic map (mem_file=>mem) port map (clk=>clock, cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
+	not_clock0 : not_gate port map (clock, not_clock);
+	dataMem: syncram generic map (mem_file=>mem) port map (clk=>not_clock, cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
 
 	-- Mux ALU and memory output (0:ALU_out, 1:mem_out)
 	mux_ALU_mem : mux_n generic map (n=>32) port map (sel=>memToReg, src0=>ALU_out, src1=>mem_out, z=>busW);
