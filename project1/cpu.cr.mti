@@ -1094,16 +1094,6 @@ Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 
 -- Compiling entity dffr_a
 -- Compiling architecture behavioral of dffr_a
 
-} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/CPU/cpu_test.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/CPU/cpu_test.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package eecs361_gates
--- Loading package eecs361
--- Compiling entity cpu_test
--- Compiling architecture structural of cpu_test
-
 } {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/Provided Components/nor_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/Provided Components/nor_gate_n.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
 -- Loading package STANDARD
@@ -1131,7 +1121,17 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/deiden26/Dropbox/Sc
 End time: 15:58:58 on Nov 23,2014, Elapsed time: 0:00:00
 Errors: 3, Warnings: 0
 
-} {12.0 13.0 14.0 15.0 16.0 17.0} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/Major Components/ALU/comparator_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/Major Components/ALU/comparator_1.vhd}
+} {12.0 13.0 14.0 15.0 16.0 17.0} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/CPU/cpu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/CPU/cpu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity cpu
+-- Compiling architecture structural of cpu
+
+} {} {}} {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/Major Components/ALU/comparator_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/deiden26/Dropbox/School/EECS 361 (Architecture)/Projects/Group_Project/project1/Major Components/ALU/comparator_1.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.3d Compiler 2014.10 Oct  7 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
