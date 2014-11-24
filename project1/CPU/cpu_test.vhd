@@ -31,9 +31,9 @@ architecture structural of cpu_test is
             wait for 10 ns;
             clk <= '1';
             wait for 10 ns;
---            if instOut = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" then
---                exit;
---            end if;
+            if instOut = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" then
+                exit;
+            end if;
         end loop test_loop;
         wait;
     end process;

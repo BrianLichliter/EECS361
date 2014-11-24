@@ -65,7 +65,7 @@ begin
 
 	-- Get next instruction from s-ram
 	dont_care <= "00000000000000000000000000000000";
-	insMem_map: sram generic map (mem_file => mem) port map (cs=>'1', oe=>'1', we=>'0', addr=>PC_full, din=>dont_care, dout=>inst);
+	insMem_map: syncram generic map (mem_file => mem) port map (clk=>clock, cs=>'1', oe=>'1', we=>'0', addr=>PC_full, din=>dont_care, dout=>inst);
 
 	-- Get Imm16
 	imm16 <= inst(15 downto 0);
