@@ -31,7 +31,7 @@ architecture structural of cpu_test_sum is
     	reset <= '0';
     	wait for 5 ns;
     	
-        test_loop : for i in 0 to 300 loop
+        test_loop : for i in 0 to 1000 loop
             exit test_loop when instOut = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
             clk <= '0';
             wait for 10 ns;
