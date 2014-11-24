@@ -30,12 +30,8 @@ architecture structural of register_file is
 	signal decoded_write_en : std_logic_vector(31 downto 0);
 	signal write_en_32 : std_logic_vector(31 downto 0);
 begin
-	--instatiate the registers
-	reg0: register_32bit port map(clk=>clk,reset_active_low=>reset_active_low,write_en=>'0',D=>write_data,Z=>reg_outs(0));
-	gen_regs:
-	for I in 1 to 31 generate
-		regx: register_32bit port map(clk=>clk,reset_active_low=>reset_active_low,write_en=>write_ens(I),D=>write_data,Z=>reg_outs(I));
-	end generate gen_regs;
+
+
 
 	--Decode write address and generate write_enables
 	decode_write_ad: decoder_5_32 port map(x=>write_index,z=>decoded_write_en);
@@ -58,4 +54,12 @@ begin
 
 	final_mux_A: mux_32 port map (sel=>read_index_A(4),src0=>level2_out_A(0),src1=>level2_out_A(1),z=>read_op_A);
 	final_mux_B: mux_32 port map (sel=>read_index_B(4),src0=>level2_out_B(0),src1=>level2_out_B(1),z=>read_op_B);
+	
+	
+	reg0: register_32bit port map(clk=>clk,reset_active_low=>reset_active_low,write_en=>'0',D=>write_data,Z=>reg_outs(0));
+	--instatiate the registers
+   gen_regs:
+   for I in 1 to 31 generate
+      regx: register_32bit port map(clk=>clk,reset_active_low=>reset_active_low,write_en=>write_ens(I),D=>write_data,Z=>reg_outs(I));
+   end generate gen_regs;
 end structural;

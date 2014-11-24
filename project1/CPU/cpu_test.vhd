@@ -25,8 +25,11 @@ architecture structural of cpu_test is
     	clk <= '1';
     	wait for 10 ns;
     	clk <= '0';
-    	wait for 10 ns;
+  	  wait for 10 ns;
+    	clk <= '1';
+    	wait for 5 ns;
     	reset <= '0';
+    	wait for 5 ns;
     	
         test_loop : for i in 0 to 300 loop
             exit test_loop when instOut = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
