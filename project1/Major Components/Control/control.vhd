@@ -19,7 +19,8 @@ entity control is
         memWrite  : out std_logic;
 		memRead	  : out std_logic;
         branch_ne : out std_logic;
-        branch_eq : out std_logic
+        branch_eq : out std_logic;
+        sllOp : out std_logic
     );
 end entity control;
 
@@ -53,7 +54,6 @@ architecture structural of control is
 	-- goes into ALUControl
 	signal ALUOp : std_logic_vector(1 downto 0);
 	signal ALUCtr_temp : std_logic_vector(3 downto 0);
-	signal ALUSrc_temp :  std_logic;
 
    	begin
 		mainCtr_map : mainControl 
@@ -61,7 +61,7 @@ architecture structural of control is
 				opcode    => opcode, 
 				ALUOp     => ALUOp,
 				regDst    => regDst,
-				ALUSrc    => ALUSrc_temp,
+				ALUSrc    => ALUSrc,
 				memtoReg  => memtoReg,
 				regWrite  => regWrite,
 				memWrite  => memWrite,
@@ -76,14 +76,9 @@ architecture structural of control is
 				func   => func,
 				ALUCtr => ALUCtr_temp
 			);
-			  
-		sigALUsrc : or_gate 
-		port map (
-			x => ALUSrc_temp, 
-			y => ALUCtr_temp(3), 
-			z => ALUSrc
-		);
-		
-		ALUCtr <= ALUCtr_temp;
+			 
+			 sllOp <= ALUCtr_temp(3);
+			 ALUCtr <= ALUCtr_temp;
+
 
 end architecture structural;

@@ -370,7 +370,8 @@ package eecs361 is
          memWrite  : out std_logic;
 	       memRead	  : out std_logic;
          branch_eq    : out std_logic;
-         branch_ne : out std_logic
+         branch_ne : out std_logic;
+         sllOp : out std_logic
      );
  end component control;
  
