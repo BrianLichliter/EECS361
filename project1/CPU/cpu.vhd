@@ -39,6 +39,7 @@ architecture structural of cpu is
 	signal reset_low	: std_logic;
 	signal imm_sll_16 : std_logic_vector(15 downto 0);
 	signal not_clock	: std_logic;
+	signal clk_memWr	: std_logic;
 
 begin
 
@@ -70,7 +71,8 @@ begin
 
 	-- Data Memory
 	not_clock0 : not_gate port map (clock, not_clock);
-	dataMem: sram generic map (mem_file=>mem) port map (cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
+	andMemWr : and_gate port map (x=>not_clock,y=>memWr,z=>clk_memWr);
+	dataMem: sram generic map (mem_file=>mem) port map (cs=>'1', oe=>memRd, we=>clk_memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
 
 	-- Mux ALU and memory output (0:ALU_out, 1:mem_out)
 	mux_ALU_mem : mux_n generic map (n=>32) port map (sel=>memToReg, src0=>ALU_out, src1=>mem_out, z=>busW);
