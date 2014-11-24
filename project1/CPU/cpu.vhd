@@ -71,7 +71,7 @@ begin
 
 	-- Data Memory
 	not_clock0 : not_gate port map (clock, not_clock);
-	dataMem: syncram generic map (mem_file=>mem) port map (clk=>not_clock, cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
+	dataMem: sram generic map (mem_file=>mem) port map (cs=>'1', oe=>memRd, we=>memWr, addr=>ALU_out, din=>busB, dout=>mem_out);
 
 	-- Mux ALU and memory output (0:ALU_out, 1:mem_out)
 	mux_ALU_mem : mux_n generic map (n=>32) port map (sel=>memToReg, src0=>ALU_out, src1=>mem_out, z=>busW);
