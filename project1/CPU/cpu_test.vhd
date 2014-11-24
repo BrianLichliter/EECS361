@@ -14,7 +14,7 @@ architecture structural of cpu_test is
     signal reset  : std_logic;
     
  begin 
-    cpu_map : cpu generic map (mem => "../Test Code/bills_branch.dat") port map (clock=>clk, reset=>reset, inst=>instOut);
+    cpu_map : cpu generic map (mem => "./Test Code/bills_branch.dat") port map (clock=>clk, reset=>reset, inst=>instOut);
                
     test_cpu : process
     begin
