@@ -36,7 +36,6 @@ architecture structural of cpu is
 	signal sllOp : std_logic;
 	signal ALU_out		: std_logic_vector(31 downto 0);
 	signal mem_out		: std_logic_vector(31 downto 0);
-	signal write_data	: std_logic_vector(31 downto 0);
 	signal reset_low	: std_logic;
 	signal imm_sll_16 : std_logic_vector(15 downto 0);
 	signal not_clock	: std_logic;
