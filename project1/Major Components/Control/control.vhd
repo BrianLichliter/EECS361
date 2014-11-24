@@ -17,8 +17,9 @@ entity control is
         memtoReg  : out std_logic;
         regWrite  : out std_logic;
         memWrite  : out std_logic;
-		    memRead	  : out std_logic;
-        branch    : out std_logic
+		memRead	  : out std_logic;
+        branch_ne : out std_logic;
+        branch_eq : out std_logic
     );
 end entity control;
 
@@ -34,7 +35,9 @@ architecture structural of control is
 			regWrite  : out std_logic;
 			memWrite  : out std_logic;
 			memRead	  : out std_logic;
-			branch    : out std_logic
+			branch_eq : out std_logic;
+			branch_ne : out std_logic
+
 		);
 	end component mainControl;
 
@@ -53,15 +56,16 @@ architecture structural of control is
    	begin
 		mainCtr_map : mainControl 
 			port map (
-				opcode   => opcode, 
-				ALUOp    => ALUOp,
-				regDst   => regDst,
-				ALUSrc   => ALUSrc,
-				memtoReg => memtoReg,
-				regWrite => regWrite,
-				memWrite => memWrite,
-				memRead  => memRead,
-				branch   => branch
+				opcode    => opcode, 
+				ALUOp     => ALUOp,
+				regDst    => regDst,
+				ALUSrc    => ALUSrc,
+				memtoReg  => memtoReg,
+				regWrite  => regWrite,
+				memWrite  => memWrite,
+				memRead   => memRead,
+				branch_ne => branch_ne,
+				branch_eq => branch_eq
 			);
 
 		ALUCtr_map : ALUControl
