@@ -16,8 +16,12 @@ end register_32bit;
 architecture structural of register_32bit is
     signal anded_clock : std_logic;
 	signal data_in : std_logic_vector(31 downto 0);
+	signal not_reset : std_logic;
+	signal actual_write_en : std_logic;
 begin
-    and_clk : and_gate port map(x=>clk,y=>write_en,z=>anded_clock);
+    and_clk : and_gate port map(x=>clk,y=>actual_write_en,z=>anded_clock);
+    reset_wr : not_gate port map(reset_active_low,not_reset);
+    get_actl_we : or_gate port map(write_en,not_reset,actual_write_en);
     gen_ffs:
     for I in 0 to 31 generate
 		rst: and_gate port map (x=>D(I),y=>reset_active_low,z=>data_in(I));

@@ -51,8 +51,8 @@ begin
 	
 	gen_level_2:
 	for I in 0 to 1 generate
-		muxA: mux_n_4 generic map(n => 32) port map(sel=>read_index_A(2 downto 1), src0=>level1_out_A(I*4), src1=>level1_out_A(I*4 + 1),src2=>level1_out_A(I*4+2),src3=>level1_out_A(I*4+3), z=>level2_out_A(I));
-		muxB: mux_n_4 generic map(n => 32) port map(sel=>read_index_B(2 downto 1), src0=>level1_out_B(I*4), src1=>level1_out_B(I*4 + 1),src2=>level1_out_B(I*4+2),src3=>level1_out_B(I*4+3),z=>level2_out_B(I));
+		muxA2: mux_n_4 generic map(n => 32) port map(sel=>read_index_A(2 downto 1), src0=>level1_out_A(I*4), src1=>level1_out_A(I*4 + 1),src2=>level1_out_A(I*4+2),src3=>level1_out_A(I*4+3), z=>level2_out_A(I));
+		muxB2: mux_n_4 generic map(n => 32) port map(sel=>read_index_B(2 downto 1), src0=>level1_out_B(I*4), src1=>level1_out_B(I*4 + 1),src2=>level1_out_B(I*4+2),src3=>level1_out_B(I*4+3),z=>level2_out_B(I));
 	end generate gen_level_2;
 
 	final_mux_A: mux_32 port map (sel=>read_index_A(0),src0=>level2_out_A(0),src1=>level2_out_A(1),z=>read_op_A);
