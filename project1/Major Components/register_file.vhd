@@ -31,8 +31,9 @@ architecture structural of register_file is
 	signal write_en_32 : std_logic_vector(31 downto 0);
 begin
 	--instatiate the registers
+	reg0: register_32bit port map(clk=>clk,reset_active_low=>reset_active_low,write_en=>'0',D=>write_data,Z=>reg_outs(0));
 	gen_regs:
-	for I in 0 to 31 generate
+	for I in 1 to 31 generate
 		regx: register_32bit port map(clk=>clk,reset_active_low=>reset_active_low,write_en=>write_ens(I),D=>write_data,Z=>reg_outs(I));
 	end generate gen_regs;
 
