@@ -1,7 +1,14 @@
 project1_brian/
-project1/work/
 *.bak
+
+project1/work/
 project1/modelsim.ini
 Project\ 1.mpf
 Project\ 1.cr.mti
 project1/vsim.wlf
+
+project2/work/
+project2/modelsim.ini
+Project\ 2.mpf
+Project\ 2.cr.mti
+project2/vsim.wlf
