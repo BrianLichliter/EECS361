@@ -1,14 +1,16 @@
 project1_brian/
 *.bak
-
+.*
 project1/work/
 project1/modelsim.ini
 Project\ 1.mpf
 Project\ 1.cr.mti
 project1/vsim.wlf
-
+transcript
 project2/work/
 project2/modelsim.ini
 Project\ 2.mpf
 Project\ 2.cr.mti
 project2/vsim.wlf
+z
+*.zip

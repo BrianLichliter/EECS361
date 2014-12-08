@@ -203,4 +203,81 @@ package eecs361 is
       signed_a_lt_b : out std_logic
     );
   end component cmp_n;
+  component or_gate_unary_n
+      generic (
+          n : integer
+        );
+        port (
+          x  : in  std_logic_vector(n-1 downto 0);
+          z  : out std_logic
+        );
+   end component or_gate_unary_n;
+     component and_gate_unary_n
+         generic (
+             n : integer
+           );
+           port (
+             x  : in  std_logic_vector(n-1 downto 0);
+             z  : out std_logic
+           );
+      end component and_gate_unary_n;
+
+   component mux_n_8 is
+	generic (
+		n	: integer
+	);
+	port (
+		sel	: in  std_logic_vector(2 downto 0);
+		src0	: in  std_logic_vector(n-1 downto 0);
+		src1	: in  std_logic_vector(n-1 downto 0);
+		src2	: in  std_logic_vector(n-1 downto 0);
+		src3	: in  std_logic_vector(n-1 downto 0);
+		src4	: in  std_logic_vector(n-1 downto 0);
+		src5	: in  std_logic_vector(n-1 downto 0);
+		src6	: in  std_logic_vector(n-1 downto 0);
+		src7	: in  std_logic_vector(n-1 downto 0);
+		z	: out std_logic_vector(n-1 downto 0)
+	);
+	end component mux_n_8;
+	
+   component mux_n_4 is
+	generic (
+		n	: integer
+	);
+	port (
+		sel	: in  std_logic_vector(1 downto 0);
+		src0	: in  std_logic_vector(n-1 downto 0);
+		src1	: in  std_logic_vector(n-1 downto 0);
+		src2	: in  std_logic_vector(n-1 downto 0);
+		src3	: in  std_logic_vector(n-1 downto 0);
+		z	: out std_logic_vector(n-1 downto 0)
+	);
+	end component mux_n_4; 
+
+	component mux_n_16 is
+	generic (
+		n	: integer
+	);
+	port (
+		sel	: in  std_logic_vector(3 downto 0);
+		src0	: in  std_logic_vector(n-1 downto 0);
+		src1	: in  std_logic_vector(n-1 downto 0);
+		src2	: in  std_logic_vector(n-1 downto 0);
+		src3	: in  std_logic_vector(n-1 downto 0);
+		src4	: in  std_logic_vector(n-1 downto 0);
+		src5	: in  std_logic_vector(n-1 downto 0);
+		src6	: in  std_logic_vector(n-1 downto 0);
+		src7	: in  std_logic_vector(n-1 downto 0);
+		src8	: in  std_logic_vector(n-1 downto 0);
+		src9	: in  std_logic_vector(n-1 downto 0);
+		src10	: in  std_logic_vector(n-1 downto 0);
+		src11	: in  std_logic_vector(n-1 downto 0);
+		src12	: in  std_logic_vector(n-1 downto 0);
+		src13	: in  std_logic_vector(n-1 downto 0);
+		src14	: in  std_logic_vector(n-1 downto 0);
+		src15	: in  std_logic_vector(n-1 downto 0);
+		z	: out std_logic_vector(n-1 downto 0)
+	);
+	end component mux_n_16;
+
 end;
