@@ -227,28 +227,28 @@ begin
 	missAndLRU1 : and_gate port map(miss1, pickedByLRU1, we1Temp2);
 	orWeTemps1 : or_gate port map(we1Temp1, we1Temp2, we1Temp3);
 	andWeWtihRequest1 : and_gate port map(we1temp3, RequestFromL1, we1temp4); 
-	andWeWithClk1 : and_gate port map(we1Temp4, Clk, we);
+	andWeWithClk1 : and_gate port map(we1Temp4, Clk, we1);
 	
 	-- we for cache block 2 --
 	hitAndReadWrite2 : and_gate port map(ReadWriteFromL1, hit2, we2Temp1);
 	missAndLRU2 : and_gate port map(miss2, pickedByLRU2, we2Temp2);
 	orWeTemps2 : or_gate port map(we2Temp1, we2Temp2, we2Temp3);
 	andWeWtihRequest2 : and_gate port map(we2temp3, RequestFromL1, we2temp4);
-	andWeWithClk2 : and_gate port map(we2Temp4, Clk, we);
+	andWeWithClk2 : and_gate port map(we2Temp4, Clk, we2);
 	
 	-- we for cache block 3 -- 
 	hitAndReadWrite3 : and_gate port map(ReadWriteFromL1, hit3, we3Temp1);
 	missAndLRU3 : and_gate port map(miss3, pickedByLRU3, we3Temp2);
 	orWeTemps3 : or_gate port map(we3Temp1, we3Temp2, we3Temp3);
 	andWeWtihRequest3 : and_gate port map(we3temp3, RequestFromL1, we3temp4);
-	andWeWithClk3 : and_gate port map(we3Temp4, Clk, we);
+	andWeWithClk3 : and_gate port map(we3Temp4, Clk, we3);
 	
 	-- we for cache block 4 --
 	hitAndReadWrite4 : and_gate port map(ReadWriteFromL1, hit4, we4Temp1);
 	missAndLRU4 : and_gate port map(miss4, pickedByLRU4, we4Temp2);
 	orWeTemps4 : or_gate port map(we4Temp1, we4Temp2, we4Temp3);
 	andWeWtihRequest4 : and_gate port map(we4temp3, RequestFromL1, we4temp4);
-	andWeWithClk4 : and_gate port map(we4Temp4, Clk, we);
+	andWeWithClk4 : and_gate port map(we4Temp4, Clk, we4);
 	
 	-- insert dataFromL1 into Cache Line (not writing yet) --
 	ExtDataIn <= (2071 downto 512 => '0') & DataFromL1;
