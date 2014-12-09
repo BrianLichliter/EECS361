@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.eecs361.mux_n;
 
-entity shifter_32 is
+entity shifter_512 is
 	port (
 		Bits	: in std_logic_vector(511 downto 0);
 		Shift	: in std_logic_vector(9 downto 0);
 		R		: out std_logic_vector(511 downto 0)
 	);
-end shifter_32;
+end shifter_512;
 
-architecture structural of shifter_32 is
+architecture structural of shifter_512 is
 	signal mux0_out	: std_logic_vector(511 downto 0);
 	signal mux1_out	: std_logic_vector(511 downto 0);
 	signal mux2_out	: std_logic_vector(511 downto 0);

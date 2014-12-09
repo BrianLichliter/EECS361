@@ -37,9 +37,13 @@ architecture structural of L1 is
 	signal weTemp1 : std_logic;
 	signal weTemp2 : std_logic;
 	signal weTemp3 : std_logic;
+	signal weTemp4 : std_logic;
 	signal dirtyTemp1 : std_logic;
 	signal dirtyTemp2 : std_logic;
 	signal writeBack : std_logic;
+	signal writeBackIn: std_logic;
+	signal writeBackInTemp1 : std_logic;
+	signal writeBackOut: std_logic;
 	signal writtenBack : std_logic;
 	signal notWrittenBack : std_logic;
 	signal writtenBackTemp1 : std_logic;
@@ -55,6 +59,10 @@ architecture structural of L1 is
 	signal Mask : std_logic_vector(511 downto 0);
 	signal maskedDataFromEntry : std_logic_vector(511 downto 0);
 	signal CacheLineIn : std_logic_vector(511 downto 0);
+	signal hitTemp1 : std_logic;
+	signal hitTemp2 : std_logic;
+	signal notReadWrite : std_logic;
+	signal dirtyIn : std_logic;
 begin
 	----Parse the address----
 	tagIn <= Address(31 downto 8);
@@ -66,7 +74,7 @@ begin
 	setNotTagFromEntry : not_gate_n generic map(n=>24) port map(
 									tagFromEntry, notTagFromEntry);
 	subtractTags : fulladder_n generic map(n=>24) port map(cin=>'1',
-								x=>tagIn,y=>tagFromEntry,z=>subtractedTags);
+								x=>tagIn,y=>notTagFromEntry,z=>subtractedTags);
 	--OR them all up
 	orSubtractedTags : or_gate_unary_n generic map(n=>24) port map(
 								x=>subtractedTags,z=>miss);
@@ -75,11 +83,13 @@ begin
 
 	----Generate write signal for cache----
 	--Might have to do some fancy stuff with eviction, but probs not
-	-- we = {(hit && ReadWrite) || (miss && DataReadyFromL2)} && Clk
+	--we = {(hit && ReadWrite) || (miss && DataReadyFromL2)} && RequestIn && Clk
 	--       (    weTemp1     )    (       weTemp2         )
 	--      {                  weTemp3                      }
+	--                                                     weTemp4
 
-	andWeWithClk : and_gate port map(weTemp3, Clk, we);
+	andWeWithClk : and_gate port map(weTemp3, RequestIn, weTemp4);
+	andWeWithRequestIn : and_gate port map(weTemp4, Clk, we);
 	hitAndReadWrite : and_gate port map(ReadWrite, hit, weTemp1);
 	missAndDataRead : and_gate port map(miss, DataReadyFromL2, weTemp2);
 	orWeTemps : or_gate port map(weTemp1, weTemp2, weTemp3);
@@ -106,6 +116,7 @@ begin
 								src15 => "0111100000",
 								z => ShiftAmt);
 
+
 	shftDataIn : shifter_512 port map(Bits => ExtDataIn, Shift => ShiftAmt, R => ShiftDataIn) ;
 
 	shiftMask : shifter_512 port map(Bits => (511 downto 32 => '0', 31 downto 0 => '1'), Shift => ShiftAmt, R=> InvMask);
@@ -113,7 +124,7 @@ begin
 
 	maskEntry : and_gate_n generic map (n=>512) port map(x => Mask, y => dataFromEntry(511 downto 0), z => maskedDataFromEntry);
 
-	dataInAndEntry : and_gate_n generic map (n=>512) port map(x => ShiftDataIn, y => maskedDataFromEntry, z => CacheLineIn);	
+	dataInAndEntry : or_gate_n generic map (n=>512) port map(x => ShiftDataIn, y => maskedDataFromEntry, z => CacheLineIn);	
 
 	----Choose data entry to write----
 
@@ -126,13 +137,14 @@ begin
 							port map(sel=>hit,src0=>DataFromL2,src1=>CacheLineIn,
 									z=>dataIntoCache(511 downto 0));
 
-	--Dirty bit = {(ReadWrite && hit) || dirty} && (miss)
-	--			   (   dirtyTemp1   )
-	--			  {         dirtyTemp2        }
+	--Dirty bit = {ReadWrite or (dirty && hit))
+	--			                 (   dirtyTemp1   )
+	--			                               
 	
-	setDirtyTemp1 : and_gate port map(ReadWrite, hit, dirtyTemp1);
-	setDirtyTemp2 : or_gate port map(dirtyTemp1, dirty, dirtyTemp2);
-	setDirtyIn : and_gate port map(dirtyTemp2, miss, dataIntoCache(536));
+	setDirtyTemp1 : and_gate port map(hit, dirty, dirtyTemp1);
+	--setDirtyTemp2 : and_gate port map(miss, notReadWrite, dirtyTemp2);
+	setDirtyIn : or_gate port map(dirtyTemp1, ReadWrite, dirtyIn);
+	dataIntoCache(536) <= dirtyIn;
 
 	----This is our cache----
 	CsramCache : csram generic map(INDEX_WIDTH=>4, BIT_WIDTH=>537)
@@ -171,10 +183,12 @@ begin
 	--
 	-- Evict if miss
 
-	RequestToL2 <= miss;
+	setRequestToL2 : and_gate port map(miss, RequestIn,RequestToL2);
 	
-	setWriteBack : and_gate port map(miss, dirty, writeBack);
-
+	setWriteBackInTemp1 : and_gate port map(miss, dirty, writeBackInTemp1);
+	setWriteBackIn : and_gate port map(writeBackInTemp1, RequestIn,writeBackIn);
+   makeWriteBackFF: dffr port map(clk=>Clk,d=>writeBackIn,q=>writeBackOut);
+   setWriteBack : or_gate port map(writeBackIn, writeBackOut, writeBack);
 	--TODO figure out writtenBack
 	--(miss should maybe be notWrittenBack??)
 	--writtenBack clocked <= miss && DataReadyFromL2 && writeBack
@@ -201,7 +215,12 @@ begin
 	AddressToL2(7 downto 4) <= index;
 	AddressToL2(3 downto 0) <= "0000";
 
-	--We're done when the request hits
-	DataReady <= hit;
+	--We're done when the request {hit && [~ReadWrite or (ReadWrite && clk)]} 
+   --                                             hitTemp2      hitTemp1   	
+   setNotReadWrite : not_gate port map(ReadWrite, notReadWrite);
+   setHitsTemp1 : and_gate port map(ReadWrite, Clk, hitTemp1);
+   setHitsTemp2 : or_gate port map(notReadWrite, hitTemp1, hitTemp2);
+   setDataReady : and_gate port map(hit, hitTemp2, DataReady);
+	
 	
 end structural;
