@@ -48,6 +48,13 @@ architecture structural of L1 is
 	signal tagToL2 : std_logic_vector(23 downto 0);
 	signal notTagFromEntry : std_logic_vector(23 downto 0);
 	signal subtractedTags : std_logic_vector(23 downto 0);
+	signal ExtDataIn : std_logic_vector(511 downto 0);
+	signal ShiftAmt : std_logic_vector(9 downto 0);
+	signal ShiftDataIn : std_logic_vector(511 downto 0);
+	signal InvMask : std_logic_vector(511 downto 0);
+	signal Mask : std_logic_vector(511 downto 0);
+	signal maskedDataFromEntry : std_logic_vector(511 downto 0);
+	signal CacheLineIn : std_logic_vector(511 downto 0);
 begin
 	----Parse the address----
 	tagIn <= Address(31 downto 8);
@@ -77,7 +84,38 @@ begin
 	missAndDataRead : and_gate port map(miss, DataReadyFromL2, weTemp2);
 	orWeTemps : or_gate port map(weTemp1, weTemp2, weTemp3);
 
-	----Generate our data entry to insert----
+	----Instert DataIn into Cache Line (not writing yet) ----
+	ExtDataIn <= (479 downto 0 => '0') & DataIn;
+
+	ShftAmt : mux_n_16 generic map(n=>10) port map(sel => offset,
+								src0 => "0000000000",
+								src1 => "0000100000",
+								src2 => "0001000000",
+								src3 => "0001100000",
+								src4 => "0010000000",
+								src5 => "0010100000",
+								src6 => "0011000000",
+								src7 => "0011100000",
+								src8 => "0100000000",
+								src9 => "0100100000",
+								src10 => "0101000000",
+								src11 => "0101100000",
+								src12 => "0110000000",
+								src13 => "0110100000",
+								src14 => "0111000000",
+								src15 => "0111100000",
+								z => ShiftAmt);
+
+	shftDataIn : shifter_512 port map(Bits => ExtDataIn, Shift => ShiftAmt, R => ShiftDataIn) ;
+
+	shiftMask : shifter_512 port map(Bits => (511 downto 32 => '0', 31 downto 0 => '1'), Shift => ShiftAmt, R=> InvMask);
+	notInvMask : not_gate_n generic map (n=>512) port map(InvMask, Mask);
+
+	maskEntry : and_gate_n generic map (n=>512) port map(x => Mask, y => dataFromEntry(511 downto 0), z => maskedDataFromEntry);
+
+	dataInAndEntry : and_gate_n generic map (n=>512) port map(x => ShiftDataIn, y => maskedDataFromEntry, z => CacheLineIn);	
+
+	----Choose data entry to write----
 
 	--dataIntoCache(511 downto 0) = (DataIn if hit) or (DataFromL2 if miss)
 	--Make sure tag corresponds with the data we're sending
@@ -85,7 +123,7 @@ begin
 								src0=>tagToL2,src1=>tagIn,
 								z=>dataIntoCache(535 downto 512));
 	muxDataWithHit : mux_n generic map (n=>512)
-							port map(sel=>hit,src0=>DataFromL2,src1=>DataIn,
+							port map(sel=>hit,src0=>DataFromL2,src1=>CacheLineIn,
 									z=>dataIntoCache(511 downto 0));
 
 	--Dirty bit = {(ReadWrite && hit) || dirty} && (miss)
@@ -97,7 +135,7 @@ begin
 	setDirtyIn : and_gate port map(dirtyTemp2, miss, dataIntoCache(536));
 
 	----This is our cache----
-	CsramCache : csram generic map(INDEX_WIDTH=>4, BIT_WIDTH=>281)
+	CsramCache : csram generic map(INDEX_WIDTH=>4, BIT_WIDTH=>537)
 						port map(cs=>'1',oe=>'1',we=>we,index=>index,
 									din=>dataIntoCache,dout=>dataFromEntry);
 

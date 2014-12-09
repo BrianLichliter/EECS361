@@ -298,4 +298,12 @@ package eecs361 is
   );
   end component L1;
 
+  component shifter_512 is
+  port (
+    Bits  : in std_logic_vector(511 downto 0);
+    Shift : in std_logic_vector(9 downto 0);
+    R     : out std_logic_vector(511 downto 0)
+  );
+  end component shifter_512;
+
 end;
