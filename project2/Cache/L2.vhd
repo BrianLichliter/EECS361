@@ -75,6 +75,34 @@ architecture structural of L2 is
 	signal DataOut3 : std_logic_vector(511 downto 0);
 	signal DataOut4 : std_logic_vector(511 downto 0);
 	
+	-- we enable calculations
+	signal we1Temp1 : std_logic;
+	signal we1Temp2 : std_logic;
+	signal we1Temp3 : std_logic;
+	signal we1Temp4 : std_logic;
+	
+	signal we2Temp1 : std_logic;
+	signal we2Temp2 : std_logic;
+	signal we2Temp3 : std_logic;
+	signal we2Temp4 : std_logic;
+	
+	signal we3Temp1 : std_logic;
+	signal we3Temp2 : std_logic;
+	signal we3Temp3 : std_logic;
+	signal we3Temp4 : std_logic;
+
+	signal we4Temp1 : std_logic;
+	signal we4Temp2 : std_logic;
+	signal we4Temp3 : std_logic;	
+	signal we4Temp4 : std_logic;
+	
+	signal pickedByLRU1 : std_logic;
+	signal pickedByLRU2 : std_logic;
+	signal pickedByLRU3 : std_logic;
+	signal pickedByLRU4 : std_logic;
+	
+	signal ExtDataIn : std_logic_vector (2071 downto 0);
+	signal ShiftAmt : std_logic_vector (11 downto 0);
 begin
 	-- parse the address --
 	tagIn <= AddressFromL1 (31 downto 8);
@@ -193,7 +221,44 @@ begin
 								
 	----------------------------------------
 	-- determine write enables
+	-- we = {{hit && readwrite} || {miss && LRUpicked}} && clk
+	-- we for cache block 1 --
+	hitAndReadWrite1 : and_gate port map(ReadWriteFromL1, hit1, we1Temp1);
+	missAndLRU1 : and_gate port map(miss1, pickedByLRU1, we1Temp2);
+	orWeTemps1 : or_gate port map(we1Temp1, we1Temp2, we1Temp3);
+	andWeWtihRequest1 : and_gate port map(we1temp3, RequestFromL1, we1temp4); 
+	andWeWithClk1 : and_gate port map(we1Temp4, Clk, we);
 	
+	-- we for cache block 2 --
+	hitAndReadWrite2 : and_gate port map(ReadWriteFromL1, hit2, we2Temp1);
+	missAndLRU2 : and_gate port map(miss2, pickedByLRU2, we2Temp2);
+	orWeTemps2 : or_gate port map(we2Temp1, we2Temp2, we2Temp3);
+	andWeWtihRequest2 : and_gate port map(we2temp3, RequestFromL1, we2temp4);
+	andWeWithClk2 : and_gate port map(we2Temp4, Clk, we);
+	
+	-- we for cache block 3 -- 
+	hitAndReadWrite3 : and_gate port map(ReadWriteFromL1, hit3, we3Temp1);
+	missAndLRU3 : and_gate port map(miss3, pickedByLRU3, we3Temp2);
+	orWeTemps3 : or_gate port map(we3Temp1, we3Temp2, we3Temp3);
+	andWeWtihRequest3 : and_gate port map(we3temp3, RequestFromL1, we3temp4);
+	andWeWithClk3 : and_gate port map(we3Temp4, Clk, we);
+	
+	-- we for cache block 4 --
+	hitAndReadWrite4 : and_gate port map(ReadWriteFromL1, hit4, we4Temp1);
+	missAndLRU4 : and_gate port map(miss4, pickedByLRU4, we4Temp2);
+	orWeTemps4 : or_gate port map(we4Temp1, we4Temp2, we4Temp3);
+	andWeWtihRequest4 : and_gate port map(we4temp3, RequestFromL1, we4temp4);
+	andWeWithClk4 : and_gate port map(we4Temp4, Clk, we);
+	
+	-- insert dataFromL1 into Cache Line (not writing yet) --
+	ExtDataIn <= (2071 downto 512 => '0') & DataFromL1;
+	
+	ShftAmt : mux_n_4 generic map(n=>12) port map(sel => offset,
+								src0 => "000000000000",
+								src1 => "001000000000",
+								src2 => "010000000000",
+								src3 => "100000000000",
+								z => ShiftAmt);
 	
 		----This is cache block 1----
 	CsramCache1 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
