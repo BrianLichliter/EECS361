@@ -280,4 +280,22 @@ package eecs361 is
 	);
 	end component mux_n_16;
 
+  component L1 is
+  port (
+    Clk : in std_logic;
+    RequestIn: in std_logic;
+    ReadWrite : in std_logic;
+    Address : in std_logic_vector (31 downto 0);
+    DataIn : in std_logic_vector (31 downto 0);
+    DataOut : out std_logic_vector (31 downto 0);
+    DataReady : out std_logic;
+    DataFromL2 : in std_logic_vector (511 downto 0);
+    DataReadyFromL2 : in std_logic;
+    RequestToL2 : out std_logic;
+    DataToL2 : out std_logic_vector (511 downto 0);
+    AddressToL2 : out std_logic_vector (31 downto 0);
+    ReadWriteToL2 : out std_logic
+  );
+  end component L1;
+
 end;
