@@ -279,7 +279,7 @@ package eecs361 is
 		z	: out std_logic_vector(n-1 downto 0)
 	);
 	end component mux_n_16;
-   
+
    component shifter_512 is
 	port (
 		Bits	: in std_logic_vector(511 downto 0);
@@ -295,6 +295,45 @@ component shifter_2048 is
 		R		: out std_logic_vector(2047 downto 0)
 	);
 end component shifter_2048;
+
+  component register_8bit is
+    port (
+        clk : in std_logic;
+        reset_active_low : in std_logic;
+        write_en: in std_logic;
+        D   : in std_logic_vector(7 downto 0);
+        Z   : out std_logic_vector(7 downto 0)
+    );
+  end component register_8bit;
+
+  component register_32bit is
+    port (
+        clk : in std_logic;
+        reset_active_low : in std_logic;
+        write_en: in std_logic;
+        D   : in std_logic_vector(31 downto 0);
+        Z   : out std_logic_vector(31 downto 0)
+    );
+  end component register_32bit;
+
+  component counter is
+    port (
+      inc   : in std_logic;
+      clk   : in std_logic;
+      reset : in std_logic;
+      cnt   : out std_logic_vector(31 downto 0)
+    );
+  end component counter;
+
+  component LRU is
+    port (
+      set_idx : in std_logic_vector(1 downto 0);
+      we    : in std_logic;
+      clk   : in std_logic;
+      reset : in std_logic;
+      lru_idx : out std_logic_vector(1 downto 0)
+    );
+  end component LRU;
 
   component L1 is
   port (
