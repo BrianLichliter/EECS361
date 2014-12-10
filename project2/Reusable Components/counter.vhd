@@ -31,7 +31,7 @@ begin
 	--Add 1 to the register output
 	add : fulladder_32 port map(cin => '1', x => registerOut, y => (31 downto 0 => '0'), cout => open, z => registerInNext);
 
-	compareWithHighestValue : cmp_n port map(a=>registerOut,
+	compareWithHighestValue : cmp_n generic map(n=>32) port map(a=>registerOut,
 									b=>HighestValue,a_eq_b=>maxedOut);
 
 	ResetIfMaxed : mux_n generic map(n=>32) port map(sel=>maxedOut,
