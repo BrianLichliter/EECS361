@@ -287,6 +287,14 @@ package eecs361 is
 		R		: out std_logic_vector(511 downto 0)
 	);
    end component shifter_512;
+   
+component shifter_2048 is
+	port (
+		Bits	: in std_logic_vector(2047 downto 0);
+		Shift	: in std_logic_vector(11 downto 0);
+		R		: out std_logic_vector(2047 downto 0)
+	);
+end component shifter_2048;
 
   component L1 is
   port (
