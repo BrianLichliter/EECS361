@@ -6,6 +6,7 @@ use work.eecs361.all;
 entity L2 is
 	port (
 		Clk : in std_logic;
+		ResetActiveHigh : in std_logic;
 		
 		ReadWriteFromL1 : in std_logic;
 		AddressFromL1 : in std_logic_vector (31 downto 0);
@@ -524,5 +525,31 @@ begin
 	CsramCache4 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
 						port map(cs=>'1',oe=>'1',we=>we4,index=>index,
 									din=>dataIntoCache4,dout=>dataFromEntry4);
-									
+								
+								
+								
+		----LRU instantiation----
+	getIndexOfLineAccessed : mux_n_16 generic map(n=>2) port map(sel=>tagHitVector,
+								src0=>LRUindexOut,
+								src1=>"00",
+								src2=>"01",
+								src4=>"10",
+								src8=>"11",
+								z=>MRUindex);
+	
+	setWeLRU : and_gate port map(RequestFromL1, hit,weLRU);
+	LRUmap : LRU port map(set_idx=>LRUindexIn,we=>weLRU,clk=>Clk,reset=>ResetActiveHigh,lru_idx=>MRUindex);
+
+	setPickedByLRUs : mux_n_4 generic map(n=>4) port map(sel=>LRUindexOut,
+							src0=>"0001",
+							src1=>"0010",
+							src2=>"0100",
+							src3=>"1000",
+							z=>pickedByLRUvector);
+
+	pickedByLRU1 <= pickedByLRUvector(0);
+	pickedByLRU2 <= pickedByLRUvector(1);
+	pickedByLRU3 <= pickedByLRUvector(2);
+	pickedByLRU4 <= pickedByLRUvector(3);
+
 end structural;
