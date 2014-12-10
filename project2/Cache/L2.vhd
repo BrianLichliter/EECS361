@@ -27,7 +27,7 @@ entity L2 is
 		BlockFromMem : in std_logic_vector(2047 downto 0);
 		BlockFromMemReady : in std_logic;
 		
-		RequestBlockFromMem : out std_logic;	
+		RequestBlockFromMem : out std_logic
 	);
 end L2;
 
@@ -130,10 +130,100 @@ architecture structural of L2 is
 	signal CacheLineIn4 : std_logic_vector(2047 downto 0);
 	
 	signal tagToMem : std_logic_vector(23 downto 0);
-	signal dataIntoCache1 : std_logic_vector(2071 downto 0);
-	signal dataIntoCache2 : std_logic_vector(2071 downto 0);
-	signal dataIntoCache3 : std_logic_vector(2071 downto 0);
-	signal dataIntoCache4 : std_logic_vector(2071 downto 0);
+	signal dataIntoCache1 : std_logic_vector(2075 downto 0);
+	signal dataIntoCache2 : std_logic_vector(2075 downto 0);
+	signal dataIntoCache3 : std_logic_vector(2075 downto 0);
+	signal dataIntoCache4 : std_logic_vector(2075 downto 0);
+	
+	signal valid1_1 : std_logic;
+	signal valid2_1 : std_logic;
+	signal valid3_1 : std_logic;
+	signal valid4_1 : std_logic;
+
+	signal valid1_2 : std_logic;
+	signal valid2_2 : std_logic;
+	signal valid3_2 : std_logic;
+	signal valid4_2 : std_logic;
+
+	signal valid1_3 : std_logic;
+	signal valid2_3 : std_logic;
+	signal valid3_3 : std_logic;
+	signal valid4_3 : std_logic;
+	
+	signal valid1_4 : std_logic;
+	signal valid2_4 : std_logic;
+	signal valid3_4 : std_logic;
+	signal valid4_4 : std_logic;
+	
+	signal andedValidVector1 : std_logic_vector(3 downto 0);
+	signal andedValidVector2 : std_logic_vector(3 downto 0);
+	signal andedValidVector3 : std_logic_vector(3 downto 0);
+	signal andedValidVector4 : std_logic_vector(3 downto 0);
+	
+	signal oredValidVectorsTemp1 : std_logic_vector(3 downto 0);
+	signal oredValidVectorsTemp2 : std_logic_vector(3 downto 0);
+	signal oredValidVectorsTemp3 : std_logic_vector(3 downto 0);
+	signal oredValidVectors : std_logic_vector(3 downto 0);
+	
+	signal writeTagMissValids  : std_logic_vector(3 downto 0);
+	signal readMissValids : std_logic_vector(3 downto 0);
+	signal writeTagHitValids : std_logic_vector(3 downto 0);
+	signal validInput : std_logic_vector(3 downto 0);
+
+	signal hit1vector : std_logic_vector(3 downto 0);
+	signal hit2vector : std_logic_vector(3 downto 0);
+	signal hit3vector : std_logic_vector(3 downto 0);
+	signal hit4vector : std_logic_vector(3 downto 0);
+	signal tagHitVector : std_logic_vector(3 downto 0);
+	signal tagHit : std_logic;
+	
+	signal valid1vector : std_logic_vector(3 downto 0);
+	signal valid2vector : std_logic_vector(3 downto 0);
+	signal valid3vector : std_logic_vector(3 downto 0);
+	signal valid4vector : std_logic_vector(3 downto 0);
+		
+	signal andedValidBit1 : std_logic;	
+	signal andedValidBit2 : std_logic;
+	signal andedValidBit3 : std_logic;
+	signal andedValidBit4 : std_logic;
+	
+	signal andedHitVector : std_logic_vector(3 downto 0);
+	signal validSel : std_logic_vector(1 downto 0);
+	
+	signal ExtDataIn1 : std_logic_vector (2047 downto 0);
+	signal ShiftDataIn1 : std_logic_vector(2047 downto 0);
+	signal ShiftAmt1 : std_logic_vector (11 downto 0);
+	signal InvMask1 : std_logic_vector(2047 downto 0);
+	signal Mask1 : std_logic_vector(2047 downto 0);
+	
+	signal maskedDataFromEntry11 : std_logic_vector(2047 downto 0);
+	signal maskedDataFromEntry21 : std_logic_vector(2047 downto 0);
+	signal maskedDataFromEntry31 : std_logic_vector(2047 downto 0);
+	signal maskedDataFromEntry41 : std_logic_vector(2047 downto 0);
+	
+	signal CacheLineFromSubBlock1 : std_logic_vector(2047 downto 0);
+  signal CacheLineFromSubBlock2 : std_logic_vector(2047 downto 0);
+  signal CacheLineFromSubBlock3 : std_logic_vector(2047 downto 0);
+  signal CacheLineFromSubBlock4 : std_logic_vector(2047 downto 0);
+  	
+  signal DataFromMem1 : std_logic_vector(2047 downto 0);	
+  signal DataFromMem2 : std_logic_vector(2047 downto 0);
+  signal DataFromMem3 : std_logic_vector(2047 downto 0);
+  signal DataFromMem4 : std_logic_vector(2047 downto 0);  	
+  
+  signal requestTemp1 : std_logic;
+  signal LRUindexOut : std_logic_vector (1 downto 0);
+  signal MRUindex : std_logic_vector (1 downto 0);
+  -- datareadyfrommem--
+  -- notreadwritefroml1--
+  -- make subblockfrommem into datafromL1 extdatain1--
+  
+  signal pickedByLRUvector : std_logic_vector (3 downto 0);
+  signal weLRU : std_logic;  	
+  signal LRUindexIn : std_logic_vector(1 downto 0);
+  
+  signal DataReadyFromMem : std_logic;
+  signal notReadWriteFromL1 : std_logic;
 begin
 	-- parse the address --
 	tagIn <= AddressFromL1 (31 downto 8);
@@ -271,8 +361,8 @@ begin
 	--Write Tag Hit, valid miss, set that valid to 1
 	
 
-	orValids3 : or_gate_n generic map(n=>4) port map(andedValidVector1,andedValidVector2,oredValidVectorsTemp1);
-	orValids3 : or_gate_n generic map(n=>4) port map(oredValidVectorsTemp1,andedValidVector3,oredValidVectorsTemp2);
+	orValids1 : or_gate_n generic map(n=>4) port map(andedValidVector1,andedValidVector2,oredValidVectorsTemp1);
+	orValids2 : or_gate_n generic map(n=>4) port map(oredValidVectorsTemp1,andedValidVector3,oredValidVectorsTemp2);
 	orValids3 : or_gate_n generic map(n=>4) port map(oredValidVectorsTemp2,andedValidVector4,oredValidVectors);
 
 	setWriteTagHitsValids : or_gate_n generic map(n=>4) port map(writeTagMissValids,oredValidVectors,writeTagHitValids);
@@ -282,7 +372,7 @@ begin
 							src1=>"0010",
 							src2=>"0100",
 							src3=>"1000",
-							z=>writeTagMissValids)
+							z=>writeTagMissValids);
 
 	validSel(1) <= ReadWriteFromL1;
 	validSel(0) <= tagHit;
@@ -307,36 +397,36 @@ begin
 	tagHitVector <= hit1 & hit2 & hit3 & hit4;
 	setTagHit: or_gate_unary_n generic map(n=>4) port map(tagHitVector,tagHit);
 
-	valid1vector <= valid4_1 & valid3_1 & valid2_1 valid1_1;
-	valid2vector <= valid4_2 & valid3_2 & valid2_2 valid1_2;
-	valid3vector <= valid4_3 & valid3_3 & valid2_3 valid1_3;
-	valid4vector <= valid4_4 & valid3_4 & valid2_4 valid1_4;
+	valid1vector <= valid4_1 & valid3_1 & valid2_1 & valid1_1;
+	valid2vector <= valid4_2 & valid3_2 & valid2_2 & valid1_2;
+	valid3vector <= valid4_3 & valid3_3 & valid2_3 & valid1_3;
+	valid4vector <= valid4_4 & valid3_4 & valid2_4 & valid1_4;
 
 	setAndedValidVector1 : and_gate_n generic map(n=>4) port map(hit1vector,valid1vector,andedValidVector1);
 	setAndedValidVector2 : and_gate_n generic map(n=>4) port map(hit2vector,valid2vector,andedValidVector2);
 	setAndedValidVector3 : and_gate_n generic map(n=>4) port map(hit3vector,valid3vector,andedValidVector3);
 	setAndedValidVector4 : and_gate_n generic map(n=>4) port map(hit4vector,valid4vector,andedValidVector4);
 	
-	muxValidBits1 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector1(0),
+	muxValidBits1 : mux_1_4 port map(sel=>offset,src0=>andedValidVector1(0),
 										src1=>andedValidVector1(1),
 										src2=>andedValidVector1(2),
 										src3=>andedValidVector1(3),
 										z=>andedValidBit1);
 	
-	muxValidBits2 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector2(0),
-										src1=>andedValidVector2(2),
+	muxValidBits2 : mux_1_4 port map(sel=>offset,src0=>andedValidVector2(0),
+										src1=>andedValidVector2(1),
 										src2=>andedValidVector2(2),
 										src3=>andedValidVector2(3),
 										z=>andedValidBit2);
 	
-	muxValidBits3 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector3(0),
-										src1=>andedValidVector3(3),
+	muxValidBits3 : mux_1_4 port map(sel=>offset,src0=>andedValidVector3(0),
+										src1=>andedValidVector3(1),
 										src2=>andedValidVector3(2),
 										src3=>andedValidVector3(3),
 										z=>andedValidBit3);
 	
-	muxValidBits4 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector4(0),
-										src1=>andedValidVector4(4),
+	muxValidBits4 : mux_1_4 port map(sel=>offset,src0=>andedValidVector4(0),
+										src1=>andedValidVector4(1),
 										src2=>andedValidVector4(2),
 										src3=>andedValidVector4(3),
 										z=>andedValidBit4);
@@ -345,7 +435,7 @@ begin
 	orHitVector : or_gate_unary_n generic map(n=> 4) port map(
 								x=>andedHitVector,z=>hit);	
 								
-								
+	BlockAndSubBlockReady : or_gate port map(BlockFromMemReady, SubBlockFromMemReady, DataReadyFromMem);							
 	----------------------------------------
 	-- determine write enables
 	-- we = {{hit && readwrite} || {miss && LRUpicked && DataReadyFromMem}} && && RequestFromL1 && clk
@@ -414,7 +504,7 @@ begin
 	----TODO Do masking for sublocks from Mem----
 
 	-- insert dataFromL1 into Cache Line (not writing yet) --
-	ExtDataIn1 <= (1535 downto 0 => '0') & SubBlockFromMem;
+	ExtDataIn1 <= (1535 downto 0 => '0') & DataFromL1;
 	
 	ShftAmt1 : mux_n_4 generic map(n=>12) port map(sel => offset,
 								src0 => "000000000000",
@@ -450,10 +540,10 @@ begin
 	muxDataFromMem2 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
 												src1=>CacheLineFromSubBlock2,z=>DataFromMem2);
 
-	muxDataFromMem1 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
+	muxDataFromMem3 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
 												src1=>CacheLineFromSubBlock3,z=>DataFromMem3);
 	
-	muxDataFromMem1 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
+	muxDataFromMem4 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
 												src1=>CacheLineFromSubBlock4,z=>DataFromMem4);
 	
 	selectTag1 : mux_n generic map(n=>24) port map(sel=>hit, 
@@ -497,6 +587,8 @@ begin
 	AddressToMem <= AddressFromL1;
 	SubBlockToMem <= DataFromL1;
 
+
+  notReadWriteMap : not_gate port map (ReadWriteFromL1, notReadWriteFromL1);
 	--Request Block when reading, miss, and request from L1
 	setRequestBlockFromMem : and_gate port map(notReadWriteFromL1, miss, requestTemp1);
 	setRequestBlockFromMem2: and_gate port map(RequestFromL1, requestTemp1, RequestBlockFromMem);
@@ -533,8 +625,19 @@ begin
 								src0=>LRUindexOut,
 								src1=>"00",
 								src2=>"01",
+								src3=>"00",
 								src4=>"10",
+								src5=>"00",
+								src6=>"00",
+								src7=>"00",
 								src8=>"11",
+								src9=>"00",
+								src10=>"00",
+								src11=>"00",
+								src12=>"00",
+								src13=>"00",
+								src14=>"00",
+								src15=>"00",
 								z=>MRUindex);
 	
 	setWeLRU : and_gate port map(RequestFromL1, hit,weLRU);

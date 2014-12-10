@@ -253,6 +253,17 @@ package eecs361 is
 		z	: out std_logic_vector(n-1 downto 0)
 	);
 	end component mux_n_4; 
+	
+   component mux_1_4 is
+	port (
+		sel	: in  std_logic_vector(1 downto 0);
+		src0	: in  std_logic;
+		src1	: in  std_logic;
+		src2	: in  std_logic;
+		src3	: in  std_logic;
+		z	: out std_logic
+	);
+	end component mux_1_4; 
 
 	component mux_n_16 is
 	generic (
