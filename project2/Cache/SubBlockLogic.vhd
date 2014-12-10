@@ -24,6 +24,7 @@ architecture structural of SubBlockLogic is
 	signal notRequestSubBlockFromL2 : std_logic;
 	signal reset : std_logic;
 	signal wereDone : std_logic;
+	signal writeEnable : std_logic;
 begin
 	--reset counter if no request
 	setNotRequestSubBlockFromL2 : not_gate port map(RequestSubBlockFromL2,
@@ -33,6 +34,7 @@ begin
 
 	--increment counter every clock
 	--when counter == 15 and clk high, ready
+	writeEnable <= RequestSubBlockFromL2;
 	thisIsOurCounter : counter port map(WriteEnable=>writeEnable,Clk=>Clk,Reset=>reset,HighestValue=>x"0000000f",Count=>count);
 
 	areWeDone : cmp_n generic map(n=>32) port map(a=>count,b=>x"0000000f",
@@ -62,7 +64,7 @@ begin
 
 	WriteToMem <= RequestSubBlockFromL2;
 
-	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>counter
+	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count
 											z=>AddressToMem);
 end structural;
 
