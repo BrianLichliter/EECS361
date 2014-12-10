@@ -28,7 +28,6 @@ architecture structural of L2 is
 	signal we2 : std_logic;
 	signal we3 : std_logic;
 	signal we4 : std_logic;
-	signal dataIntoCache : std_logic_vector (2075 downto 0);
 	signal dataFromEntry1 : std_logic_vector(2075 downto 0);
 	signal dataFromEntry2 : std_logic_vector(2075 downto 0);
 	signal dataFromEntry3 : std_logic_vector(2075 downto 0);
@@ -101,8 +100,28 @@ architecture structural of L2 is
 	signal pickedByLRU3 : std_logic;
 	signal pickedByLRU4 : std_logic;
 	
-	signal ExtDataIn : std_logic_vector (2071 downto 0);
+	-- write calculations
+	signal ExtDataIn : std_logic_vector (2047 downto 0);
+	signal ShiftDataIn : std_logic_vector(2047 downto 0);
 	signal ShiftAmt : std_logic_vector (11 downto 0);
+	signal InvMask : std_logic_vector(2047 downto 0);
+	signal Mask : std_logic_vector(2047 downto 0);
+	
+	signal maskedDataFromEntry1 : std_logic_vector(2047 downto 0);
+	signal maskedDataFromEntry2 : std_logic_vector(2047 downto 0);
+	signal maskedDataFromEntry3 : std_logic_vector(2047 downto 0);
+	signal maskedDataFromEntry4 : std_logic_vector(2047 downto 0);
+	
+	signal CacheLineIn1 : std_logic_vector(2047 downto 0);
+	signal CacheLineIn2 : std_logic_vector(2047 downto 0);
+	signal CacheLineIn3 : std_logic_vector(2047 downto 0);
+	signal CacheLineIn4 : std_logic_vector(2047 downto 0);
+	
+	signal tagToMem : std_logic_vector(23 downto 0);
+	signal dataIntoCache1 : std_logic_vector(2071 downto 0);
+	signal dataIntoCache2 : std_logic_vector(2071 downto 0);
+	signal dataIntoCache3 : std_logic_vector(2071 downto 0);
+	signal dataIntoCache4 : std_logic_vector(2071 downto 0);
 begin
 	-- parse the address --
 	tagIn <= AddressFromL1 (31 downto 8);
@@ -251,7 +270,7 @@ begin
 	andWeWithClk4 : and_gate port map(we4Temp4, Clk, we4);
 	
 	-- insert dataFromL1 into Cache Line (not writing yet) --
-	ExtDataIn <= (2071 downto 512 => '0') & DataFromL1;
+	ExtDataIn <= (1535 downto 0 => '0') & DataFromL1;
 	
 	ShftAmt : mux_n_4 generic map(n=>12) port map(sel => offset,
 								src0 => "000000000000",
@@ -259,22 +278,77 @@ begin
 								src2 => "010000000000",
 								src3 => "100000000000",
 								z => ShiftAmt);
+								
+	shftDataIn : shifter_2048 port map(Bits => ExtDataIn, Shift => ShiftAmt, R => ShiftDataIn);
+	
+	-- create the bit mask
+	shiftMask : shifter_2048 port map (Bits => (2047 downto 512 => '0', 511 downto 0 => '1'), Shift => ShiftAmt, R=> InvMask);
+	notInvMask : not_gate_n generic map (n=>2048) port map (InvMask, Mask);
+	
+	-- mask each possible data entry
+	maskEntry1 : and_gate_n generic map (n=>2048) port map (x => Mask, y => dataFromEntry1(2047 downto 0),z => maskedDataFromEntry1);
+	maskEntry2 : and_gate_n generic map (n=>2048) port map (x => Mask, y => dataFromEntry2(2047 downto 0),z => maskedDataFromEntry2);
+	maskEntry3 : and_gate_n generic map (n=>2048) port map (x => Mask, y => dataFromEntry3(2047 downto 0),z => maskedDataFromEntry3);
+	maskEntry4 : and_gate_n generic map (n=>2048) port map (x => Mask, y => dataFromEntry4(2047 downto 0),z => maskedDataFromEntry4);
+	
+	-- create all the possible cacheline we would write back
+	dataInAndEntry1 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn, y => maskedDataFromEntry1, z => CacheLineIn1);	
+	dataInAndEntry2 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn, y => maskedDataFromEntry2, z => CacheLineIn2);	
+	dataInAndEntry3 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn, y => maskedDataFromEntry3, z => CacheLineIn3);	
+	dataInAndEntry4 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn, y => maskedDataFromEntry4, z => CacheLineIn4);	
+	
+
+	-- Chose data entry to write --
+		-- dataIntoCache(511 downto 0) = (DataIn if hit) or (mem, if miss)
+		-- make sure tag corresponds with the data we're sending
+	selectTag1 : mux_n generic map(n=>24) port map(sel=>hit, 
+									src0=>tagToMem, src1 => tagIn, 
+									z=>dataIntoCache1(2071 downto 2048));
+	selectTag2 : mux_n generic map(n=>24) port map(sel=>hit, 
+									src0=>tagToMem, src1 => tagIn, 
+									z=>dataIntoCache2(2071 downto 2048));
+	selectTag3 : mux_n generic map(n=>24) port map(sel=>hit, 
+									src0=>tagToMem, src1 => tagIn, 
+									z=>dataIntoCache3(2071 downto 2048));
+	selectTag4 : mux_n generic map(n=>24) port map(sel=>hit, 
+									src0=>tagToMem, src1 => tagIn, 
+									z=>dataIntoCache4(2071 downto 2048));
+	muxDataWithHit1 : mux_n generic map (n=>2048)
+								port map(sel=>hit1, src0=>DataFromMem, src1 => CacheLineIn1,
+										z=>dataIntoCache1(2047 downto 0));
+	muxDataWithHit2 : mux_n generic map (n=>2048)
+								port map(sel=>hit2, src0=>DataFromMem, src1 => CacheLineIn2,
+										z=>dataIntoCache2(2047 downto 0));
+	muxDataWithHit3 : mux_n generic map (n=>2048)
+								port map(sel=>hit3, src0=>DataFromMem, src1 => CacheLineIn3,
+										z=>dataIntoCache3(2047 downto 0));
+	muxDataWithHit4 : mux_n generic map (n=>2048)
+								port map(sel=>hit4, src0=>DataFromMem, src1 => CacheLineIn4,
+										z=>dataIntoCache4(2047 downto 0));
+										
+	
+	-----------------------------------------------------
+	-----------------incomplete------------------------
+	-----------------------------------------------------	
+	------ write to mem not done ------
+	------ read from mem not done ----
+	------ lines 186+ from L1 not translated -----
 	
 		----This is cache block 1----
 	CsramCache1 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
 						port map(cs=>'1',oe=>'1',we=>we1,index=>index,
-									din=>dataIntoCache,dout=>dataFromEntry1);
+									din=>dataIntoCache1,dout=>dataFromEntry1);
 		----This is cache block 2----
 	CsramCache2 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
 						port map(cs=>'1',oe=>'1',we=>we2,index=>index,
-									din=>dataIntoCache,dout=>dataFromEntry2);
+									din=>dataIntoCache2,dout=>dataFromEntry2);
 		----This is cache block 3----
 	CsramCache3 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
 						port map(cs=>'1',oe=>'1',we=>we3,index=>index,
-									din=>dataIntoCache,dout=>dataFromEntry3);
+									din=>dataIntoCache3,dout=>dataFromEntry3);
 		----This is cache block 4----
 	CsramCache4 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
 						port map(cs=>'1',oe=>'1',we=>we4,index=>index,
-									din=>dataIntoCache,dout=>dataFromEntry4);
+									din=>dataIntoCache4,dout=>dataFromEntry4);
 									
 end structural;
