@@ -13,12 +13,20 @@ entity L2 is
 		DataFromL1 : in std_logic_vector (511 downto 0);
 		RequestFromL1 : in std_logic;
 		DataToL1 : out std_logic_vector (511 downto 0);
-		
+
+		--SubBlock Logic--		
+		SubBlockFromMem : in std_logic_vector(511 downto 0);
+		SubBlockFromMemReady : in std_logic;
+
+		RequestSubBlockFromMem : out std_logic;
 		AddressToMem : out std_logic_vector(31 downto 0);
-		DataFromMem : in std_logic_vector(31 downto 0);
-		DataToMem : out std_logic_vector(31 downto 0);
+		SubBlockToMem : out std_logic_vector(511 downto 0);
+
+		--Block Logic--
+		BlockFromMem : in std_logic_vector(2047 downto 0);
+		BlockFromMemReady : in std_logic;
 		
-		ReadWriteToMem : out std_logic
+		RequestBlockFromMem : out std_logic;	
 	);
 end L2;
 
@@ -79,21 +87,24 @@ architecture structural of L2 is
 	signal we1Temp2 : std_logic;
 	signal we1Temp3 : std_logic;
 	signal we1Temp4 : std_logic;
-	
+	signal we1Temp5 : std_logic;
 	signal we2Temp1 : std_logic;
 	signal we2Temp2 : std_logic;
 	signal we2Temp3 : std_logic;
 	signal we2Temp4 : std_logic;
+	signal we2Temp5 : std_logic;
 	
 	signal we3Temp1 : std_logic;
 	signal we3Temp2 : std_logic;
 	signal we3Temp3 : std_logic;
 	signal we3Temp4 : std_logic;
+	signal we3Temp5 : std_logic;
 
 	signal we4Temp1 : std_logic;
 	signal we4Temp2 : std_logic;
 	signal we4Temp3 : std_logic;	
 	signal we4Temp4 : std_logic;
+	signal we4Temp5 : std_logic;
 	
 	signal pickedByLRU1 : std_logic;
 	signal pickedByLRU2 : std_logic;
@@ -226,6 +237,60 @@ begin
 								x=>subtractedTags4,z=>miss4);
 	setMiss4 : not_gate port map(miss4,hit4);
 	
+	--TODO subblock miss logic--
+	--get valid bits--
+	--check valid bit--
+	--Generate request to mem--
+	
+	--GetValidBits
+	--TestAppropriateValidBit
+	valid1_1 <= DataFromEntry1(2072);
+	valid2_1 <= DataFromEntry1(2073);
+	valid3_1 <= DataFromEntry1(2074);
+	valid4_1 <= DataFromEntry1(2075);
+
+	valid1_2 <= DataFromEntry2(2072);
+	valid2_2 <= DataFromEntry2(2073);
+	valid3_2 <= DataFromEntry2(2074);
+	valid4_2 <= DataFromEntry2(2075);
+
+	valid1_3 <= DataFromEntry3(2072);
+	valid2_3 <= DataFromEntry3(2073);
+	valid3_3 <= DataFromEntry3(2074);
+	valid4_3 <= DataFromEntry3(2075);
+
+	valid1_4 <= DataFromEntry4(2072);
+	valid2_4 <= DataFromEntry4(2073);
+	valid3_4 <= DataFromEntry4(2074);
+	valid4_4 <= DataFromEntry4(2075);
+
+	--Read miss, set all Valids to 1
+	readMissValids <= "1111";
+
+	--Write Tag Hit, valid miss, set that valid to 1
+	
+
+	orValids3 : or_gate_n generic map(n=>4) port map(andedValidVector1,andedValidVector2,oredValidVectorsTemp1);
+	orValids3 : or_gate_n generic map(n=>4) port map(oredValidVectorsTemp1,andedValidVector3,oredValidVectorsTemp2);
+	orValids3 : or_gate_n generic map(n=>4) port map(oredValidVectorsTemp2,andedValidVector4,oredValidVectors);
+
+	setWriteTagHitsValids : or_gate_n generic map(n=>4) port map(writeTagMissValids,oredValidVectors,writeTagHitValids);
+	--Write Tag Miss, set that valid to 1, rest to 0
+	setWriteTagMissValids : mux_n_4 generic map(n=>4) port map(sel=>offset,
+							src0=>"0001",
+							src1=>"0010",
+							src2=>"0100",
+							src3=>"1000",
+							z=>writeTagMissValids)
+
+	validSel(1) <= ReadWriteFromL1;
+	validSel(0) <= tagHit;
+	
+	setValidInput : mux_n_4 generic map(n=>4) port map(sel=>validSel, src0=>readMissValids,
+											src1=>oredValidVectors,
+											src2=>writeTagMissValids,
+											src3=>writeTagHitValids,
+											z=>validInput);
 	
 	----------------------------------------
 	-- get overall miss and hit signals
@@ -233,39 +298,85 @@ begin
 	orMissVector : or_gate_unary_n generic map(n=> 4) port map(
 								x=>missVector,z=>miss);
 	
-	hitVector <= hit1 & hit2 & hit3 & hit4;
+	hit1vector <= (3 downto 0 => hit1);
+	hit2vector <= (3 downto 0 => hit2);
+	hit3vector <= (3 downto 0 => hit3);
+	hit4vector <= (3 downto 0 => hit4);
+
+	tagHitVector <= hit1 & hit2 & hit3 & hit4;
+	setTagHit: or_gate_unary_n generic map(n=>4) port map(tagHitVector,tagHit);
+
+	valid1vector <= valid4_1 & valid3_1 & valid2_1 valid1_1;
+	valid2vector <= valid4_2 & valid3_2 & valid2_2 valid1_2;
+	valid3vector <= valid4_3 & valid3_3 & valid2_3 valid1_3;
+	valid4vector <= valid4_4 & valid3_4 & valid2_4 valid1_4;
+
+	setAndedValidVector1 : and_gate_n generic map(n=>4) port map(hit1vector,valid1vector,andedValidVector1);
+	setAndedValidVector2 : and_gate_n generic map(n=>4) port map(hit2vector,valid2vector,andedValidVector2);
+	setAndedValidVector3 : and_gate_n generic map(n=>4) port map(hit3vector,valid3vector,andedValidVector3);
+	setAndedValidVector4 : and_gate_n generic map(n=>4) port map(hit4vector,valid4vector,andedValidVector4);
+	
+	muxValidBits1 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector1(0),
+										src1=>andedValidVector1(1),
+										src2=>andedValidVector1(2),
+										src3=>andedValidVector1(3),
+										z=>andedValidBit1);
+	
+	muxValidBits2 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector2(0),
+										src1=>andedValidVector2(2),
+										src2=>andedValidVector2(2),
+										src3=>andedValidVector2(3),
+										z=>andedValidBit2);
+	
+	muxValidBits3 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector3(0),
+										src1=>andedValidVector3(3),
+										src2=>andedValidVector3(2),
+										src3=>andedValidVector3(3),
+										z=>andedValidBit3);
+	
+	muxValidBits4 : mux_n_4 generic map(n=>1) port map(sel=>offset,src0=>andedValidVector4(0),
+										src1=>andedValidVector4(4),
+										src2=>andedValidVector4(2),
+										src3=>andedValidVector4(3),
+										z=>andedValidBit4);
+	
+	andedHitVector <= andedValidBit1 & andedValidBit2 & andedValidBit3 & andedValidBit4;
 	orHitVector : or_gate_unary_n generic map(n=> 4) port map(
-								x=>hitVector,z=>hit);	
+								x=>andedHitVector,z=>hit);	
 								
 								
 	----------------------------------------
 	-- determine write enables
-	-- we = {{hit && readwrite} || {miss && LRUpicked}} && clk
+	-- we = {{hit && readwrite} || {miss && LRUpicked && DataReadyFromMem}} && && RequestFromL1 && clk
 	-- we for cache block 1 --
 	hitAndReadWrite1 : and_gate port map(ReadWriteFromL1, hit1, we1Temp1);
 	missAndLRU1 : and_gate port map(miss1, pickedByLRU1, we1Temp2);
-	orWeTemps1 : or_gate port map(we1Temp1, we1Temp2, we1Temp3);
+	we1Temp2AndDataReady : and_gate port map(we1Temp2,DataReadyFromMem,we1Temp5);
+	orWeTemps1 : or_gate port map(we1Temp1, we1Temp5, we1Temp3);
 	andWeWtihRequest1 : and_gate port map(we1temp3, RequestFromL1, we1temp4); 
 	andWeWithClk1 : and_gate port map(we1Temp4, Clk, we1);
 	
 	-- we for cache block 2 --
 	hitAndReadWrite2 : and_gate port map(ReadWriteFromL1, hit2, we2Temp1);
 	missAndLRU2 : and_gate port map(miss2, pickedByLRU2, we2Temp2);
-	orWeTemps2 : or_gate port map(we2Temp1, we2Temp2, we2Temp3);
+	we2Temp2AndDataReady : and_gate port map(we2Temp2,DataReadyFromMem,we2Temp5);
+	orWeTemps2 : or_gate port map(we2Temp1, we2Temp5, we2Temp3);
 	andWeWtihRequest2 : and_gate port map(we2temp3, RequestFromL1, we2temp4);
 	andWeWithClk2 : and_gate port map(we2Temp4, Clk, we2);
 	
 	-- we for cache block 3 -- 
 	hitAndReadWrite3 : and_gate port map(ReadWriteFromL1, hit3, we3Temp1);
 	missAndLRU3 : and_gate port map(miss3, pickedByLRU3, we3Temp2);
-	orWeTemps3 : or_gate port map(we3Temp1, we3Temp2, we3Temp3);
+	we3Temp2AndDataReady : and_gate port map(we3Temp2,DataReadyFromMem,we3Temp5);
+	orWeTemps3 : or_gate port map(we3Temp1, we3Temp5, we3Temp3);
 	andWeWtihRequest3 : and_gate port map(we3temp3, RequestFromL1, we3temp4);
 	andWeWithClk3 : and_gate port map(we3Temp4, Clk, we3);
 	
 	-- we for cache block 4 --
 	hitAndReadWrite4 : and_gate port map(ReadWriteFromL1, hit4, we4Temp1);
 	missAndLRU4 : and_gate port map(miss4, pickedByLRU4, we4Temp2);
-	orWeTemps4 : or_gate port map(we4Temp1, we4Temp2, we4Temp3);
+	we4Temp2AndDataReady : and_gate port map(we4Temp2,DataReadyFromMem,we4Temp5);
+	orWeTemps4 : or_gate port map(we4Temp1, we4Temp5, we4Temp3);
 	andWeWtihRequest4 : and_gate port map(we4temp3, RequestFromL1, we4temp4);
 	andWeWithClk4 : and_gate port map(we4Temp4, Clk, we4);
 	
@@ -298,9 +409,52 @@ begin
 	dataInAndEntry4 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn, y => maskedDataFromEntry4, z => CacheLineIn4);	
 	
 
+
+	----TODO Do masking for sublocks from Mem----
+
+	-- insert dataFromL1 into Cache Line (not writing yet) --
+	ExtDataIn1 <= (1535 downto 0 => '0') & SubBlockFromMem;
+	
+	ShftAmt1 : mux_n_4 generic map(n=>12) port map(sel => offset,
+								src0 => "000000000000",
+								src1 => "001000000000",
+								src2 => "010000000000",
+								src3 => "100000000000",
+								z => ShiftAmt1);
+								
+	shftDataIn1 : shifter_2048 port map(Bits => ExtDataIn1, Shift => ShiftAmt1, R => ShiftDataIn1);
+	
+	-- create the bit mask
+	shiftMask1 : shifter_2048 port map (Bits => (2047 downto 512 => '0', 511 downto 0 => '1'), Shift => ShiftAmt1, R=> InvMask1);
+	notInvMask1 : not_gate_n generic map (n=>2048) port map (InvMask1, Mask1);
+	
+	-- mask each possible data entry
+	maskEntry11 : and_gate_n generic map (n=>2048) port map (x => Mask1, y => dataFromEntry1(2047 downto 0),z => maskedDataFromEntry11);
+	maskEntry21 : and_gate_n generic map (n=>2048) port map (x => Mask1, y => dataFromEntry2(2047 downto 0),z => maskedDataFromEntry21);
+	maskEntry31 : and_gate_n generic map (n=>2048) port map (x => Mask1, y => dataFromEntry3(2047 downto 0),z => maskedDataFromEntry31);
+	maskEntry41 : and_gate_n generic map (n=>2048) port map (x => Mask1, y => dataFromEntry4(2047 downto 0),z => maskedDataFromEntry41);
+	
+	-- create all the possible cacheline we would write back
+	dataInAndEntry11 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn1, y => maskedDataFromEntry11, z => CacheLineFromSubBlock1);	
+	dataInAndEntry21 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn1, y => maskedDataFromEntry21, z => CacheLineFromSubBlock2);	
+	dataInAndEntry31 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn1, y => maskedDataFromEntry31, z => CacheLineFromSubBlock3);	
+	dataInAndEntry41 : or_gate_n generic map (n=>2048) port map(x => ShiftDataIn1, y => maskedDataFromEntry41, z => CacheLineFromSubBlock4);	
 	-- Chose data entry to write --
 		-- dataIntoCache(511 downto 0) = (DataIn if hit) or (mem, if miss)
 		-- make sure tag corresponds with the data we're sending
+	--DataFromMem = CacheLineFromSubBlock if write, BlockFromMem if read
+	muxDataFromMem1 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
+												src1=>CacheLineFromSubBlock1,z=>DataFromMem1);
+
+	muxDataFromMem2 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
+												src1=>CacheLineFromSubBlock2,z=>DataFromMem2);
+
+	muxDataFromMem1 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
+												src1=>CacheLineFromSubBlock3,z=>DataFromMem3);
+	
+	muxDataFromMem1 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
+												src1=>CacheLineFromSubBlock4,z=>DataFromMem4);
+	
 	selectTag1 : mux_n generic map(n=>24) port map(sel=>hit, 
 									src0=>tagToMem, src1 => tagIn, 
 									z=>dataIntoCache1(2071 downto 2048));
@@ -313,20 +467,40 @@ begin
 	selectTag4 : mux_n generic map(n=>24) port map(sel=>hit, 
 									src0=>tagToMem, src1 => tagIn, 
 									z=>dataIntoCache4(2071 downto 2048));
+
+	dataIntoCache1(2075 downto 2072) <= validInput;
+	dataIntoCache2(2075 downto 2072) <= validInput;
+	dataIntoCache3(2075 downto 2072) <= validInput;
+	dataIntoCache4(2075 downto 2072) <= validInput;
+	
 	muxDataWithHit1 : mux_n generic map (n=>2048)
-								port map(sel=>hit1, src0=>DataFromMem, src1 => CacheLineIn1,
+								port map(sel=>hit1, src0=>DataFromMem1, src1 => CacheLineIn1,
 										z=>dataIntoCache1(2047 downto 0));
 	muxDataWithHit2 : mux_n generic map (n=>2048)
-								port map(sel=>hit2, src0=>DataFromMem, src1 => CacheLineIn2,
+								port map(sel=>hit2, src0=>DataFromMem2, src1 => CacheLineIn2,
 										z=>dataIntoCache2(2047 downto 0));
 	muxDataWithHit3 : mux_n generic map (n=>2048)
-								port map(sel=>hit3, src0=>DataFromMem, src1 => CacheLineIn3,
+								port map(sel=>hit3, src0=>DataFromMem3, src1 => CacheLineIn3,
 										z=>dataIntoCache3(2047 downto 0));
 	muxDataWithHit4 : mux_n generic map (n=>2048)
-								port map(sel=>hit4, src0=>DataFromMem, src1 => CacheLineIn4,
+								port map(sel=>hit4, src0=>DataFromMem4, src1 => CacheLineIn4,
 										z=>dataIntoCache4(2047 downto 0));
 										
-	
+	----Set DataFromMem----
+	--DataReadyToL1 = (hit && RequestFromL1)
+	SetDataReady: and_gate port map(hit, RequestFromL1, DataReadyToL1);	
+		
+	--RequestSubBlock if write and RequestIn
+	SetRequestSubBlockFromMem : and_gate port map(ReadWriteFromL1, RequestFromL1,RequestSubBlockFromMem);
+
+	AddressToMem <= AddressFromL1;
+	SubBlockToMem <= DataFromL1;
+
+	--Request Block when reading, miss, and request from L1
+	setRequestBlockFromMem : and_gate port map(notReadWriteFromL1, miss, requestTemp1);
+	setRequestBlockFromMem2: and_gate port map(RequestFromL1, requestTemp1, RequestBlockFromMem);
+
+
 	-----------------------------------------------------
 	-----------------incomplete------------------------
 	-----------------------------------------------------	
