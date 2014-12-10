@@ -298,6 +298,25 @@ package eecs361 is
     );
   end component register_8bit;
 
+  component register_32bit is
+    port (
+        clk : in std_logic;
+        reset_active_low : in std_logic;
+        write_en: in std_logic;
+        D   : in std_logic_vector(31 downto 0);
+        Z   : out std_logic_vector(31 downto 0)
+    );
+  end component register_32bit;
+
+  component counter is
+    port (
+      inc   : in std_logic;
+      clk   : in std_logic;
+      reset : in std_logic;
+      cnt   : out std_logic_vector(31 downto 0)
+    );
+  end component counter;
+
   component LRU is
     port (
       set_idx : in std_logic_vector(1 downto 0);
