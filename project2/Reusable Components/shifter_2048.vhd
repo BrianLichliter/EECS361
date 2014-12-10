@@ -48,7 +48,7 @@ begin
 	mux7_in <= mux6_out(1919 downto 0) & x"00000000000000000000000000000000";
 	mux8_in <= mux7_out(1791 downto 0) & x"0000000000000000000000000000000000000000000000000000000000000000";
 	mux9_in <= mux8_out(1535 downto 0) & (511 downto 0 => '0');
-	mux10_in <= mux9_out(1023 downto 0) & (1024 downto 0 => '0');
+	mux10_in <= mux9_out(1023 downto 0) & (1023 downto 0 => '0');
 	mux11_in <=  (2047 downto 0 => '0');
 
 
