@@ -23,7 +23,8 @@ component memory_hierarchy is
     l1_evict_cnt : out std_logic_vector(31 downto 0);
     l2_hit_cnt : out std_logic_vector(31 downto 0);
     l2_miss_cnt : out std_logic_vector(31 downto 0);
-    l2_evict_cnt : out std_logic_vector(31 downto 0)
+    l2_evict_cnt : out std_logic_vector(31 downto 0); 
+    ResetActiveHigh : in std_logic
   );
 end component memory_hierarchy;
 signal clk : std_logic := '0';
@@ -58,7 +59,8 @@ begin
       l1_evict_cnt => l1e,
       l2_hit_cnt => l2h,
       l2_miss_cnt => l2m,
-      l2_evict_cnt => l2e
+      l2_evict_cnt => l2e,
+      ResetActiveHigh => rst
     );
 
   tester_map : cache_test
