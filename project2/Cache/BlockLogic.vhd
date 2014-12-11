@@ -30,6 +30,7 @@ architecture structural of BlockLogic is
 	signal lower12Count : std_logic_vector(11 downto 0);
 	signal dataOut : std_logic_vector(2047 downto 0);
 	signal oredDataFromMem : std_logic_vector(2047 downto 0);
+	signal alignedAddress : std_logic_vector(31 downto 0);
 begin
 	--reset counter if no request
 	setNotRequestBlockFromL2 : not_gate port map(RequestBlockFromL2,
@@ -63,8 +64,8 @@ begin
 							src0=>oredDataFromMem,
 							src1=>lotsOfZeros,
 							z=>dataIntoResponse);
-
-	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2(31 downto 8) & (7 downto 0 => '0'),y=>count,
+	alignedAddress <= AddressFromL2(31 downto 8) & (7 downto 0 => '0');
+	setAddressToMem : fulladder_32 port map(cin=>'0',x=>alignedAddress,y=>count,
 											z=>AddressToMem);
 
 	DataToL2 <= dataIntoResponse;
