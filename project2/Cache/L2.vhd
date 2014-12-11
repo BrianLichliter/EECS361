@@ -54,7 +54,6 @@ architecture structural of L2 is
 	signal miss2 : std_logic;
 	signal miss3 : std_logic;
 	signal miss4 : std_logic;
-	signal missVector : std_logic_vector(3 downto 0);
 	signal miss : std_logic;
 	
 	signal hit1 : std_logic;
@@ -164,7 +163,6 @@ architecture structural of L2 is
 	
 	signal oredValidVectorsTemp1 : std_logic_vector(3 downto 0);
 	signal oredValidVectorsTemp2 : std_logic_vector(3 downto 0);
-	signal oredValidVectorsTemp3 : std_logic_vector(3 downto 0);
 	signal oredValidVectors : std_logic_vector(3 downto 0);
 	
 	signal writeTagMissValids  : std_logic_vector(3 downto 0);
@@ -552,18 +550,22 @@ begin
 	muxDataFromMem4 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
 												src1=>CacheLineFromSubBlock4,z=>DataFromMem4);
 	
-	selectTag1 : mux_n generic map(n=>24) port map(sel=>hit, 
-									src0=>tagToMem, src1 => tagIn, 
-									z=>dataIntoCache1(2071 downto 2048));
-	selectTag2 : mux_n generic map(n=>24) port map(sel=>hit, 
-									src0=>tagToMem, src1 => tagIn, 
-									z=>dataIntoCache2(2071 downto 2048));
-	selectTag3 : mux_n generic map(n=>24) port map(sel=>hit, 
-									src0=>tagToMem, src1 => tagIn, 
-									z=>dataIntoCache3(2071 downto 2048));
-	selectTag4 : mux_n generic map(n=>24) port map(sel=>hit, 
-									src0=>tagToMem, src1 => tagIn, 
-									z=>dataIntoCache4(2071 downto 2048));
+	dataIntoCache1(2071 downto 2048) <= tagIn;
+	dataIntoCache2(2071 downto 2048) <= tagIn;
+	dataIntoCache3(2071 downto 2048) <= tagIn;
+	dataIntoCache4(2071 downto 2048) <= tagIn;
+	--selectTag1 : mux_n generic map(n=>24) port map(sel=>hit, 
+	--								src0=>tagToMem, src1 => tagIn, 
+	--								z=>dataIntoCache1(2071 downto 2048));
+	--selectTag2 : mux_n generic map(n=>24) port map(sel=>hit, 
+	--								src0=>tagToMem, src1 => tagIn, 
+	--								z=>dataIntoCache2(2071 downto 2048));
+	--selectTag3 : mux_n generic map(n=>24) port map(sel=>hit, 
+	--								src0=>tagToMem, src1 => tagIn, 
+	--								z=>dataIntoCache3(2071 downto 2048));
+	--selectTag4 : mux_n generic map(n=>24) port map(sel=>hit, 
+	--								src0=>tagToMem, src1 => tagIn, 
+	--								z=>dataIntoCache4(2071 downto 2048));
 
 	dataIntoCache1(2075 downto 2072) <= validInput;
 	dataIntoCache2(2075 downto 2072) <= validInput;

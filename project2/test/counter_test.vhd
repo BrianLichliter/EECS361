@@ -17,10 +17,11 @@ architecture structural of counter_test is
 
 begin 
     counter_map : counter port map (
-                    inc => inc,
+                    WriteEnable => inc,
                     clk => clk,
                     reset => reset,
-                    cnt => cnt);
+                    Count => cnt,
+                    HighestValue =>(31 downto 0 => '1'));
 
     counter_test : process begin
 

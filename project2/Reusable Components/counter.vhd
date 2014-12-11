@@ -25,8 +25,8 @@ begin
 	--Not the Reset so the counter is Reset on high
 	not1 : not_gate port map(Reset, ResetLow);
 
-	-- Register countaining count
-	reg : register_32bit port map(Clk => Clk, Reset_active_low => ResetLow, write_en => WriteEnable, D => registerIn, Z => registerOut);
+	-- Register containing count
+	reg : register_32bit port map(clk => Clk, reset_active_low => ResetLow, write_en => WriteEnable, D => registerIn, Z => registerOut);
 
 	--Add 1 to the register output
 	add : fulladder_32 port map(cin => '1', x => registerOut, y => (31 downto 0 => '0'), cout => open, z => registerInNext);

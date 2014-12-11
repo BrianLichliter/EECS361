@@ -33,15 +33,12 @@ architecture structural of L1 is
 	signal dirty : std_logic;
 	signal hit : std_logic;
 	signal miss : std_logic;
-	signal cs : std_logic;
-	signal oe : std_logic;
 	signal we : std_logic;
 	signal weTemp1 : std_logic;
 	signal weTemp2 : std_logic;
 	signal weTemp3 : std_logic;
 	signal weTemp4 : std_logic;
 	signal dirtyTemp1 : std_logic;
-	signal dirtyTemp2 : std_logic;
 	signal writeBack : std_logic;
 	signal writeBackIn: std_logic;
 	signal writeBackInTemp1 : std_logic;
