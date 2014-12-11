@@ -27,7 +27,10 @@ entity L2 is
 		BlockFromMem : in std_logic_vector(2047 downto 0);
 		BlockFromMemReady : in std_logic;
 		
-		RequestBlockFromMem : out std_logic
+		RequestBlockFromMem : out std_logic;
+		
+		L2hit : out std_logic;
+		L2miss : out std_logic
 	);
 end L2;
 
@@ -385,9 +388,6 @@ begin
 	
 	----------------------------------------
 	-- get overall miss and hit signals
-	missVector <= miss1 & miss2 & miss3 & miss4;
-	orMissVector : or_gate_unary_n generic map(n=> 4) port map(
-								x=>missVector,z=>miss);
 	
 	hit1vector <= (3 downto 0 => hit1);
 	hit2vector <= (3 downto 0 => hit2);
@@ -433,7 +433,12 @@ begin
 	
 	andedHitVector <= andedValidBit1 & andedValidBit2 & andedValidBit3 & andedValidBit4;
 	orHitVector : or_gate_unary_n generic map(n=> 4) port map(
-								x=>andedHitVector,z=>hit);	
+								x=>andedHitVector,z=>hit);
+	setMiss : not_gate port map(hit,miss);
+	L2miss <= miss;
+	L2hit <= hit;	
+								
+	
 								
 	BlockAndSubBlockReady : or_gate port map(BlockFromMemReady, SubBlockFromMemReady, DataReadyFromMem);							
 	----------------------------------------

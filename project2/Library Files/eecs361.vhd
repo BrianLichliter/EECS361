@@ -328,12 +328,13 @@ end component shifter_2048;
   end component register_32bit;
 
   component counter is
-    port (
-      inc   : in std_logic;
-      clk   : in std_logic;
-      reset : in std_logic;
-      cnt   : out std_logic_vector(31 downto 0)
-    );
+	port (
+		WriteEnable		: in std_logic;
+		Clk		: in std_logic;
+		Reset	: in std_logic;
+		HighestValue : in std_logic_vector(31 downto 0);
+		Count		: out std_logic_vector(31 downto 0)
+	);
   end component counter;
 
   component LRU is

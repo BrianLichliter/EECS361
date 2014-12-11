@@ -17,7 +17,9 @@ entity L1 is
 		RequestToL2 : out std_logic;
 		DataToL2 : out std_logic_vector (511 downto 0);
 		AddressToL2 : out std_logic_vector (31 downto 0);
-		ReadWriteToL2 : out std_logic
+		ReadWriteToL2 : out std_logic;
+		L1hit : out std_logic;
+		L1miss : out std_logic
 	);
 end L1;
 
@@ -80,6 +82,9 @@ begin
 								x=>subtractedTags,z=>miss);
 
 	setMiss : not_gate port map(miss,hit);
+	  
+	L1hit <= hit;
+	L1miss <= miss;
 
 	----Generate write signal for cache----
 	--Might have to do some fancy stuff with eviction, but probs not
