@@ -48,8 +48,8 @@ begin
 
 	setDataReady : and_gate port map(wereDone, Clk,BlockReadyToL2);
 
-	CSRamToBuildResponse: csram generic map(INDEX_WIDTH=>1,BIT_WIDTH=>2048)
-								port map (cs=>'1',oe=>'1',we=>'1',index=>"0",
+	CSRamToBuildResponse: csram generic map(INDEX_WIDTH=>2,BIT_WIDTH=>2048)
+								port map (cs=>'1',oe=>'1',we=>Clk,index=>"01",
 									din=>dataIntoResponse,dout=>dataOut);
 
   extDataFromMem <= (2015 downto 0 => '0') & DataFromMem;
