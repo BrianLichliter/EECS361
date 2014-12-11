@@ -64,7 +64,7 @@ begin
 							src1=>lotsOfZeros,
 							z=>dataIntoResponse);
 
-	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count,
+	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2(31 downto 8) & (7 downto 0 => '0'),y=>count,
 											z=>AddressToMem);
 
 	DataToL2 <= dataIntoResponse;
