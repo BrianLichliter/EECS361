@@ -41,8 +41,8 @@ signal l1h, l1m, l1e, l2h, l2m, l2e : std_logic_vector(31 downto 0);
 begin
   clk <= not clk after 5 ns;
   -- changed reset to going low after a full cycle
-  rst <= '1', '0' after 6 ns;
-  en <= '0' , '1' after 7 ns;
+  rst <= '1', '0' after 10 ns;
+  en <= '0' , '1' after 11 ns;
 
   mem_map : memory_hierarchy
     generic map (
