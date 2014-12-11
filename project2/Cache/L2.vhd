@@ -214,7 +214,10 @@ architecture structural of L2 is
   signal muxedDataFromEntry : std_logic_vector(2073 downto 0);
   
   signal requestTemp1 : std_logic;
-  signal LRUindexOut : std_logic_vector (1 downto 0);
+  signal LRUindexOut1 : std_logic_vector (1 downto 0);
+  signal LRUindexOut2 : std_logic_vector (1 downto 0);
+  signal LRUindexOut3 : std_logic_vector (1 downto 0);
+  signal LRUindexOut4 : std_logic_vector (1 downto 0);
   signal MRUindex : std_logic_vector (1 downto 0);
   -- datareadyfrommem--
   -- notreadwritefroml1--
@@ -226,6 +229,12 @@ architecture structural of L2 is
   
   signal DataReadyFromMem : std_logic;
   signal notReadWriteFromL1 : std_logic;
+
+  signal lineHitVector : std_logic_vector(3 downto 0);
+  signal linehit1 : std_logic;
+  signal linehit2 : std_logic;
+  signal linehit3 : std_logic;
+  signal linehit4 : std_logic;
 begin
 	-- parse the address --
 	tagIn <= AddressFromL1 (31 downto 10);
@@ -263,7 +272,7 @@ begin
 	                  src1=>dataFromEntry3(1023 downto 512),
 	                  src2=>dataFromentry3(1535 downto 1024),
 	                  src3=>dataFromEntry3(2047 downto 1536),
-	                  z=>DataOut3);
+
 	tagFromEntry3 <= dataFromEntry3(2069 downto 2048);
 	
 	
@@ -658,9 +667,40 @@ begin
 								src14=>"00",
 								src15=>"00",
 								z=>MRUindex);
+
+	setlineHitVector : mux_n_4 generic map(n=>4) port map(sel=>index,
+							src0=>"0001",
+							src1=>"0010",
+							src2=>"0100",
+							src3=>"1000",
+							z=>lineHitVector);
+
+	linehit1 <= lineHitVector(0);
+	linehit2 <= lineHitVector(1);
+	linehit3 <= lineHitVector(2);
+	linehit4 <= lineHitVector(3);
+
 	
-	setWeLRU : and_gate port map(RequestFromL1, hit,weLRU);
-	LRUmap : LRU port map(set_idx=>LRUindexIn,we=>weLRU,clk=>Clk,reset=>ResetActiveHigh,lru_idx=>MRUindex);
+	setWeLRU1 : and_gate port map(RequestFromL1, linehit1,weLRU1);
+	LRUmap1 : LRU port map(set_idx=>MRUindex,we=>weLRU1,clk=>Clk,reset=>ResetActiveHigh,lru_idx=>LRUindexOut1);
+
+	setWeLRU2 : and_gate port map(RequestFromL1, linehit2,weLRU2);
+	LRUmap2 : LRU port map(set_idx=>MRUindex,we=>weLRU2,clk=>Clk,reset=>ResetActiveHigh,lru_idx=>LRUindexOut2);
+
+	setWeLRU3 : and_gate port map(RequestFromL1, linehit3,weLRU3);
+	LRUmap3 : LRU port map(set_idx=>MRUindex,we=>weLRU3,clk=>Clk,reset=>ResetActiveHigh,lru_idx=>LRUindexOut3);
+
+	setWeLRU4 : and_gate port map(RequestFromL1, linehit4,weLRU4);
+	LRUmap4 : LRU port map(set_idx=>MRUindex,we=>weLRU4,clk=>Clk,reset=>ResetActiveHigh,lru_idx=>LRUindexOut4);
+
+
+	setHitLRU : mux_n_4 generic map(n =>2) port map(sel=>index,
+						src0=>LRUindexOut1,
+						src1=>LRUindexOut2,
+						src2=>LRUindexOut3,
+						src4=>LRUindexOut4,
+						z=>LRUindexOut);
+						
 
 	setPickedByLRUs : mux_n_4 generic map(n=>4) port map(sel=>LRUindexOut,
 							src0=>"0001",
