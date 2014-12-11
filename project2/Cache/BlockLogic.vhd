@@ -53,7 +53,7 @@ begin
 									din=>dataIntoResponse,dout=>dataOut);
 
   extDataFromMem <= (2015 downto 0 => '0') & DataFromMem;
-  lower12Count <= count(11 downto 0);
+  lower12Count <= count(6 downto 0)& (4 downto 0 =>'0');
 	shftDataIn : shifter_2048 port map(Bits => extDataFromMem,Shift=>lower12Count,R=>
 								shiftedDataFromMem);
 
