@@ -364,6 +364,67 @@ end component shifter_2048;
     ReadWriteToL2 : out std_logic
   );
   end component L1;
+  
+component L2 is
+	port (
+		Clk : in std_logic;
+		ResetActiveHigh : in std_logic;
+		
+		ReadWriteFromL1 : in std_logic;
+		AddressFromL1 : in std_logic_vector (31 downto 0);
+		DataReadyToL1 : out std_logic;
+		DataFromL1 : in std_logic_vector (511 downto 0);
+		RequestFromL1 : in std_logic;
+		DataToL1 : out std_logic_vector (511 downto 0);
+
+		--SubBlock Logic--		
+		SubBlockFromMem : in std_logic_vector(511 downto 0);
+		SubBlockFromMemReady : in std_logic;
+
+		RequestSubBlockFromMem : out std_logic;
+		AddressToMem : out std_logic_vector(31 downto 0);
+		SubBlockToMem : out std_logic_vector(511 downto 0);
+
+		--Block Logic--
+		BlockFromMem : in std_logic_vector(2047 downto 0);
+		BlockFromMemReady : in std_logic;
+		
+		RequestBlockFromMem : out std_logic;
+		
+		L2hit : out std_logic;
+		L2miss : out std_logic
+	);
+end component L2;
+
+component SubBlockLogic is
+	port(
+		Clk : in std_logic;
+		ResetActiveHigh : in std_logic;
+		SubBlockFromL2 : in std_logic_vector(511 downto 0);
+		RequestSubBlockFromL2 : in std_logic;
+		AddressFromL2 : in std_logic_vector(31 downto 0);
+		DataFromMem : in std_logic_vector(31 downto 0);
+
+		SubBlockReadyToL2 : out std_logic;
+		AddressToMem : out std_logic_vector(31 downto 0);
+		DataToMem : out std_logic_vector(31 downto 0);
+		WriteToMem : out std_logic
+	);
+end component SubBlockLogic;
+
+component BlockLogic is
+	port(
+		Clk : in std_logic;
+		ResetActiveHigh : in std_logic;
+		RequestBlockFromL2 : in std_logic;
+		AddressFromL2 : in std_logic_vector(31 downto 0);
+		DataFromMem : in std_logic_vector(31 downto 0);
+
+		BlockReadyToL2 : out std_logic;
+		AddressToMem : out std_logic_vector(31 downto 0);
+		DataToL2 : out std_logic_vector(2047 downto 0)
+	);
+end component BlockLogic;
 
 
 
