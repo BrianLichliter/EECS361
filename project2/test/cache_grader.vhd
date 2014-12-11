@@ -24,6 +24,7 @@ component memory_hierarchy is
     l2_hit_cnt : out std_logic_vector(31 downto 0);
     l2_miss_cnt : out std_logic_vector(31 downto 0);
     l2_evict_cnt : out std_logic_vector(31 downto 0); 
+    -- added signal for reset input
     ResetActiveHigh : in std_logic
   );
 end component memory_hierarchy;
@@ -39,7 +40,8 @@ signal err : std_logic;
 signal l1h, l1m, l1e, l2h, l2m, l2e : std_logic_vector(31 downto 0);
 begin
   clk <= not clk after 5 ns;
-  rst <= '1', '0' after 2 ns;
+  -- changed reset to going low after a full cycle
+  rst <= '1', '0' after 6 ns;
   en <= '0' , '1' after 7 ns;
 
   mem_map : memory_hierarchy
@@ -60,6 +62,7 @@ begin
       l2_hit_cnt => l2h,
       l2_miss_cnt => l2m,
       l2_evict_cnt => l2e,
+      -- passing reset to mem hier
       ResetActiveHigh => rst
     );
 
