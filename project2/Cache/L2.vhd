@@ -64,20 +64,20 @@ architecture structural of L2 is
 	signal hit : std_logic;
 	
 	-- signals for tag comparisons 
-	signal tagFromEntry1 : std_logic_vector (23 downto 0);
-	signal tagFromEntry2 : std_logic_vector (23 downto 0);
-	signal tagFromEntry3 : std_logic_vector (23 downto 0);
-	signal tagFromEntry4 : std_logic_vector (23 downto 0);
+	signal tagFromEntry1 : std_logic_vector (21 downto 0);
+	signal tagFromEntry2 : std_logic_vector (21 downto 0);
+	signal tagFromEntry3 : std_logic_vector (21 downto 0);
+	signal tagFromEntry4 : std_logic_vector (21 downto 0);
 	
-	signal notTagFromEntry1 : std_logic_vector (23 downto 0);
-	signal notTagFromEntry2 : std_logic_vector (23 downto 0);
-	signal notTagFromEntry3 : std_logic_vector (23 downto 0);
-	signal notTagFromEntry4 : std_logic_vector (23 downto 0);
+	signal notTagFromEntry1 : std_logic_vector (21 downto 0);
+	signal notTagFromEntry2 : std_logic_vector (21 downto 0);
+	signal notTagFromEntry3 : std_logic_vector (21 downto 0);
+	signal notTagFromEntry4 : std_logic_vector (21 downto 0);
 
-	signal subtractedTags1 : std_logic_vector (23 downto 0);
-	signal subtractedTags2 : std_logic_vector (23 downto 0);
-	signal subtractedTags3 : std_logic_vector (23 downto 0);
-	signal subtractedTags4 : std_logic_vector (23 downto 0);
+	signal subtractedTags1 : std_logic_vector (21 downto 0);
+	signal subtractedTags2 : std_logic_vector (21 downto 0);
+	signal subtractedTags3 : std_logic_vector (21 downto 0);
+	signal subtractedTags4 : std_logic_vector (21 downto 0);
 	
 	signal DataOut1 : std_logic_vector(511 downto 0);
 	signal DataOut2 : std_logic_vector(511 downto 0);
@@ -130,7 +130,7 @@ architecture structural of L2 is
 	signal CacheLineIn3 : std_logic_vector(2047 downto 0);
 	signal CacheLineIn4 : std_logic_vector(2047 downto 0);
 	
-	signal tagToMem : std_logic_vector(23 downto 0);
+	signal tagToMem : std_logic_vector(21 downto 0);
 	signal dataIntoCache1 : std_logic_vector(2073 downto 0);
 	signal dataIntoCache2 : std_logic_vector(2073 downto 0);
 	signal dataIntoCache3 : std_logic_vector(2073 downto 0);
@@ -282,12 +282,12 @@ begin
 	-- check if cache block 1 is hit or miss --
 	----Check if hit or miss by comparing tags----	
 	--Subtract the two
-	setNotTagFromEntry1 : not_gate_n generic map(n=>24) port map(
+	setNotTagFromEntry1 : not_gate_n generic map(n=>22) port map(
 									tagFromEntry1, notTagFromEntry1);
-	subtractTags1 : fulladder_n generic map(n=>24) port map(cin=>'1',
+	subtractTags1 : fulladder_n generic map(n=>22) port map(cin=>'1',
 								x=>tagIn,y=>notTagFromEntry1,z=>subtractedTags1);
 	--OR them all up
-	orSubtractedTags1 : or_gate_unary_n generic map(n=>24) port map(
+	orSubtractedTags1 : or_gate_unary_n generic map(n=>22) port map(
 								x=>subtractedTags1,z=>miss1);
 	setMiss1 : not_gate port map(miss1,hit1);
 	
@@ -295,12 +295,12 @@ begin
 	-- check if cache block 2 is hit or miss --
 	----Check if hit or miss by comparing tags----	
 	--Subtract the two
-	setNotTagFromEntry2 : not_gate_n generic map(n=>24) port map(
+	setNotTagFromEntry2 : not_gate_n generic map(n=>22) port map(
 									tagFromEntry2, notTagFromEntry2);
-	subtractTags2 : fulladder_n generic map(n=>24) port map(cin=>'1',
+	subtractTags2 : fulladder_n generic map(n=>22) port map(cin=>'1',
 								x=>tagIn,y=>notTagFromEntry2,z=>subtractedTags2);
 	--OR them all up
-	orSubtractedTags2 : or_gate_unary_n generic map(n=>24) port map(
+	orSubtractedTags2 : or_gate_unary_n generic map(n=>22) port map(
 								x=>subtractedTags2,z=>miss2);
 	setMiss2 : not_gate port map(miss2,hit2);
 								
@@ -308,12 +308,12 @@ begin
 	-- check if cache block 3 is hit or miss --
 	----Check if hit or miss by comparing tags----	
 	--Subtract the two
-	setNotTagFromEntry3 : not_gate_n generic map(n=>24) port map(
+	setNotTagFromEntry3 : not_gate_n generic map(n=>22) port map(
 									tagFromEntry3, notTagFromEntry3);
-	subtractTags3 : fulladder_n generic map(n=>24) port map(cin=>'1',
+	subtractTags3 : fulladder_n generic map(n=>22) port map(cin=>'1',
 								x=>tagIn,y=>notTagFromEntry3,z=>subtractedTags3);
 	--OR them all up
-	orSubtractedTags3 : or_gate_unary_n generic map(n=>24) port map(
+	orSubtractedTags3 : or_gate_unary_n generic map(n=>22) port map(
 								x=>subtractedTags3,z=>miss3);
 	setMiss3 : not_gate port map(miss3,hit3);
 								
@@ -321,12 +321,12 @@ begin
 	-- check if cache block 4 is hit or miss --
 	----Check if hit or miss by comparing tags----	
 	--Subtract the two
-	setNotTagFromEntry4 : not_gate_n generic map(n=>24) port map(
+	setNotTagFromEntry4 : not_gate_n generic map(n=>22) port map(
 									tagFromEntry4, notTagFromEntry4);
-	subtractTags4 : fulladder_n generic map(n=>24) port map(cin=>'1',
+	subtractTags4 : fulladder_n generic map(n=>22) port map(cin=>'1',
 								x=>tagIn,y=>notTagFromEntry4,z=>subtractedTags4);
 	--OR them all up
-	orSubtractedTags4 : or_gate_unary_n generic map(n=>24) port map(
+	orSubtractedTags4 : or_gate_unary_n generic map(n=>22) port map(
 								x=>subtractedTags4,z=>miss4);
 	setMiss4 : not_gate port map(miss4,hit4);
 	

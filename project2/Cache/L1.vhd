@@ -24,8 +24,8 @@ entity L1 is
 end L1;
 
 architecture structural of L1 is
-	signal tagIn : std_logic_vector (23 downto 0); 
-	signal tagFromEntry : std_logic_vector (23 downto 0);
+	signal tagIn : std_logic_vector (21 downto 0); 
+	signal tagFromEntry : std_logic_vector (21 downto 0);
 	signal dataFromEntry : std_logic_vector(534 downto 0);
 	signal dataIntoCache : std_logic_vector(534 downto 0);
 	signal index : std_logic_vector (3 downto 0);
@@ -48,9 +48,9 @@ architecture structural of L1 is
 	signal writtenBackTemp1 : std_logic;
 	signal writtenBackIn : std_logic;
 	signal needToWriteButHavent : std_logic;
-	signal tagToL2 : std_logic_vector(23 downto 0);
-	signal notTagFromEntry : std_logic_vector(23 downto 0);
-	signal subtractedTags : std_logic_vector(23 downto 0);
+	signal tagToL2 : std_logic_vector(21 downto 0);
+	signal notTagFromEntry : std_logic_vector(21 downto 0);
+	signal subtractedTags : std_logic_vector(21 downto 0);
 	signal ExtDataIn : std_logic_vector(511 downto 0);
 	signal ShiftAmt : std_logic_vector(9 downto 0);
 	signal ShiftDataIn : std_logic_vector(511 downto 0);
@@ -65,17 +65,17 @@ architecture structural of L1 is
 begin
 	----Parse the address----
 	tagIn <= Address(31 downto 10);
-	index <= Address(9 downto 4);
+	index <= Address(9 downto 6);
 	offset <= Address(5 downto 0);
 
 	----Check if hit or miss by comparing tags----	
 	--Subtract the two
-	setNotTagFromEntry : not_gate_n generic map(n=>24) port map(
+	setNotTagFromEntry : not_gate_n generic map(n=>22) port map(
 									tagFromEntry, notTagFromEntry);
-	subtractTags : fulladder_n generic map(n=>24) port map(cin=>'1',
+	subtractTags : fulladder_n generic map(n=>22) port map(cin=>'1',
 								x=>tagIn,y=>notTagFromEntry,z=>subtractedTags);
 	--OR them all up
-	orSubtractedTags : or_gate_unary_n generic map(n=>24) port map(
+	orSubtractedTags : or_gate_unary_n generic map(n=>22) port map(
 								x=>subtractedTags,z=>miss);
 
 	setMiss : not_gate port map(miss,hit);
@@ -132,7 +132,7 @@ begin
 
 	--dataIntoCache(511 downto 0) = (DataIn if hit) or (DataFromL2 if miss)
 	--Make sure tag corresponds with the data we're sending
-	selectTag : mux_n generic map(n=>24) port map(sel=>hit,
+	selectTag : mux_n generic map(n=>22) port map(sel=>hit,
 								src0=>tagToL2,src1=>tagIn,
 								z=>dataIntoCache(533 downto 512));
 	muxDataWithHit : mux_n generic map (n=>512)
@@ -176,8 +176,8 @@ begin
 					  src15=>dataFromEntry(511 downto 480),
 	                  z=>DataOut);
 
-	dirty <= dataFromEntry(536);
-	tagFromEntry <= dataFromEntry(535 downto 512);
+	dirty <= dataFromEntry(534);
+	tagFromEntry <= dataFromEntry(533 downto 512);
 
 	----TODO eviction----
 	-- If dirty, write old to L2, wait for OK, read new from L2, wait for ok,
@@ -209,7 +209,7 @@ begin
 	ReadWriteToL2 <= needToWriteButHavent;
 
 	--AddressToL2 is muxed on writtenBack
-	setTagToL2 : mux_n generic map(n=>24)
+	setTagToL2 : mux_n generic map(n=>22)
 							port map(sel=>needToWriteButHavent,src0=>tagIn,
 									src1=>tagFromEntry,
 									z=>tagToL2);
