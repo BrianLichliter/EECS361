@@ -1,41 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.eecs361_gates.all;
+use work.eecs361.all;
+
 entity memory_hierarchy is   
 	generic (     
 		-- mem_file is used to initialize your main memory.     
 		mem_file : string   
-		);   
+		);   
 	port (     
 		-- clock     
-		clk : in std_logic;
+		clk : in std_logic;
 		     
 		-- EN = ‘1’ means the inputs are ready in the coming rising edge. 		    
-		EN : in std_logic;  
+		EN : in std_logic;  
 		   
 		-- WR = ‘1’ means the next request is a write request.     
-		WR : in std_logic;
+		WR : in std_logic;
 		     
 		-- Addr is the address of the request.     
-		Addr : in std_logic_vector(31 downto 0);
+		Addr : in std_logic_vector(31 downto 0);
 		     
 		-- DataIn is the data to be written. It is only valid when the request is a write request.     
-		DataIn : in std_logic_vector(31 downto 0);
+		DataIn : in std_logic_vector(31 downto 0);
 		     
 		-- Ready = ‘1’ means your cache have finish the current request. Before you rise Ready to ‘1’, your cache should either finished the write request, or you have get the data of the read request at DataOut port.     
-		Ready : out std_logic;
+		Ready : out std_logic;
 		     
 		-- DataOut is the data for read requests.     
-		DataOut : out std_logic_vector(31 downto 0);
+		DataOut : out std_logic_vector(31 downto 0);
 
 		ResetActiveHigh : in std_logic;
 		     
 		-- Below are the counters of your caches.     
-		l1_hit_cnt : out std_logic_vector(31 downto 0);     
-		l1_miss_cnt : out std_logic_vector(31 downto 0);     
-		l1_evict_cnt : out std_logic_vector(31 downto 0);     
-		l2_hit_cnt : out std_logic_vector(31 downto 0);
-	    l2_miss_cnt : out std_logic_vector(31 downto 0);     
+		l1_hit_cnt : out std_logic_vector(31 downto 0);     
+		l1_miss_cnt : out std_logic_vector(31 downto 0);     
+		l1_evict_cnt : out std_logic_vector(31 downto 0);     
+		l2_hit_cnt : out std_logic_vector(31 downto 0);
+	    l2_miss_cnt : out std_logic_vector(31 downto 0);     
 		l2_evict_cnt : out std_logic_vector(31 downto 0)   
-	); 
-end memory_hieracrchy;
+	); 
+end memory_hierarchy;
 --this is a comment
 architecture structural of memory_hierarchy is
 	signal dataFromL2ToL1 : std_logic_vector (511 downto 0);
@@ -70,6 +75,7 @@ architecture structural of memory_hierarchy is
 	signal L2missCount : std_logic_vector(31 downto 0);
 	signal L2totalCount : std_logic_vector(31 downto 0);
 	signal notL2missCount : std_logic_vector(31 downto 0);
+	signal we : std_logic;
 begin
 	--This is our L1
 	Ready <= dataReadyL1;
@@ -91,7 +97,8 @@ begin
 						AddressToMem=>addressToMem,SubBlockToMem=>dataFromL2ToSub,
 						BlockFromMem=>dataFromBlockToL2,
 						BlockFromMemReady=>dataReadyBlock,
-						RequestBlockFromMem=>requestBlock
+						RequestBlockFromMem=>requestBlock,
+						DataFromL1=>dataFromL1ToL2,
 						L2hit=>L2hit,L2miss=>L2miss);
 
 	--SubBlockLogic
@@ -142,12 +149,12 @@ begin
 						z=>L1hitCount);
 
 	setnotL2Miss : not_gate_n generic map(n=>32) port map(L2missCount, notL2missCount);
-	getTotal : fulladder_32 port map(cin=>'1',x=>L2totalCount,y=>notL2missCount,
+	getTotal2 : fulladder_32 port map(cin=>'1',x=>L2totalCount,y=>notL2missCount,
 						z=>L2hitCount);
 
 	l1_hit_cnt <= L1hitCount;
 	l1_miss_cnt <= L1missCount;
-	l1_evict_cnt <= L1missCoutn;
+	l1_evict_cnt <= L1missCount;
 	l2_hit_cnt <= L2hitCount;
 	l2_miss_cnt <= L2missCount;
 	l2_evict_cnt <= L2missCount;

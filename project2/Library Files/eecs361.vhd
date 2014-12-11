@@ -348,21 +348,23 @@ end component shifter_2048;
   end component LRU;
 
   component L1 is
-  port (
-    Clk : in std_logic;
-    RequestIn: in std_logic;
-    ReadWrite : in std_logic;
-    Address : in std_logic_vector (31 downto 0);
-    DataIn : in std_logic_vector (31 downto 0);
-    DataOut : out std_logic_vector (31 downto 0);
-    DataReady : out std_logic;
-    DataFromL2 : in std_logic_vector (511 downto 0);
-    DataReadyFromL2 : in std_logic;
-    RequestToL2 : out std_logic;
-    DataToL2 : out std_logic_vector (511 downto 0);
-    AddressToL2 : out std_logic_vector (31 downto 0);
-    ReadWriteToL2 : out std_logic
-  );
+	port (
+		Clk : in std_logic;
+		RequestIn: in std_logic;
+		ReadWrite : in std_logic;
+		Address : in std_logic_vector (31 downto 0);
+		DataIn : in std_logic_vector (31 downto 0);
+		DataOut : out std_logic_vector (31 downto 0);
+		DataReady : out std_logic;
+		DataFromL2 : in std_logic_vector (511 downto 0);
+		DataReadyFromL2 : in std_logic;
+		RequestToL2 : out std_logic;
+		DataToL2 : out std_logic_vector (511 downto 0);
+		AddressToL2 : out std_logic_vector (31 downto 0);
+		ReadWriteToL2 : out std_logic;
+		L1hit : out std_logic;
+		L1miss : out std_logic
+	);
   end component L1;
   
 component L2 is
@@ -378,7 +380,6 @@ component L2 is
 		DataToL1 : out std_logic_vector (511 downto 0);
 
 		--SubBlock Logic--		
-		SubBlockFromMem : in std_logic_vector(511 downto 0);
 		SubBlockFromMemReady : in std_logic;
 
 		RequestSubBlockFromMem : out std_logic;

@@ -16,7 +16,6 @@ entity L2 is
 		DataToL1 : out std_logic_vector (511 downto 0);
 
 		--SubBlock Logic--		
-		SubBlockFromMem : in std_logic_vector(511 downto 0);
 		SubBlockFromMemReady : in std_logic;
 
 		RequestSubBlockFromMem : out std_logic;
