@@ -64,7 +64,7 @@ begin
 							src0=>oredDataFromMem,
 							src1=>lotsOfZeros,
 							z=>dataIntoResponse);
-	alignedAddress <= AddressFromL2(31 downto 6) & (5 downto 0 => '0');
+	alignedAddress <= AddressFromL2(31 downto 8) & (7 downto 0 => '0');
 	setAddressToMem : fulladder_32 port map(cin=>'0',x=>alignedAddress,y=>count,
 											z=>AddressToMem);
 
