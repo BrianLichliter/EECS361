@@ -28,6 +28,8 @@ architecture structural of BlockLogic is
 	signal lotsOfZeros : std_logic_vector(2047 downto 0);
 	signal extDataFromMem : std_logic_vector(2047 downto 0);
 	signal lower12Count : std_logic_vector(11 downto 0);
+	signal dataOut : std_logic_vector(2047 downto 0);
+	signal oredDataFromMem : std_logic_vector(2047 downto 0);
 begin
 	--reset counter if no request
 	setNotRequestBlockFromL2 : not_gate port map(RequestBlockFromL2,
@@ -48,20 +50,22 @@ begin
 
 	CSRamToBuildResponse: csram generic map(INDEX_WIDTH=>1,BIT_WIDTH=>2048)
 								port map (cs=>'1',oe=>'1',we=>'1',index=>"0",
-									din=>dataIntoResponse,dout=>DataToL2);
+									din=>dataIntoResponse,dout=>dataOut);
 
   extDataFromMem <= (2015 downto 0 => '0') & DataFromMem;
   lower12Count <= count(11 downto 0);
 	shftDataIn : shifter_2048 port map(Bits => extDataFromMem,Shift=>lower12Count,R=>
 								shiftedDataFromMem);
+
+	setOr : or_gate_n generic map(n=>2048) port map(shiftedDataFromMem, dataOut,oredDataFromMem);
 	lotsOfZeros <= (2047 downto 0 =>'0');
 	setDataIntoResponse : mux_n generic map(n=>2048) port map(sel=>reset,
-							src0=>shiftedDataFromMem,
+							src0=>oredDataFromMem,
 							src1=>lotsOfZeros,
 							z=>dataIntoResponse);
 
 	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count,
 											z=>AddressToMem);
 
-
+	DataToL2 <= dataOut;
 end structural;
