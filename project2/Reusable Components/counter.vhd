@@ -7,6 +7,7 @@ entity counter is
 	port (
 		WriteEnable		: in std_logic;
 		Clk		: in std_logic;
+		ClkRes	: in std_logic;
 		Reset	: in std_logic;
 		HighestValue : in std_logic_vector(31 downto 0);
 		Count		: out std_logic_vector(31 downto 0)
@@ -19,14 +20,18 @@ architecture structural of counter is
 	signal registerOut		: std_logic_vector(31 downto 0);
 	signal registerIn 		: std_logic_vector(31 downto 0);
 	signal notRegisterOut 	: std_logic_vector(31 downto 0);
-	signal maxedOut : std_logic;
+	signal maxedOut			: std_logic;
+	signal ClkActual		: std_logic;
 begin
+
+	--Use the clk reset when reset is high
+	mux1 : mux port map(sel => Reset, src0 => Clk, src1 => ClkRes, z => ClkActual);
 
 	--Not the Reset so the counter is Reset on high
 	not1 : not_gate port map(Reset, ResetLow);
 
 	-- Register containing count
-	reg : register_32bit port map(clk => Clk, reset_active_low => ResetLow, write_en => WriteEnable, D => registerIn, Z => registerOut);
+	reg : register_32bit port map(clk => ClkActual, reset_active_low => ResetLow, write_en => WriteEnable, D => registerIn, Z => registerOut);
 
 	--Add 1 to the register output
 	add : fulladder_32 port map(cin => '1', x => registerOut, y => (31 downto 0 => '0'), cout => open, z => registerInNext);

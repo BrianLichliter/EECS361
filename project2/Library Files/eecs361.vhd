@@ -331,6 +331,7 @@ end component shifter_2048;
 	port (
 		WriteEnable		: in std_logic;
 		Clk		: in std_logic;
+    ClkRes  : in std_logic;
 		Reset	: in std_logic;
 		HighestValue : in std_logic_vector(31 downto 0);
 		Count		: out std_logic_vector(31 downto 0)

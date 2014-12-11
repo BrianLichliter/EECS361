@@ -135,13 +135,13 @@ begin
 								
 
 	--Hit Counters
-	L1missMap : counter port map(WriteEnable=>EN,Clk=>L1miss,Reset=>ResetActiveHigh,
+	L1missMap : counter port map(WriteEnable=>EN,Clk=>L1miss,ClkRes=>clk,Reset=>ResetActiveHigh,
 						HighestValue=>x"ffffffff",Count=>L1missCount);
-	L1totalMap : counter port map(WriteEnable=>EN,Clk=>dataReadyL1,Reset=>ResetActiveHigh,
+	L1totalMap : counter port map(WriteEnable=>EN,Clk=>dataReadyL1,ClkRes=>clk,Reset=>ResetActiveHigh,
 						HighestValue=>x"ffffffff",Count=>L1totalCount);
-	L2missMap : counter port map(WriteEnable=>EN,Clk=>L2miss,Reset=>ResetActiveHigh,
+	L2missMap : counter port map(WriteEnable=>EN,Clk=>L2miss,ClkRes=>clk,Reset=>ResetActiveHigh,
 						HighestValue=>x"ffffffff",Count=>L2missCount);
-	L2totalMap : counter port map(WriteEnable=>EN,Clk=>dataReadyL2,Reset=>ResetActiveHigh,
+	L2totalMap : counter port map(WriteEnable=>EN,Clk=>dataReadyL2,ClkRes=>clk,Reset=>ResetActiveHigh,
 						HighestValue=>x"ffffffff",Count=>L2totalCount);
 
 	setnotL1Miss : not_gate_n generic map(n=>32) port map(L1missCount, notL1missCount);
