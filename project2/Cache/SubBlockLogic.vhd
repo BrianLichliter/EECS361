@@ -15,9 +15,9 @@ entity SubBlockLogic is
 		SubBlockReadyToL2 : out std_logic;
 		AddressToMem : out std_logic_vector(31 downto 0);
 		DataToMem : out std_logic_vector(31 downto 0);
-		WriteToMem : out std_logic;
+		WriteToMem : out std_logic
 	);
-end SubBlockLogic
+end SubBlockLogic;
 
 architecture structural of SubBlockLogic is
 	signal count : std_logic_vector(31 downto 0);
@@ -25,7 +25,10 @@ architecture structural of SubBlockLogic is
 	signal reset : std_logic;
 	signal wereDone : std_logic;
 	signal writeEnable : std_logic;
+	signal offset : std_logic_vector(3 downto 0);
 begin
+  
+  offset <= count (3 downto 0);
 	--reset counter if no request
 	setNotRequestSubBlockFromL2 : not_gate port map(RequestSubBlockFromL2,
 										notRequestSubBlockFromL2);
@@ -46,10 +49,10 @@ begin
 	muxOutputs : mux_n_16 generic map(n=>32) port map(sel=>offset,
 	                  src0=>SubBlockFromL2(31 downto 0),
 	                  src1=>SubBlockFromL2(63 downto 32),
-	                  src2=>dataFromentry(95 downto 64),
+	                  src2=>SubBlockFromL2(95 downto 64),
 	                  src3=>SubBlockFromL2(127 downto 96),
 	                  src4=>SubBlockFromL2(159 downto 128),
-	                  src5=>datafromEntry(191 downto 160),
+	                  src5=>SubBlockFromL2(191 downto 160),
 	                  src6=>SubBlockFromL2(223 downto 192),
 	                  src7=>SubBlockFromL2(255 downto 224),
 					  src8=>SubBlockFromL2(287 downto 256),
@@ -64,7 +67,7 @@ begin
 
 	WriteToMem <= RequestSubBlockFromL2;
 
-	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count
+	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count,
 											z=>AddressToMem);
 end structural;
 

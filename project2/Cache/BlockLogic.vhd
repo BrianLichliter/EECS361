@@ -13,9 +13,9 @@ entity BlockLogic is
 
 		BlockReadyToL2 : out std_logic;
 		AddressToMem : out std_logic_vector(31 downto 0);
-		DataToL2 : out std_logic_vector(2047 downto 0);
+		DataToL2 : out std_logic_vector(2047 downto 0)
 	);
-end BlockLogic
+end BlockLogic;
 
 architecture structural of BlockLogic is
 	signal count : std_logic_vector(31 downto 0);
@@ -25,6 +25,9 @@ architecture structural of BlockLogic is
 	signal shiftedDataFromMem : std_logic_vector(2047 downto 0);
 	signal dataIntoResponse : std_logic_vector(2047 downto 0);
 	signal writeEnable : std_logic;
+	signal lotsOfZeros : std_logic_vector(2047 downto 0);
+	signal extDataFromMem : std_logic_vector(2047 downto 0);
+	signal lower12Count : std_logic_vector(11 downto 0);
 begin
 	--reset counter if no request
 	setNotRequestBlockFromL2 : not_gate port map(RequestBlockFromL2,
@@ -44,10 +47,12 @@ begin
 	setDataReady : and_gate port map(wereDone, Clk,BlockReadyToL2);
 
 	CSRamToBuildResponse: csram generic map(INDEX_WIDTH=>1,BIT_WIDTH=>2048)
-								port map (cs=>'1',oe=>'1',we=>'1',index=>'0',
+								port map (cs=>'1',oe=>'1',we=>'1',index=>"0",
 									din=>dataIntoResponse,dout=>DataToL2);
 
-	shftDataIn : shifter_2048 port map(Bits => DataFromMem,Shift=>count,R=>
+  extDataFromMem <= (2015 downto 0 => '0') & DataFromMem;
+  lower12Count <= count(11 downto 0);
+	shftDataIn : shifter_2048 port map(Bits => extDataFromMem,Shift=>lower12Count,R=>
 								shiftedDataFromMem);
 	lotsOfZeros <= (2047 downto 0 =>'0');
 	setDataIntoResponse : mux_n generic map(n=>2048) port map(sel=>reset,
@@ -55,7 +60,7 @@ begin
 							src1=>lotsOfZeros,
 							z=>dataIntoResponse);
 
-	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count
+	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count,
 											z=>AddressToMem);
 
 
