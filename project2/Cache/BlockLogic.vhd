@@ -67,5 +67,5 @@ begin
 	setAddressToMem : fulladder_32 port map(cin=>'0',x=>AddressFromL2,y=>count,
 											z=>AddressToMem);
 
-	DataToL2 <= dataOut;
+	DataToL2 <= dataIntoResponse;
 end structural;
