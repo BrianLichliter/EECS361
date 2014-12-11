@@ -606,19 +606,19 @@ begin
 	------ lines 186+ from L1 not translated -----
 	
 		----This is cache block 1----
-	CsramCache1 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
+	CsramCache1 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
 						port map(cs=>'1',oe=>'1',we=>we1,index=>index,
 									din=>dataIntoCache1,dout=>dataFromEntry1);
 		----This is cache block 2----
-	CsramCache2 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
+	CsramCache2 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
 						port map(cs=>'1',oe=>'1',we=>we2,index=>index,
 									din=>dataIntoCache2,dout=>dataFromEntry2);
 		----This is cache block 3----
-	CsramCache3 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
+	CsramCache3 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
 						port map(cs=>'1',oe=>'1',we=>we3,index=>index,
 									din=>dataIntoCache3,dout=>dataFromEntry3);
 		----This is cache block 4----
-	CsramCache4 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2072)
+	CsramCache4 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
 						port map(cs=>'1',oe=>'1',we=>we4,index=>index,
 									din=>dataIntoCache4,dout=>dataFromEntry4);
 								
