@@ -149,7 +149,7 @@ begin
 	dataIntoCache(534) <= dirtyIn;
 
 	----This is our cache----
-	CsramCache : csram generic map(INDEX_WIDTH=>4, BIT_WIDTH=>537)
+	CsramCache : csram generic map(INDEX_WIDTH=>4, BIT_WIDTH=>535)
 						port map(cs=>'1',oe=>'1',we=>we,index=>index,
 									din=>dataIntoCache,dout=>dataFromEntry);
 
