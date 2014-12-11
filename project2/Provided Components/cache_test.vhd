@@ -31,7 +31,7 @@ begin
   begin
     if rst = '1' then
       addr_src <= (others => '0');
-    elsif rising_edge(clk) then
+    elsif falling_edge(clk) then
       if Ready = '1' then
         addr_src <= std_logic_vector(4 + unsigned(addr_src));
       end if;

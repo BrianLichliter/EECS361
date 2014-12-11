@@ -214,6 +214,7 @@ architecture structural of L2 is
   signal muxedDataFromEntry : std_logic_vector(2073 downto 0);
   
   signal requestTemp1 : std_logic;
+  signal LRUindexOut : std_logic_vector(1 downto 0);
   signal LRUindexOut1 : std_logic_vector (1 downto 0);
   signal LRUindexOut2 : std_logic_vector (1 downto 0);
   signal LRUindexOut3 : std_logic_vector (1 downto 0);
@@ -224,7 +225,10 @@ architecture structural of L2 is
   -- make subblockfrommem into datafromL1 extdatain1--
   
   signal pickedByLRUvector : std_logic_vector (3 downto 0);
-  signal weLRU : std_logic;  	
+  signal weLRU1 : std_logic;  	
+  signal weLRU2 : std_logic;  
+  signal weLRU3 : std_logic;
+  signal weLRU4 : std_logic; 
   signal LRUindexIn : std_logic_vector(1 downto 0);
   
   signal DataReadyFromMem : std_logic;
@@ -272,6 +276,7 @@ begin
 	                  src1=>dataFromEntry3(1023 downto 512),
 	                  src2=>dataFromentry3(1535 downto 1024),
 	                  src3=>dataFromEntry3(2047 downto 1536),
+	                  z=>Dataout3);
 
 	tagFromEntry3 <= dataFromEntry3(2069 downto 2048);
 	
@@ -698,7 +703,7 @@ begin
 						src0=>LRUindexOut1,
 						src1=>LRUindexOut2,
 						src2=>LRUindexOut3,
-						src4=>LRUindexOut4,
+						src3=>LRUindexOut4,
 						z=>LRUindexOut);
 						
 

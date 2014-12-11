@@ -41,7 +41,7 @@ signal l1h, l1m, l1e, l2h, l2m, l2e : std_logic_vector(31 downto 0);
 begin
   clk <= not clk after 5 ns;
   -- changed reset to going low after a full cycle
-  rst <= '1', '0' after 10 ns;
+  rst <= '1', '0' after 10.5 ns;
   en <= '0' , '1' after 11 ns;
 
   mem_map : memory_hierarchy
@@ -68,8 +68,8 @@ begin
 
   tester_map : cache_test
     generic map (
-      data_trace_file => "data/random_data_trace",
-      addr_trace_file => "data/random_addr_trace"
+      data_trace_file => "data/readonly_data_trace",
+      addr_trace_file => "data/readonly_addr_trace"
     )
     port map (
       DataIn => dataout,
