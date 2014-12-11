@@ -337,6 +337,15 @@ end component shifter_2048;
 		Count		: out std_logic_vector(31 downto 0)
 	);
   end component counter;
+  component counter4 is
+	port (
+		WriteEnable		: in std_logic;
+		Clk		: in std_logic;
+		Reset	: in std_logic;
+		HighestValue : in std_logic_vector(31 downto 0);
+		Count		: out std_logic_vector(31 downto 0)
+	);
+  end component counter4;
 
   component LRU is
     port (

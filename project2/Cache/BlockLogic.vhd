@@ -39,9 +39,9 @@ begin
 
 	--increment counter every clock
 	--when counter == 15 and clk high, ready
-	thisIsOurCounter : counter port map(WriteEnable=>writeEnable,Clk=>Clk,ClkRes=>Clk,Reset=>reset,HighestValue=>x"0000003f",Count=>count);
-
-	areWeDone : cmp_n generic map(n=>32) port map(a=>count,b=>x"0000003f",
+	thisIsOurCounter : counter4 port map(WriteEnable=>writeEnable,Clk=>Clk,Reset=>reset,HighestValue=>x"000000fc",Count=>count);
+	
+	areWeDone : cmp_n generic map(n=>32) port map(a=>count,b=>x"000000fc",
 											a_eq_b=>wereDone);
 
 	setDataReady : and_gate port map(wereDone, Clk,BlockReadyToL2);
