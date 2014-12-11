@@ -26,10 +26,10 @@ end L1;
 architecture structural of L1 is
 	signal tagIn : std_logic_vector (23 downto 0); 
 	signal tagFromEntry : std_logic_vector (23 downto 0);
-	signal dataFromEntry : std_logic_vector(536 downto 0);
-	signal dataIntoCache : std_logic_vector(536 downto 0);
+	signal dataFromEntry : std_logic_vector(534 downto 0);
+	signal dataIntoCache : std_logic_vector(534 downto 0);
 	signal index : std_logic_vector (3 downto 0);
-	signal offset : std_logic_vector (3 downto 0);
+	signal offset : std_logic_vector (5 downto 0);
 	signal dirty : std_logic;
 	signal hit : std_logic;
 	signal miss : std_logic;
@@ -64,9 +64,9 @@ architecture structural of L1 is
 	signal dirtyIn : std_logic;
 begin
 	----Parse the address----
-	tagIn <= Address(31 downto 8);
-	index <= Address(7 downto 4);
-	offset <= Address(3 downto 0);
+	tagIn <= Address(31 downto 10);
+	index <= Address(9 downto 4);
+	offset <= Address(5 downto 0);
 
 	----Check if hit or miss by comparing tags----	
 	--Subtract the two
@@ -99,7 +99,7 @@ begin
 	----Instert DataIn into Cache Line (not writing yet) ----
 	ExtDataIn <= (479 downto 0 => '0') & DataIn;
 
-	ShftAmt : mux_n_16 generic map(n=>10) port map(sel => offset,
+	ShftAmt : mux_n_16 generic map(n=>10) port map(sel => offset(5 downto 2),
 								src0 => "0000000000",
 								src1 => "0000100000",
 								src2 => "0001000000",
@@ -134,7 +134,7 @@ begin
 	--Make sure tag corresponds with the data we're sending
 	selectTag : mux_n generic map(n=>24) port map(sel=>hit,
 								src0=>tagToL2,src1=>tagIn,
-								z=>dataIntoCache(535 downto 512));
+								z=>dataIntoCache(533 downto 512));
 	muxDataWithHit : mux_n generic map (n=>512)
 							port map(sel=>hit,src0=>DataFromL2,src1=>CacheLineIn,
 									z=>dataIntoCache(511 downto 0));
@@ -146,7 +146,7 @@ begin
 	setDirtyTemp1 : and_gate port map(hit, dirty, dirtyTemp1);
 	--setDirtyTemp2 : and_gate port map(miss, notReadWrite, dirtyTemp2);
 	setDirtyIn : or_gate port map(dirtyTemp1, ReadWrite, dirtyIn);
-	dataIntoCache(536) <= dirtyIn;
+	dataIntoCache(534) <= dirtyIn;
 
 	----This is our cache----
 	CsramCache : csram generic map(INDEX_WIDTH=>4, BIT_WIDTH=>537)
@@ -157,7 +157,7 @@ begin
 	DataToL2 <= dataFromEntry(511 downto 0);
 	
 	--Mux the data out by offset
-	muxOutputs : mux_n_16 generic map(n=>32) port map(sel=>offset,
+	muxOutputs : mux_n_16 generic map(n=>32) port map(sel=>offset(5 downto 2),
 	                  src0=>dataFromEntry(31 downto 0),
 	                  src1=>dataFromEntry(63 downto 32),
 	                  src2=>dataFromentry(95 downto 64),
@@ -213,9 +213,9 @@ begin
 							port map(sel=>needToWriteButHavent,src0=>tagIn,
 									src1=>tagFromEntry,
 									z=>tagToL2);
-	AddressToL2(31 downto 8) <=tagToL2;
-	AddressToL2(7 downto 4) <= index;
-	AddressToL2(3 downto 0) <= "0000";
+	AddressToL2(31 downto 10) <=tagToL2;
+	AddressToL2(9 downto 6) <= index;
+	AddressToL2(5 downto 0) <= "000000";
 
 	--We're done when the request {hit && [~ReadWrite or (ReadWrite && clk)]} 
    --                                             hitTemp2      hitTemp1   	

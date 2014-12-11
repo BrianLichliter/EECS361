@@ -39,13 +39,13 @@ architecture structural of L2 is
 	signal we2 : std_logic;
 	signal we3 : std_logic;
 	signal we4 : std_logic;
-	signal dataFromEntry1 : std_logic_vector(2075 downto 0);
-	signal dataFromEntry2 : std_logic_vector(2075 downto 0);
-	signal dataFromEntry3 : std_logic_vector(2075 downto 0);
-	signal dataFromEntry4 : std_logic_vector(2075 downto 0);
+	signal dataFromEntry1 : std_logic_vector(2073 downto 0);
+	signal dataFromEntry2 : std_logic_vector(2073 downto 0);
+	signal dataFromEntry3 : std_logic_vector(2073 downto 0);
+	signal dataFromEntry4 : std_logic_vector(2073 downto 0);
 	
 	-- signals for address
-	signal tagIn : std_logic_vector (23 downto 0);
+	signal tagIn : std_logic_vector (21 downto 0);
 	signal index : std_logic_vector (1 downto 0);
 	signal offset : std_logic_vector (1 downto 0);
 	
@@ -131,10 +131,10 @@ architecture structural of L2 is
 	signal CacheLineIn4 : std_logic_vector(2047 downto 0);
 	
 	signal tagToMem : std_logic_vector(23 downto 0);
-	signal dataIntoCache1 : std_logic_vector(2075 downto 0);
-	signal dataIntoCache2 : std_logic_vector(2075 downto 0);
-	signal dataIntoCache3 : std_logic_vector(2075 downto 0);
-	signal dataIntoCache4 : std_logic_vector(2075 downto 0);
+	signal dataIntoCache1 : std_logic_vector(2073 downto 0);
+	signal dataIntoCache2 : std_logic_vector(2073 downto 0);
+	signal dataIntoCache3 : std_logic_vector(2073 downto 0);
+	signal dataIntoCache4 : std_logic_vector(2073 downto 0);
 	
 	signal valid1_1 : std_logic;
 	signal valid2_1 : std_logic;
@@ -211,7 +211,7 @@ architecture structural of L2 is
   signal DataFromMem3 : std_logic_vector(2047 downto 0);
   signal DataFromMem4 : std_logic_vector(2047 downto 0);  	
 
-  signal muxedDataFromEntry : std_logic_vector(2075 downto 0);
+  signal muxedDataFromEntry : std_logic_vector(2073 downto 0);
   
   signal requestTemp1 : std_logic;
   signal LRUindexOut : std_logic_vector (1 downto 0);
@@ -228,9 +228,9 @@ architecture structural of L2 is
   signal notReadWriteFromL1 : std_logic;
 begin
 	-- parse the address --
-	tagIn <= AddressFromL1 (31 downto 8);
-	index <= AddressFromL1 (7 downto 6);
-	offset <= AddressFromL1 (5 downto 4);
+	tagIn <= AddressFromL1 (31 downto 10);
+	index <= AddressFromL1 (9 downto 8);
+	offset <= AddressFromL1 (7 downto 6);
 	
 	----------------------------------------
 	-- parse data from cache blocks --
@@ -242,7 +242,7 @@ begin
 	                  src2=>dataFromEntry1(1535 downto 1024),
 	                  src3=>dataFromEntry1(2047 downto 1536),
 	                  z=>DataOut1);
-	tagFromEntry1 <= dataFromEntry1(2071 downto 2048);
+	tagFromEntry1 <= dataFromEntry1(2069 downto 2048);
 	
 	
 	-- cache block 2 --
@@ -253,7 +253,7 @@ begin
 	                  src2=>dataFromEntry2(1535 downto 1024),
 	                  src3=>dataFromEntry2(2047 downto 1536),
 	                  z=>DataOut2);
-	tagFromEntry2 <= dataFromEntry2(2071 downto 2048);
+	tagFromEntry2 <= dataFromEntry2(2069 downto 2048);
 	
 	
 	-- cache block 3 --
@@ -264,7 +264,7 @@ begin
 	                  src2=>dataFromentry3(1535 downto 1024),
 	                  src3=>dataFromEntry3(2047 downto 1536),
 	                  z=>DataOut3);
-	tagFromEntry3 <= dataFromEntry3(2071 downto 2048);
+	tagFromEntry3 <= dataFromEntry3(2069 downto 2048);
 	
 	
 	-- cache block 4 --
@@ -275,7 +275,7 @@ begin
 	                  src2=>dataFromEntry4(1535 downto 1024),
 	                  src3=>dataFromEntry4(2047 downto 1536),
 	                  z=>DataOut4);
-	tagFromEntry4 <= dataFromEntry4(2071 downto 2048);
+	tagFromEntry4 <= dataFromEntry4(2069 downto 2048);
 	
 	
 	----------------------------------------
@@ -337,25 +337,25 @@ begin
 	
 	--GetValidBits
 	--TestAppropriateValidBit
-	valid1_1 <= DataFromEntry1(2072);
-	valid2_1 <= DataFromEntry1(2073);
-	valid3_1 <= DataFromEntry1(2074);
-	valid4_1 <= DataFromEntry1(2075);
+	valid1_1 <= DataFromEntry1(2070);
+	valid2_1 <= DataFromEntry1(2071);
+	valid3_1 <= DataFromEntry1(2072);
+	valid4_1 <= DataFromEntry1(2073);
 
-	valid1_2 <= DataFromEntry2(2072);
-	valid2_2 <= DataFromEntry2(2073);
-	valid3_2 <= DataFromEntry2(2074);
-	valid4_2 <= DataFromEntry2(2075);
+	valid1_2 <= DataFromEntry2(2070);
+	valid2_2 <= DataFromEntry2(2071);
+	valid3_2 <= DataFromEntry2(2072);
+	valid4_2 <= DataFromEntry2(2073);
 
-	valid1_3 <= DataFromEntry3(2072);
-	valid2_3 <= DataFromEntry3(2073);
-	valid3_3 <= DataFromEntry3(2074);
-	valid4_3 <= DataFromEntry3(2075);
+	valid1_3 <= DataFromEntry3(2070);
+	valid2_3 <= DataFromEntry3(2071);
+	valid3_3 <= DataFromEntry3(2072);
+	valid4_3 <= DataFromEntry3(2073);
 
-	valid1_4 <= DataFromEntry4(2072);
-	valid2_4 <= DataFromEntry4(2073);
-	valid3_4 <= DataFromEntry4(2074);
-	valid4_4 <= DataFromEntry4(2075);
+	valid1_4 <= DataFromEntry4(2070);
+	valid2_4 <= DataFromEntry4(2071);
+	valid3_4 <= DataFromEntry4(2072);
+	valid4_4 <= DataFromEntry4(2073);
 
 	--Read miss, set all Valids to 1
 	readMissValids <= "1111";
@@ -550,27 +550,27 @@ begin
 	muxDataFromMem4 : mux_n generic map(n=>2048) port map(sel=>ReadWriteFromL1, src0=>BlockFromMem,
 												src1=>CacheLineFromSubBlock4,z=>DataFromMem4);
 	
-	dataIntoCache1(2071 downto 2048) <= tagIn;
-	dataIntoCache2(2071 downto 2048) <= tagIn;
-	dataIntoCache3(2071 downto 2048) <= tagIn;
-	dataIntoCache4(2071 downto 2048) <= tagIn;
+	dataIntoCache1(2069 downto 2048) <= tagIn;
+	dataIntoCache2(2069 downto 2048) <= tagIn;
+	dataIntoCache3(2069 downto 2048) <= tagIn;
+	dataIntoCache4(2069 downto 2048) <= tagIn;
 	--selectTag1 : mux_n generic map(n=>24) port map(sel=>hit, 
 	--								src0=>tagToMem, src1 => tagIn, 
-	--								z=>dataIntoCache1(2071 downto 2048));
+	--								z=>dataIntoCache1(2069 downto 2048));
 	--selectTag2 : mux_n generic map(n=>24) port map(sel=>hit, 
 	--								src0=>tagToMem, src1 => tagIn, 
-	--								z=>dataIntoCache2(2071 downto 2048));
+	--								z=>dataIntoCache2(2069 downto 2048));
 	--selectTag3 : mux_n generic map(n=>24) port map(sel=>hit, 
 	--								src0=>tagToMem, src1 => tagIn, 
-	--								z=>dataIntoCache3(2071 downto 2048));
+	--								z=>dataIntoCache3(2069 downto 2048));
 	--selectTag4 : mux_n generic map(n=>24) port map(sel=>hit, 
 	--								src0=>tagToMem, src1 => tagIn, 
-	--								z=>dataIntoCache4(2071 downto 2048));
+	--								z=>dataIntoCache4(2069 downto 2048));
 
-	dataIntoCache1(2075 downto 2072) <= validInput;
-	dataIntoCache2(2075 downto 2072) <= validInput;
-	dataIntoCache3(2075 downto 2072) <= validInput;
-	dataIntoCache4(2075 downto 2072) <= validInput;
+	dataIntoCache1(2073 downto 2070) <= validInput;
+	dataIntoCache2(2073 downto 2070) <= validInput;
+	dataIntoCache3(2073 downto 2070) <= validInput;
+	dataIntoCache4(2073 downto 2070) <= validInput;
 	
 	muxDataWithHit1 : mux_n generic map (n=>2048)
 								port map(sel=>hit1, src0=>DataFromMem1, src1 => CacheLineIn1,
@@ -610,23 +610,23 @@ begin
 	------ lines 186+ from L1 not translated -----
 	
 		----This is cache block 1----
-	CsramCache1 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
+	CsramCache1 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2074)
 						port map(cs=>'1',oe=>'1',we=>we1,index=>index,
 									din=>dataIntoCache1,dout=>dataFromEntry1);
 		----This is cache block 2----
-	CsramCache2 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
+	CsramCache2 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2074)
 						port map(cs=>'1',oe=>'1',we=>we2,index=>index,
 									din=>dataIntoCache2,dout=>dataFromEntry2);
 		----This is cache block 3----
-	CsramCache3 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
+	CsramCache3 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2074)
 						port map(cs=>'1',oe=>'1',we=>we3,index=>index,
 									din=>dataIntoCache3,dout=>dataFromEntry3);
 		----This is cache block 4----
-	CsramCache4 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2076)
+	CsramCache4 : csram generic map(INDEX_WIDTH=>2, BIT_WIDTH=>2074)
 						port map(cs=>'1',oe=>'1',we=>we4,index=>index,
 									din=>dataIntoCache4,dout=>dataFromEntry4);
 								
-	setMuxedDataFromEntry : mux_n_4 generic map(n=>2076) port map(sel=>MRUindex,
+	setMuxedDataFromEntry : mux_n_4 generic map(n=>2074) port map(sel=>MRUindex,
 								src0=>dataFromEntry1,
 								src1=>dataFromEntry2,
 								src2=>dataFromEntry3,
