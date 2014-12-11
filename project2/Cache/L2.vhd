@@ -212,6 +212,8 @@ architecture structural of L2 is
   signal DataFromMem2 : std_logic_vector(2047 downto 0);
   signal DataFromMem3 : std_logic_vector(2047 downto 0);
   signal DataFromMem4 : std_logic_vector(2047 downto 0);  	
+
+  signal muxedDataFromEntry : std_logic_vector(2047 downto 0);
   
   signal requestTemp1 : std_logic;
   signal LRUindexOut : std_logic_vector (1 downto 0);
@@ -622,7 +624,18 @@ begin
 						port map(cs=>'1',oe=>'1',we=>we4,index=>index,
 									din=>dataIntoCache4,dout=>dataFromEntry4);
 								
-								
+	setMuxedDataFromEntry : mux_n_4 generic map(n=>2048) port map(sel=>MRUindex,
+								src0=>dataFromEntry1,
+								src1=>dataFromEntry2,
+								src2=>dataFromEntry3,
+								src3=>dataFromEntry4,
+								z=>muxedDataFromEntry);
+	setDataToL1 : mux_n_4 generic map(n=>512) port map(sel=>offset,
+								src0=>muxedDataFromEntry(511 downto 0),
+								src1=>muxedDataFromEntry(1023 downto 512),
+								src2=>muxedDataFromEntry(1535 downto 1024),
+								src3=>muxedDataFromEntry(2047 downto 1536),
+								z=>DataToL1);
 								
 		----LRU instantiation----
 	getIndexOfLineAccessed : mux_n_16 generic map(n=>2) port map(sel=>tagHitVector,
